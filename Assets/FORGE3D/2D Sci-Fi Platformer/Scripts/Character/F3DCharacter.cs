@@ -46,10 +46,6 @@ public class F3DCharacter : MonoBehaviour
 //                _colliders[i].enabled = false;
             _weaponController.Drop();
 
-            // Disable blob shadow under the character
-            if (_controller.Shadow)
-                _controller.Shadow.enabled = false;
-
             //
             return;
         }

@@ -7288,6 +7288,26 @@ Prefab:
       propertyPath: m_Name
       value: Player 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012022282460, guid: 16801b1d55f90e14b936c002e549ab0d,
+        type: 2}
+      propertyPath: JumpForce
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012022282460, guid: 16801b1d55f90e14b936c002e549ab0d,
+        type: 2}
+      propertyPath: DoubleJumpForce
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012022282460, guid: 16801b1d55f90e14b936c002e549ab0d,
+        type: 2}
+      propertyPath: MaxSpeedBackwards
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012022282460, guid: 16801b1d55f90e14b936c002e549ab0d,
+        type: 2}
+      propertyPath: MaxVelocityX
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 16801b1d55f90e14b936c002e549ab0d, type: 2}
   m_IsPrefabParent: 0
@@ -12965,6 +12985,26 @@ Prefab:
     - target: {fileID: 1000013978739964, guid: 16801b1d55f90e14b936c002e549ab0d, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012022282460, guid: 16801b1d55f90e14b936c002e549ab0d,
+        type: 2}
+      propertyPath: JumpForce
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012022282460, guid: 16801b1d55f90e14b936c002e549ab0d,
+        type: 2}
+      propertyPath: DoubleJumpForce
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012022282460, guid: 16801b1d55f90e14b936c002e549ab0d,
+        type: 2}
+      propertyPath: MaxSpeedBackwards
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012022282460, guid: 16801b1d55f90e14b936c002e549ab0d,
+        type: 2}
+      propertyPath: MaxVelocityX
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 16801b1d55f90e14b936c002e549ab0d, type: 2}

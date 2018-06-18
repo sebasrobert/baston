@@ -3,42 +3,26 @@ using System.Collections;
 
 public class F3DCharacterController : MonoBehaviour
 {
-    public enum InputType {
-        KEYBOAD_MOUSE,
-        GAMING_CONTROLLER
-    }
-
     // Components
     public Animator Character;
 
     public Transform SideCheck;
     public Transform WeaponSocket;
-    public Transform ShadowL;
-    public Transform ShadowR;
-    public SpriteRenderer Shadow;
-    public float ShadowCheckDist;
-    public float ShadowMinAngle;
-    public float ShadowDrawDist;
 
     // Settings
     public LayerMask Ground;
 
-    public LayerMask ShadowLayerMask;
     public float MaxVelocityX;
     public float MaxVelocityY;
-    public float MoveForce = 365f;
     public float MaxSpeed = 1f;
     public float CrouchSpeed = 0.75f;
-    public float MaxSpeedBackwards = 0.5f;
+    public float MaxSpeedBackwards = 1f;
     public float MaxSpeedFade = 1f;
     public float JumpForce = 1000f;
     public float DoubleJumpForce;
-    public float BreakForce = 0.05f;
     public float GroundCheckCircleSize;
     public float SideCheckDist;
     public float AimTime;
-    public InputType inputType; 
-    public string gamepad;
 
     //
     private Rigidbody2D _rb2D;
@@ -62,9 +46,6 @@ public class F3DCharacterController : MonoBehaviour
     private float _horizontal;
     private float _horizontalSignLast;
 
-    //
-    private Vector3 _shadowBaseScale;
-
     // DEBUG GIZMOS
     private void OnDrawGizmos()
     {
@@ -79,79 +60,11 @@ public class F3DCharacterController : MonoBehaviour
         _rb2D = GetComponent<Rigidbody2D>();
         _audio = GetComponent<F3DCharacterAudio>();
         _speed = MaxSpeed;
-        if (Shadow != null)
-            _shadowBaseScale = Shadow.transform.localScale;
-    }
-
-    private float _lastShadowDrawDist;
-    private Color _lastShadowAlpha;
-
-    private void DrawShadow()
-    {
-        if (Shadow == null) return;
-        if (ShadowL == null) return;
-        if (ShadowR == null) return;
-        if (_character.Health <= 0)
-            return;
-
-        // Linecast each side
-        var _left = Physics2D.Linecast(ShadowL.position, ShadowL.position + Vector3.down * ShadowCheckDist,
-            ShadowLayerMask);
-        var _right = Physics2D.Linecast(ShadowR.position, ShadowR.position + Vector3.down * ShadowCheckDist,
-            ShadowLayerMask);
-
-     
-
-        // Move the shadow
-        var midPos = Physics2D.Linecast(transform.position, transform.position + Vector3.down * ShadowDrawDist,
-            ShadowLayerMask);
-        var dist = Mathf.Clamp01(midPos.distance * (1f / (ShadowDrawDist)));
-
-      
-
-        // Flying?
-        if (!midPos)
-        {
-            Shadow.transform.localScale = Vector3.zero;
-            _lastShadowDrawDist = 1;
-            return;
-        }
-        var shadowColor = Shadow.color;
-
-        //
-        if ((_left && !_right) || (!_left && _right))
-        {
-            _lastShadowDrawDist = Mathf.Lerp(_lastShadowDrawDist, 1f, Time.deltaTime * 10);
-            _lastShadowAlpha = Color.Lerp(_lastShadowAlpha, Color.clear, Time.deltaTime * 10);
-            shadowColor = _lastShadowAlpha;
-        }
-        else
-        {
-            shadowColor = Color.white;
-            shadowColor.a = 1 - dist;
-            _lastShadowAlpha = shadowColor;
-            _lastShadowDrawDist = dist;
-        }
-
-        //
-        Shadow.color = shadowColor;
-        Shadow.transform.localScale = Vector3.Lerp(_shadowBaseScale, Vector3.zero, _lastShadowDrawDist);
-        Shadow.transform.position = midPos.point;
-
-        // Check angle or stop drawing
-        if (Vector2.Dot(midPos.normal, Vector3.up) >= ShadowMinAngle)
-            Shadow.transform.rotation = Quaternion.LookRotation(Vector3.forward, midPos.normal);
-        else
-        {
-            Shadow.transform.rotation = Quaternion.identity;
-            Shadow.transform.localScale = Vector3.zero;
-        }
     }
 
     // Update is called once per frame
     private void Update()
     {
-        
         // Debug Teleport
         if (Input.GetKeyDown(KeyCode.T))
         {
@@ -161,17 +74,10 @@ public class F3DCharacterController : MonoBehaviour
         }
 
         // Check and apply Player Input
-        _horizontal = Input.GetAxis(gamepad + "Horizontal");
-        if (_horizontal > 0)
-            _hClamp = 1f;
-        else if (_horizontal < 0)
-            _hClamp = -1f;
-        else
-            _hClamp = 0;
-        Character.SetFloat("Horizontal", Mathf.Abs(_hClamp));
-        _weaponController.SetFloat("Horizontal", Mathf.Abs(_hClamp));
+        _horizontal = Input.GetAxis("Horizontal");
+        Character.SetFloat("Horizontal", Mathf.Abs(_horizontal));
+        _weaponController.SetFloat("Horizontal", Mathf.Abs(_horizontal));
 
-      
 
         // Check Grounded
         var groundedCollider = Physics2D.OverlapCircle(transform.position, GroundCheckCircleSize, Ground);
@@ -184,7 +90,7 @@ public class F3DCharacterController : MonoBehaviour
         //        _platform = groundedCollider.GetComponent<F3DPlatform>();
         //}
         //else
-            //_platform = null;
+        //_platform = null;
 
         //
         _grounded = groundedCollider;
@@ -195,13 +101,13 @@ public class F3DCharacterController : MonoBehaviour
 
             // Set the appropriate surface type in the character audio controller
             //if (groundedCollider.CompareTag("Sand"))
-                //_audio.Surface = F3DCharacterAudio.SurfaceType.Sand;
+            //_audio.Surface = F3DCharacterAudio.SurfaceType.Sand;
             //else if (groundedCollider.CompareTag("Metal"))
-                _audio.Surface = F3DCharacterAudio.SurfaceType.Metal;
+            _audio.Surface = F3DCharacterAudio.SurfaceType.Metal;
             //else if (groundedCollider.CompareTag("Barrel"))
-                //_audio.Surface = F3DCharacterAudio.SurfaceType.Barrel;
+            //_audio.Surface = F3DCharacterAudio.SurfaceType.Barrel;
             //else
-                //_audio.Surface = F3DCharacterAudio.SurfaceType.None;
+            //_audio.Surface = F3DCharacterAudio.SurfaceType.None;
 
             // Play landing sound
             _audio.OnLand();
@@ -212,7 +118,7 @@ public class F3DCharacterController : MonoBehaviour
         Debug.DrawLine(transform.position, transform.position - Vector3.up * GroundCheckCircleSize);
 
         // Jump
-        if (Input.GetButtonDown(gamepad + "Jump"))
+        if (Input.GetButtonDown("Jump"))
         {
             if (!_jump && !_doubleJump && _grounded)
             {
@@ -236,11 +142,11 @@ public class F3DCharacterController : MonoBehaviour
 
         // Crouch 
         // Exit crouch state on button up
-        if (Input.GetButtonUp(gamepad + "Crouch"))
+        if (Input.GetButtonUp("Crouch"))
             _crouch = false;
 
         // Enter crouch on button hold, no jump
-        if (Input.GetButton(gamepad + "Crouch") && !_jump && !_doubleJump && !_crouch)
+        if (Input.GetButton("Crouch") && !_jump && !_doubleJump && !_crouch)
             _crouch = true;
 
         // Jump cancels any current crouch state
@@ -265,7 +171,7 @@ public class F3DCharacterController : MonoBehaviour
         Character.SetBool("SideObstacle", _sideObstacle);
         _weaponController.SetBool("SideObstacle", _sideObstacle);
 
-   
+
 
         ////////////////////////////////// FIRING
         if (WeaponSocket == null) return;
@@ -274,20 +180,9 @@ public class F3DCharacterController : MonoBehaviour
         var aimPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         aimPos.z = 0;
 
-        Debug.Log(name + "intput type " + inputType + ", gamepad" + gamepad);
         // Look direction
-        Vector3 dir;
-        if (inputType == InputType.KEYBOAD_MOUSE)
-        {
-            dir = (aimPos - WeaponSocket.position).normalized;
-            dir.z = 0;
-        }
-        else
-        {
-            float rightH = Input.GetAxis(gamepad + "Right_Horizontal");
-            float rightV = Input.GetAxis(gamepad + "Right_Vertical");
-            dir = new Vector3(rightH, -rightV, 0);
-        }
+        var dir = (aimPos - WeaponSocket.position).normalized;
+        dir.z = 0;
 
         // Weapon socket to FX Socket offset
         var currentWeapon = _weaponController.GetCurrentWeapon();
@@ -305,20 +200,10 @@ public class F3DCharacterController : MonoBehaviour
             Debug.DrawLine(Vector3.zero, localOffset * transform.lossyScale.x, Color.yellow);
 
             //  Debug.DrawLine(WeaponSocket.position, currentWeapon.FXSocket.position, Color.yellow);
-            Vector3 weaponDir;
-            if (inputType == InputType.KEYBOAD_MOUSE)
-            {
-                var worldOffset = WeaponSocket.TransformVector(localOffset) - WeaponSocket.right * 5 * Mathf.Sign(dir.x);
-                weaponDir = (aimPos - (WeaponSocket.position + worldOffset)).normalized;
-            } else {
-                float rightH = Input.GetAxis(gamepad + "Right_Horizontal");
-                float rightV = Input.GetAxis(gamepad + "Right_Vertical");
-                weaponDir = new Vector3(rightH, -rightV, 0);    
-            }
-
+            var worldOffset = WeaponSocket.TransformVector(localOffset) - WeaponSocket.right * 5 * Mathf.Sign(dir.x);
+            var weaponDir = (aimPos - (WeaponSocket.position + worldOffset)).normalized;
             var socketRotation = Quaternion.LookRotation(Vector3.forward,
-                    Mathf.Sign(dir.x) * Vector3.Cross(Vector3.forward, weaponDir));
-
+                Mathf.Sign(dir.x) * Vector3.Cross(Vector3.forward, weaponDir));
             WeaponSocket.rotation = Quaternion.Lerp(WeaponSocket.rotation, socketRotation, Time.deltaTime * AimTime);
 
             // Lock Weapon Socket Angle
@@ -346,8 +231,8 @@ public class F3DCharacterController : MonoBehaviour
         Debug.DrawLine(currentWeapon.FXSocket.position, aimPos, Color.blue);
 
         // Check Facing
-        if (_hClamp > 0) _horizontalSignLast = 1f;
-        else if (_hClamp < 0) _horizontalSignLast = -1f;
+        if (_horizontal > 0) _horizontalSignLast = 1f;
+        else if (_horizontal < 0) _horizontalSignLast = -1f;
         var facingSing = (_facingRight ? 1f : -1f) * _horizontalSignLast;
 
         // Dampen Speed on Moving Backwards and Crouch
@@ -370,37 +255,13 @@ public class F3DCharacterController : MonoBehaviour
         Character.SetFloat("Speed", Mathf.Abs(platformVelocity.x));
         _weaponController.SetFloat("vSpeed", platformVelocity.y);
         Character.SetFloat("vSpeed", platformVelocity.y);
-
-        //
-        DrawShadow();
     }
 
     private void FixedUpdate()
     {
-        var platformVelocity = Vector2.zero;
-        if (_platform != null)
-            platformVelocity = _platform.Velocity;
         var velocityClamp = _rb2D.velocity;
-        _rb2D.AddForce(Vector2.right * _hClamp * MoveForce, ForceMode2D.Force);
-        velocityClamp.x = Mathf.Clamp(_rb2D.velocity.x, -MaxVelocityX * _speed + platformVelocity.x,
-            MaxVelocityX * _speed + platformVelocity.x);
-        velocityClamp.y = Mathf.Clamp(_rb2D.velocity.y, -MaxVelocityY, MaxVelocityY);
-
+        velocityClamp.x = _horizontal * MaxVelocityX;
         _rb2D.velocity = velocityClamp;
-
-        // Break
-        var breakForce = Vector2.zero;
-        if (_grounded && _hClamp > -0.25f && _hClamp < 0.25f)
-        {
-            breakForce = (_platform
-                ? -BreakForce * (_rb2D.velocity - _platform.Velocity)
-                : BreakForce * -_rb2D.velocity);
-            breakForce.y = 0;
-        }
-     
-        _rb2D.AddForce(breakForce, ForceMode2D.Force);
-
-    
     }
 
     private void Flip()
