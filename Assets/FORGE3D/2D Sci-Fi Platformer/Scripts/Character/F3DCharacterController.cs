@@ -3,11 +3,6 @@ using System.Collections;
 
 public class F3DCharacterController : MonoBehaviour
 {
-    public enum InputType
-    {
-        KEYBOAD_MOUSE,
-        GAMING_CONTROLLER
-    }
 
     // Components
     public Animator Character;
@@ -29,8 +24,6 @@ public class F3DCharacterController : MonoBehaviour
     public float GroundCheckCircleSize;
     public float SideCheckDist;
     public float AimTime;
-    public InputType inputType;
-    public string gamepad;
 
     //
     private Rigidbody2D _rb2D;
@@ -82,7 +75,7 @@ public class F3DCharacterController : MonoBehaviour
         }
 
         // Check and apply Player Input
-        _horizontal = Input.GetAxis(gamepad + "Horizontal");
+        _horizontal = Input.GetAxis(_character.inputControllerName + "Horiz");
         Character.SetFloat("Horizontal", Mathf.Abs(_horizontal));
         _weaponController.SetFloat("Horizontal", Mathf.Abs(_horizontal));
 
@@ -126,7 +119,7 @@ public class F3DCharacterController : MonoBehaviour
         Debug.DrawLine(transform.position, transform.position - Vector3.up * GroundCheckCircleSize);
 
         // Jump
-        if (Input.GetButtonDown(gamepad + "Jump"))
+        if (Input.GetButtonDown(_character.inputControllerName + "Jump"))
         {
             if (!_jump && !_doubleJump && _grounded)
             {
@@ -150,11 +143,11 @@ public class F3DCharacterController : MonoBehaviour
 
         // Crouch 
         // Exit crouch state on button up
-        if (Input.GetButtonUp(gamepad + "Crouch"))
+        if (Input.GetButtonUp(_character.inputControllerName + "Crouch"))
             _crouch = false;
 
         // Enter crouch on button hold, no jump
-        if (Input.GetButton(gamepad + "Crouch") && !_jump && !_doubleJump && !_crouch)
+        if (Input.GetButton(_character.inputControllerName + "Crouch") && !_jump && !_doubleJump && !_crouch)
             _crouch = true;
 
         // Jump cancels any current crouch state
@@ -190,15 +183,15 @@ public class F3DCharacterController : MonoBehaviour
 
         // Look direction
         Vector3 dir;
-        if (inputType == InputType.KEYBOAD_MOUSE)
+        if (_character.inputControllerType == F3DCharacter.InputType.KEYBOAD_MOUSE)
         {
             dir = (aimPos - WeaponSocket.position).normalized;
             dir.z = 0;
         }
         else
         {
-            float rightH = Input.GetAxis(gamepad + "Right_Horizontal");
-            float rightV = Input.GetAxis(gamepad + "Right_Vertical");
+            float rightH = Input.GetAxis(_character.inputControllerName + "Right_Horizontal");
+            float rightV = Input.GetAxis(_character.inputControllerName + "Right_Vertical");
             dir = new Vector3(rightH, -rightV, 0);
         }
 
@@ -219,15 +212,15 @@ public class F3DCharacterController : MonoBehaviour
 
             //  Debug.DrawLine(WeaponSocket.position, currentWeapon.FXSocket.position, Color.yellow);
             Vector3 weaponDir;
-            if (inputType == InputType.KEYBOAD_MOUSE)
+            if (_character.inputControllerType == F3DCharacter.InputType.KEYBOAD_MOUSE)
             {
                 var worldOffset = WeaponSocket.TransformVector(localOffset) - WeaponSocket.right * 5 * Mathf.Sign(dir.x);
                 weaponDir = (aimPos - (WeaponSocket.position + worldOffset)).normalized;
             }
             else
             {
-                float rightH = Input.GetAxis(gamepad + "Right_Horizontal");
-                float rightV = Input.GetAxis(gamepad + "Right_Vertical");
+                float rightH = Input.GetAxis(_character.inputControllerName + "Right_Horizontal");
+                float rightV = Input.GetAxis(_character.inputControllerName + "Right_Vertical");
                 weaponDir = new Vector3(rightH, -rightV, 0);
             }
 

@@ -14,6 +14,7 @@ public class F3DWeaponController : MonoBehaviour
 
     //
     private F3DCharacterAvatar _avatar;
+    private F3DCharacter _character;
 
     //
     [Serializable]
@@ -52,6 +53,7 @@ public class F3DWeaponController : MonoBehaviour
     private void Awake()
     {
         _avatar = GetComponent<F3DCharacterAvatar>();
+        _character = GetComponent<F3DCharacter>();
 
         if(RandomWeaponAtStart)
         {
@@ -70,15 +72,24 @@ public class F3DWeaponController : MonoBehaviour
     private void Update()
     {
         // Fire
-        if (Input.GetMouseButtonDown(0))
+        if (_character.inputControllerType == F3DCharacter.InputType.KEYBOAD_MOUSE)
         {
-            Slots[EquippedSlot].Weapons[EquippedWeapon].Fire();
-        }
+            if (Input.GetMouseButtonDown(0))
+            {
+                Slots[EquippedSlot].Weapons[EquippedWeapon].Fire();
+            }
 
-        // Stop
-        if (Input.GetMouseButtonUp(0))
-        {
-            Slots[EquippedSlot].Weapons[EquippedWeapon].Stop();
+            // Stop
+            if (Input.GetMouseButtonUp(0))
+            {
+                Slots[EquippedSlot].Weapons[EquippedWeapon].Stop();
+            }
+        } else {
+            if(Input.GetButton(_character.inputControllerName + "Fire")) {
+                Slots[EquippedSlot].Weapons[EquippedWeapon].Fire();   
+            } else {
+                Slots[EquippedSlot].Weapons[EquippedWeapon].Stop();
+            }
         }
 
         // Switch Weapon Slot

@@ -7306,7 +7306,7 @@ Prefab:
     - target: {fileID: 114000012022282460, guid: 16801b1d55f90e14b936c002e549ab0d,
         type: 2}
       propertyPath: MaxVelocityX
-      value: 7
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 16801b1d55f90e14b936c002e549ab0d, type: 2}
@@ -12938,11 +12938,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000010434551902, guid: 16801b1d55f90e14b936c002e549ab0d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -17.36063
+      value: 22.79
       objectReference: {fileID: 0}
     - target: {fileID: 4000010434551902, guid: 16801b1d55f90e14b936c002e549ab0d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.7052655
+      value: 7.81
       objectReference: {fileID: 0}
     - target: {fileID: 4000010434551902, guid: 16801b1d55f90e14b936c002e549ab0d, type: 2}
       propertyPath: m_LocalPosition.z
@@ -13004,7 +13004,32 @@ Prefab:
     - target: {fileID: 114000012022282460, guid: 16801b1d55f90e14b936c002e549ab0d,
         type: 2}
       propertyPath: MaxVelocityX
-      value: 7
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012022282460, guid: 16801b1d55f90e14b936c002e549ab0d,
+        type: 2}
+      propertyPath: inputControllerType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012022282460, guid: 16801b1d55f90e14b936c002e549ab0d,
+        type: 2}
+      propertyPath: inputControllerName
+      value: Gamepad_1_
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000014108707352, guid: 16801b1d55f90e14b936c002e549ab0d,
+        type: 2}
+      propertyPath: Health
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000014108707352, guid: 16801b1d55f90e14b936c002e549ab0d,
+        type: 2}
+      propertyPath: inputControllerType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000014108707352, guid: 16801b1d55f90e14b936c002e549ab0d,
+        type: 2}
+      propertyPath: inputControllerName
+      value: Gamepad_1_
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 16801b1d55f90e14b936c002e549ab0d, type: 2}

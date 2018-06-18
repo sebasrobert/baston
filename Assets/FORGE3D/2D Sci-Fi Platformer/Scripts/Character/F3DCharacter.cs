@@ -3,7 +3,16 @@ using System.Collections;
 
 public class F3DCharacter : MonoBehaviour
 {
+    public enum InputType
+    {
+        KEYBOAD_MOUSE,
+        GAMING_CONTROLLER
+    }
+
     public int Health;
+    public InputType inputControllerType;
+    public string inputControllerName;
+
     private F3DCharacterController _controller;
     private int _hitTriggerCounter;
     private float _hitTriggerTimer;
