@@ -35,8 +35,6 @@ public class F3DCharacterController : MonoBehaviour
 
     //
     private bool _facingRight = true;
-
-    private float _hClamp;
     private bool _jump;
     private bool _doubleJump;
     private bool _crouch;
