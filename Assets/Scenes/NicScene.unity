@@ -6155,6 +6155,21 @@ Prefab:
       propertyPath: GroundCheckCircleSize
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012022282460, guid: 16801b1d55f90e14b936c002e549ab0d,
+        type: 2}
+      propertyPath: MaxVelocityX
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000014108707352, guid: 16801b1d55f90e14b936c002e549ab0d,
+        type: 2}
+      propertyPath: inputControllerType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000014108707352, guid: 16801b1d55f90e14b936c002e549ab0d,
+        type: 2}
+      propertyPath: inputControllerName
+      value: Gamepad2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 16801b1d55f90e14b936c002e549ab0d, type: 2}
   m_IsPrefabParent: 0
@@ -13014,7 +13029,7 @@ Prefab:
     - target: {fileID: 114000014108707352, guid: 16801b1d55f90e14b936c002e549ab0d,
         type: 2}
       propertyPath: Health
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 114000014108707352, guid: 16801b1d55f90e14b936c002e549ab0d,
         type: 2}
@@ -13024,7 +13039,7 @@ Prefab:
     - target: {fileID: 114000014108707352, guid: 16801b1d55f90e14b936c002e549ab0d,
         type: 2}
       propertyPath: inputControllerName
-      value: Gamepad_1_
+      value: Gamepad1
       objectReference: {fileID: 0}
     - target: {fileID: 114000012022282460, guid: 16801b1d55f90e14b936c002e549ab0d,
         type: 2}

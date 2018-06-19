@@ -30,6 +30,7 @@ public class F3DCharacter : MonoBehaviour
 
     public void OnDamage(int damageAmount)
     {
+        Debug.Log("Damage");
         if (_controller == null) return;
         if (_isDead) return;
 

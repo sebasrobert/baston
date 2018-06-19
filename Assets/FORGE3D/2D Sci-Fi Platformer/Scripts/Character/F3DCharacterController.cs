@@ -73,7 +73,7 @@ public class F3DCharacterController : MonoBehaviour
         }
 
         // Check and apply Player Input
-        _horizontal = Input.GetAxis(_character.inputControllerName + "Horiz");
+        _horizontal = Input.GetAxis(_character.inputControllerName + "Horizontal");
         Character.SetFloat("Horizontal", Mathf.Abs(_horizontal));
         _weaponController.SetFloat("Horizontal", Mathf.Abs(_horizontal));
 
@@ -188,8 +188,8 @@ public class F3DCharacterController : MonoBehaviour
         }
         else
         {
-            float rightH = Input.GetAxis(_character.inputControllerName + "Right_Horizontal");
-            float rightV = Input.GetAxis(_character.inputControllerName + "Right_Vertical");
+            float rightH = Input.GetAxis(_character.inputControllerName + "RightX");
+            float rightV = Input.GetAxis(_character.inputControllerName + "RightV");
             dir = new Vector3(rightH, -rightV, 0);
         }
 
@@ -217,8 +217,8 @@ public class F3DCharacterController : MonoBehaviour
             }
             else
             {
-                float rightH = Input.GetAxis(_character.inputControllerName + "Right_Horizontal");
-                float rightV = Input.GetAxis(_character.inputControllerName + "Right_Vertical");
+                float rightH = Input.GetAxis(_character.inputControllerName + "RightX");
+                float rightV = Input.GetAxis(_character.inputControllerName + "RightV");
                 weaponDir = new Vector3(rightH, -rightV, 0);
             }
 
