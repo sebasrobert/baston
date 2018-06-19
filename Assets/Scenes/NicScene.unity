@@ -6163,12 +6163,17 @@ Prefab:
     - target: {fileID: 114000014108707352, guid: 16801b1d55f90e14b936c002e549ab0d,
         type: 2}
       propertyPath: inputControllerType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000014108707352, guid: 16801b1d55f90e14b936c002e549ab0d,
         type: 2}
       propertyPath: inputControllerName
-      value: Gamepad2
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 60000011121456706, guid: 16801b1d55f90e14b936c002e549ab0d,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 16801b1d55f90e14b936c002e549ab0d, type: 2}
