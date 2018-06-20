@@ -5418,9 +5418,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectables:
-  - {fileID: 1774276181463046, guid: 8196721ca6cc343709cc0df9f2484455, type: 2}
-  - {fileID: 1246384818883734, guid: 2b35447208bfe442792f4babab1e0799, type: 2}
   - {fileID: 1782291817775314, guid: 31b0bbb30ac114a3b8a1a00c29955217, type: 2}
+  - {fileID: 1246384818883734, guid: 2b35447208bfe442792f4babab1e0799, type: 2}
+  - {fileID: 1774276181463046, guid: 8196721ca6cc343709cc0df9f2484455, type: 2}
   spawnPoints:
   - {fileID: 1000105717}
   - {fileID: 137659835}
@@ -5430,7 +5430,7 @@ MonoBehaviour:
   - {fileID: 2131790238}
   - {fileID: 178469151}
   startWait: 2
-  spawnWait: 20
+  spawnWait: 10
 --- !u!4 &727353465
 Transform:
   m_ObjectHideFlags: 0
