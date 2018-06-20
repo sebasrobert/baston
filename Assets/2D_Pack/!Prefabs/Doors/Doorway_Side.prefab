@@ -26,7 +26,7 @@ GameObject:
   m_Component:
   - component: {fileID: 464654}
   - component: {fileID: 21244916}
-  - component: {fileID: 6584988}
+  - component: {fileID: 61626337043706256}
   m_Layer: 0
   m_Name: Doorway_Side
   m_TagString: Untagged
@@ -54,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 178970}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -32.894604, y: 3.700265, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 463480}
@@ -86,18 +86,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.973514, y: 4.548352}
   m_EdgeRadius: 0
---- !u!65 &6584988
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 178970}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5837011, y: 1.1184583, z: 0.2}
-  m_Center: {x: 0.00000008940697, y: 2.0007708, z: 0}
 --- !u!212 &21242810
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -199,3 +187,28 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 178970}
   m_IsPrefabParent: 1
+--- !u!61 &61626337043706256
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 178970}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0000019073486, y: 2.0118325}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.56, y: 5.12}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.5153923, y: 1.0963349}
+  m_EdgeRadius: 0
