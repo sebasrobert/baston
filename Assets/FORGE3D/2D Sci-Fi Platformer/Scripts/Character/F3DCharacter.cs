@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class F3DCharacter : MonoBehaviour
@@ -9,7 +10,8 @@ public class F3DCharacter : MonoBehaviour
         GAMING_CONTROLLER
     }
 
-    public int Health;
+    public int maxHealth;
+    public Slider heathBarSlider;
     public InputType inputControllerType;
     public string inputControllerName;
 
@@ -19,6 +21,7 @@ public class F3DCharacter : MonoBehaviour
     private Rigidbody2D _rBody;
     private F3DWeaponController _weaponController;
     private bool _isDead;
+    private float currentHealth;
 
     // Use this for initialization
     void Awake()
@@ -26,6 +29,7 @@ public class F3DCharacter : MonoBehaviour
         _rBody = GetComponent<Rigidbody2D>();
         _controller = GetComponent<F3DCharacterController>();
         _weaponController = GetComponent<F3DWeaponController>();
+        currentHealth = maxHealth;
     }
 
     public void OnDamage(int damageAmount)
@@ -33,14 +37,13 @@ public class F3DCharacter : MonoBehaviour
         if (_controller == null) return;
         if (_isDead) return;
 
-        // Substract incoming damage
-        if (Health > 0)
-            Health -= damageAmount;
+        currentHealth -= damageAmount;
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+        heathBarSlider.value = currentHealth / maxHealth;
 
         // Dead Already?
-        if (Health <= 0)
+        if (currentHealth < float.Epsilon)
         {
-            Health = 0;
             _isDead = true;
 
             // Player Death sequence
