@@ -11025,8 +11025,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 499e24af3eafc9f4391eb3240a7e5abf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RandomizeAtStart: 1
-  CharacterId: 1
+  CharacterId: 0
   Head: {fileID: 212077484178119708}
   Body: {fileID: 212379892765948832}
   Characters:

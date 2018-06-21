@@ -18,7 +18,6 @@ public class F3DCharacterController : MonoBehaviour
     public float MaxSpeed = 1f;
     public float CrouchSpeed = 0.75f;
     public float MaxSpeedBackwards = 1f;
-    public float MaxSpeedFade = 1f;
     public float JumpForce = 1000f;
     public float DoubleJumpForce;
     public float GroundCheckCircleSize;
@@ -27,8 +26,6 @@ public class F3DCharacterController : MonoBehaviour
 
     //
     private Rigidbody2D _rb2D;
-
-    private F3DPlatform _platform;
     private F3DWeaponController _weaponController;
     private F3DCharacter _character;
     private F3DCharacterAudio _audio;
@@ -41,7 +38,6 @@ public class F3DCharacterController : MonoBehaviour
     private bool _grounded;
     private bool _lastGroundedState;
     private bool _sideObstacle;
-    private float _speed;
     private float _horizontal;
     private float _horizontalSignLast;
 
@@ -58,7 +54,6 @@ public class F3DCharacterController : MonoBehaviour
         _weaponController = GetComponent<F3DWeaponController>();
         _rb2D = GetComponent<Rigidbody2D>();
         _audio = GetComponent<F3DCharacterAudio>();
-        _speed = MaxSpeed;
     }
 
     // Update is called once per frame
@@ -80,16 +75,6 @@ public class F3DCharacterController : MonoBehaviour
 
         // Check Grounded
         var groundedCollider = Physics2D.OverlapCircle(transform.position, GroundCheckCircleSize, Ground);
-
-        // Check active platform and handle the reference
-        //if (groundedCollider)
-        //{
-        //    var onPlatform = groundedCollider.transform.gameObject.layer == LayerMask.NameToLayer("Platform");
-        //    if (onPlatform)
-        //        _platform = groundedCollider.GetComponent<F3DPlatform>();
-        //}
-        //else
-        //_platform = null;
 
         //
         _grounded = groundedCollider;
@@ -256,33 +241,26 @@ public class F3DCharacterController : MonoBehaviour
         else if (_horizontal < 0) _horizontalSignLast = -1f;
         var facingSing = (_facingRight ? 1f : -1f) * _horizontalSignLast;
 
-        // Dampen Speed on Moving Backwards and Crouch
-        var speedDamp = _crouch ? CrouchSpeed : MaxSpeed;
-        speedDamp = facingSing >= 0 ? speedDamp : speedDamp * MaxSpeedBackwards;
-        _speed = Mathf.Lerp(_speed, speedDamp, Time.deltaTime * MaxSpeedFade);
-
         // Set Animator Vars
         Character.SetFloat("facingRight", facingSing);
         _weaponController.SetFloat("facingRight", facingSing);
 
         //
-        var platformVelocity = _rb2D.velocity;
-        if (_platform != null)
-        {
-            platformVelocity = _rb2D.velocity;
-            platformVelocity.x = platformVelocity.x - _platform.Velocity.x;
-        }
-        _weaponController.SetFloat("Speed", Mathf.Abs(platformVelocity.x));
-        Character.SetFloat("Speed", Mathf.Abs(platformVelocity.x));
-        _weaponController.SetFloat("vSpeed", platformVelocity.y);
-        Character.SetFloat("vSpeed", platformVelocity.y);
+        _weaponController.SetFloat("Speed", Mathf.Abs(_rb2D.velocity.x));
+        Character.SetFloat("Speed", Mathf.Abs(_rb2D.velocity.x));
+        _weaponController.SetFloat("vSpeed", _rb2D.velocity.y);
+        Character.SetFloat("vSpeed", _rb2D.velocity.y);
     }
 
     private void FixedUpdate()
     {
-        var velocityClamp = _rb2D.velocity;
-        velocityClamp.x = _horizontal * MaxVelocityX;
-        _rb2D.velocity = velocityClamp;
+        var newVelocity = _rb2D.velocity;
+
+        // Dampen Speed on Moving Backwards and Crouch
+        var speedDamp = _crouch ? CrouchSpeed : MaxSpeed;
+        newVelocity.x = _horizontal * MaxVelocityX * speedDamp;
+
+        _rb2D.velocity = newVelocity;
     }
 
     private void Flip()

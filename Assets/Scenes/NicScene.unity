@@ -12428,16 +12428,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 224324173556856686, guid: 3fee3cb6168dd4af9b9b3d9557a3035c,
-        type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224324173556856686, guid: 3fee3cb6168dd4af9b9b3d9557a3035c,
-        type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4017525553532322, guid: 3fee3cb6168dd4af9b9b3d9557a3035c, type: 2}
       propertyPath: m_LocalPosition.x
       value: -23.467838
@@ -12474,9 +12464,14 @@ Prefab:
       propertyPath: m_Name
       value: Player 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114230344089667098, guid: 3fee3cb6168dd4af9b9b3d9557a3035c,
+    - target: {fileID: 224324173556856686, guid: 3fee3cb6168dd4af9b9b3d9557a3035c,
         type: 2}
-      propertyPath: CharacterId
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224324173556856686, guid: 3fee3cb6168dd4af9b9b3d9557a3035c,
+        type: 2}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
