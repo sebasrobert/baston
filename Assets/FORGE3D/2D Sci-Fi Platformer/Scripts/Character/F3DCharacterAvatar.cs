@@ -4,8 +4,6 @@ using System.Collections;
 
 public class F3DCharacterAvatar : MonoBehaviour
 {
-    public bool RandomizeAtStart;
-
     public int CharacterId;
     public SpriteRenderer Head;
     public SpriteRenderer Body;
@@ -31,7 +29,6 @@ public class F3DCharacterAvatar : MonoBehaviour
     private void Awake()
     {
         _weaponController = GetComponent<F3DWeaponController>();
-        if (RandomizeAtStart) CharacterId = UnityEngine.Random.Range(0, 6);
         SwitchCharacter(CharacterId);
     }
 
@@ -43,65 +40,5 @@ public class F3DCharacterAvatar : MonoBehaviour
         Head.sprite = Characters[CharacterId].Head;
         Body.sprite = Characters[CharacterId].Body;
         _weaponController.UpdateCharacterHands(Characters[CharacterId]);
-    }
-
-    private void Update()
-    {
-        if (Head == null) return;
-        if (Body == null) return;
-     
-        // Debug
-        DebugSwitchCharacter();
-    }
-
-    // DEBUG 
-    private void DebugSwitchCharacter()
-    {
-        if(Input.GetKeyDown(KeyCode.Alpha8))
-        {
-            CharacterId++;
-            if (CharacterId > 5)
-                CharacterId = 0;
-            SwitchCharacter(CharacterId);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha7))
-        {
-            CharacterId--;
-            if (CharacterId < 0)
-                CharacterId = 5;
-            SwitchCharacter(CharacterId);
-        }
-         
-        /*
-        if (Input.GetKeyDown(KeyCode.F1))
-        {
-            CharacterId = 0;
-            SwitchCharacter(CharacterId);
-        }
-        else if (Input.GetKeyDown(KeyCode.F2))
-        {
-            CharacterId = 1;
-            SwitchCharacter(CharacterId);
-        }
-        else if (Input.GetKeyDown(KeyCode.F3))
-        {
-            CharacterId = 2;
-            SwitchCharacter(CharacterId);
-        }
-        else if (Input.GetKeyDown(KeyCode.F4))
-        {
-            CharacterId = 3;
-            SwitchCharacter(CharacterId);
-        }
-        else if (Input.GetKeyDown(KeyCode.F5))
-        {
-            CharacterId = 4;
-            SwitchCharacter(CharacterId);
-        }
-        else if (Input.GetKeyDown(KeyCode.F6))
-        {
-            CharacterId = 5;
-            SwitchCharacter(CharacterId);
-        }*/
     }
 }
