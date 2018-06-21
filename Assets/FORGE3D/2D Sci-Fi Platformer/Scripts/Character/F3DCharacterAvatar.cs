@@ -28,7 +28,6 @@ public class F3DCharacterAvatar : MonoBehaviour
     //
     private void Awake()
     {
-        _weaponController = GetComponent<F3DWeaponController>();
         SwitchCharacter(CharacterId);
     }
 
@@ -39,6 +38,5 @@ public class F3DCharacterAvatar : MonoBehaviour
         if (Characters == null || id >= Characters.Length || id < 0) return;
         Head.sprite = Characters[CharacterId].Head;
         Body.sprite = Characters[CharacterId].Body;
-        _weaponController.UpdateCharacterHands(Characters[CharacterId]);
     }
 }

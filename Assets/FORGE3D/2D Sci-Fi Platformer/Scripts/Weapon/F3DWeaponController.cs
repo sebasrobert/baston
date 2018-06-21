@@ -6,8 +6,6 @@ using Random = UnityEngine.Random;
 
 public class F3DWeaponController : MonoBehaviour
 {
-    public bool RandomWeaponAtStart;
-
     public int EquippedSlot;
     public int EquippedWeapon;
     public List<WeaponSlot> Slots;
@@ -48,19 +46,10 @@ public class F3DWeaponController : MonoBehaviour
         Melee
     }
 
-    
-
     private void Awake()
     {
         _avatar = GetComponent<F3DCharacterAvatar>();
         _character = GetComponent<F3DCharacter>();
-
-        if(RandomWeaponAtStart)
-        {
-            EquippedSlot = UnityEngine.Random.Range(0, 5);
-            EquippedWeapon = UnityEngine.Random.Range(0, 3);
-        }
-
         ActivateWeapon(EquippedSlot, EquippedWeapon);
     }
 

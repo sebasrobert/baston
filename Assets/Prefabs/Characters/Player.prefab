@@ -11087,7 +11087,6 @@ MonoBehaviour:
   MaxSpeed: 1
   CrouchSpeed: 0.5
   MaxSpeedBackwards: 1
-  MaxSpeedFade: 8
   JumpForce: 200
   DoubleJumpForce: 200
   GroundCheckCircleSize: 0.3
@@ -11439,7 +11438,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0513e5368f000e94a8fd103f02135aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RandomWeaponAtStart: 1
   EquippedSlot: 4
   EquippedWeapon: 1
   Slots:

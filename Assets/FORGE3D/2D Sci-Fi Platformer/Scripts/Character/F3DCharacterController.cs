@@ -245,9 +245,9 @@ public class F3DCharacterController : MonoBehaviour
         Character.SetFloat("facingRight", facingSing);
         _weaponController.SetFloat("facingRight", facingSing);
 
-        //
         _weaponController.SetFloat("Speed", Mathf.Abs(_rb2D.velocity.x));
         Character.SetFloat("Speed", Mathf.Abs(_rb2D.velocity.x));
+
         _weaponController.SetFloat("vSpeed", _rb2D.velocity.y);
         Character.SetFloat("vSpeed", _rb2D.velocity.y);
     }
@@ -255,8 +255,6 @@ public class F3DCharacterController : MonoBehaviour
     private void FixedUpdate()
     {
         var newVelocity = _rb2D.velocity;
-
-        // Dampen Speed on Moving Backwards and Crouch
         var speedDamp = _crouch ? CrouchSpeed : MaxSpeed;
         newVelocity.x = _horizontal * MaxVelocityX * speedDamp;
 
