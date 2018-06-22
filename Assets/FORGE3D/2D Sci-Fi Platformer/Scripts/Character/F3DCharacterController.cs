@@ -82,18 +82,7 @@ public class F3DCharacterController : MonoBehaviour
         {
             _jump = false;
             _doubleJump = false;
-
-            // Set the appropriate surface type in the character audio controller
-            //if (groundedCollider.CompareTag("Sand"))
-            //_audio.Surface = F3DCharacterAudio.SurfaceType.Sand;
-            //else if (groundedCollider.CompareTag("Metal"))
             _audio.Surface = F3DCharacterAudio.SurfaceType.Metal;
-            //else if (groundedCollider.CompareTag("Barrel"))
-            //_audio.Surface = F3DCharacterAudio.SurfaceType.Barrel;
-            //else
-            //_audio.Surface = F3DCharacterAudio.SurfaceType.None;
-
-            // Play landing sound
             _audio.OnLand();
         }
         _lastGroundedState = _grounded;

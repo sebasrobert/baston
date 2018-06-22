@@ -1509,7 +1509,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1397045378528986
 GameObject:
   m_ObjectHideFlags: 1
@@ -2695,7 +2695,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1707329433471700
 GameObject:
   m_ObjectHideFlags: 1
@@ -2865,7 +2865,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1752806010222452
 GameObject:
   m_ObjectHideFlags: 1
@@ -10673,14 +10673,14 @@ MonoBehaviour:
   MuzzleFlashZ: -1
   ShellForce: {x: 4, y: 6}
   ShellTorque: {x: -1, y: 1}
-  ProjectileForce: {x: 6666, y: 8888}
+  ProjectileForce: {x: 1500, y: 1500}
   ProjectileHitLayerMask:
     serializedVersion: 2
     m_Bits: 426752
   ProjectileDelay: 0
   ProjectileOffset: {x: 1, y: 0}
-  ProjectileRotation: {x: -3, y: 3}
-  ProjectileLifeTime: {x: 3, y: 4}
+  ProjectileRotation: {x: -1, y: 1}
+  ProjectileLifeTime: {x: 0.7, y: 0.7}
   ProjectileBaseScale: {x: 0.8, y: 1.2}
   ProjectileScaleX: {x: 0, y: 0}
   AudioInfo:

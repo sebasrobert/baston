@@ -9,9 +9,6 @@ public class F3DCharacterAvatar : MonoBehaviour
     public SpriteRenderer Body;
 
     //
-    private F3DWeaponController _weaponController;
-
-    //
     [Serializable]
     public class CharacterArmature
     {
