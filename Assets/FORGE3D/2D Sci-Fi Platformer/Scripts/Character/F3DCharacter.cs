@@ -11,11 +11,17 @@ public class F3DCharacter : MonoBehaviour
     }
 
     public int maxHealth;
+    public int mediumHealthThreshold;
+    public int lowHealthThreshod;
     public Slider heathBarSlider;
+    public Color highHealthColor;
+    public Color mediumHealthColor;
+    public Color lowHealthColor;
     public InputType inputControllerType;
     public string inputControllerName;
 
     private F3DCharacterController _controller;
+    private Image heathBarImage;
     private int _hitTriggerCounter;
     private float _hitTriggerTimer;
     private Rigidbody2D _rBody;
@@ -29,6 +35,7 @@ public class F3DCharacter : MonoBehaviour
         _rBody = GetComponent<Rigidbody2D>();
         _controller = GetComponent<F3DCharacterController>();
         _weaponController = GetComponent<F3DWeaponController>();
+        heathBarImage = heathBarSlider.GetComponentInChildren<Image>();
         currentHealth = maxHealth;
     }
 
@@ -37,9 +44,8 @@ public class F3DCharacter : MonoBehaviour
         if (_controller == null) return;
         if (_isDead) return;
 
-        currentHealth -= damageAmount;
-        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-        heathBarSlider.value = currentHealth / maxHealth;
+        float newHealth = Mathf.Clamp(currentHealth - damageAmount, 0, maxHealth);
+        ChangeHealth(newHealth);
 
         // Dead Already?
         if (currentHealth < float.Epsilon)
@@ -66,6 +72,30 @@ public class F3DCharacter : MonoBehaviour
         if (_hitTriggerCounter < 1)
             _controller.Character.SetTrigger("Hit");
         _hitTriggerCounter++;
+    }
+
+    private void ChangeHealth(float newHealth) 
+    {
+        currentHealth = newHealth;
+        AdjustHealthBarValueAndColor();
+    }
+
+    private void AdjustHealthBarValueAndColor() 
+    {
+        heathBarSlider.value = currentHealth / maxHealth;
+
+        if (currentHealth > lowHealthThreshod && currentHealth > mediumHealthThreshold)
+        {
+            heathBarImage.color = highHealthColor;
+        }
+        else if (currentHealth > lowHealthThreshod && currentHealth <= mediumHealthThreshold)
+        {
+            heathBarImage.color = mediumHealthColor;
+        }
+        else
+        {
+            heathBarImage.color = lowHealthColor;
+        }
     }
 
     private void LateUpdate()
