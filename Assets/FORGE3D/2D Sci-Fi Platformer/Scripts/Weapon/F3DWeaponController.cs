@@ -3,8 +3,9 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using Random = UnityEngine.Random;
+using UnityEngine.Networking;
 
-public class F3DWeaponController : MonoBehaviour
+public class F3DWeaponController : NetworkBehaviour
 {
     public int EquippedSlot;
     public int EquippedWeapon;
@@ -60,42 +61,86 @@ public class F3DWeaponController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        if (!hasAuthority) {
+            return;
+        }
+
         // Fire
         if (_character.inputControllerType == F3DCharacter.InputType.KEYBOAD_MOUSE)
         {
             if (Input.GetMouseButtonDown(0))
             {
-                Slots[EquippedSlot].Weapons[EquippedWeapon].Fire();
+                CmdFire();
             }
 
             // Stop
             if (Input.GetMouseButtonUp(0))
             {
-                Slots[EquippedSlot].Weapons[EquippedWeapon].Stop();
+                CmdStop();
             }
         } else {
             if(Input.GetButton(_character.inputControllerName + "Fire")) {
-                Slots[EquippedSlot].Weapons[EquippedWeapon].Fire();   
+                CmdFire();
             } else {
-                Slots[EquippedSlot].Weapons[EquippedWeapon].Stop();
+                CmdStop();
             }
         }
 
         // Switch Weapon Slot
         if (Input.GetKeyDown(KeyCode.Alpha1))
-            ActivateSlot(0);
+            CmdActivateSlot(0);
         if (Input.GetKeyDown(KeyCode.Alpha2))
-            ActivateSlot(1);
+            CmdActivateSlot(1);
         if (Input.GetKeyDown(KeyCode.Alpha3))
-            ActivateSlot(2);
+            CmdActivateSlot(2);
         if (Input.GetKeyDown(KeyCode.Alpha4))
-            ActivateSlot(3);
+            CmdActivateSlot(3);
         if (Input.GetKeyDown(KeyCode.Alpha5))
-            ActivateSlot(4);
+            CmdActivateSlot(4);
         if (Input.GetKeyDown(KeyCode.Alpha6))
-            ActivateSlot(5);
+            CmdActivateSlot(5);
         if (Input.GetKeyDown(KeyCode.F))
-            ActivateSlot(6);
+            CmdActivateSlot(6);
+    }
+
+    [Command]
+    private void CmdFire()
+    {
+        Slots[EquippedSlot].Weapons[EquippedWeapon].Fire();   
+        RpcFire();
+    }
+
+    [ClientRpc]
+    private void RpcFire()
+    {
+        if (!isServer) {
+            Slots[EquippedSlot].Weapons[EquippedWeapon].Fire();   
+        }
+    }
+
+    [Command]
+    private void CmdStop()
+    {
+        Slots[EquippedSlot].Weapons[EquippedWeapon].Stop();   
+        RpcStop();
+    }
+
+    [ClientRpc]
+    private void RpcStop()
+    {
+        Slots[EquippedSlot].Weapons[EquippedWeapon].Stop();   
+    }
+
+    [Command]
+    private void CmdActivateSlot(int slot)
+    {
+        RpcActivateSlot(slot);
+    }
+
+    [ClientRpc]
+    private void RpcActivateSlot(int slot)
+    {
+        ActivateSlot(slot);
     }
 
     private void ActivateSlot(int slot)
@@ -107,6 +152,8 @@ public class F3DWeaponController : MonoBehaviour
         EquippedWeapon = Slots[EquippedSlot].WeaponSlotCounter;
         ActivateWeapon(EquippedSlot, EquippedWeapon);
     }
+
+
 
     //////////////////////////////////////////////////////////////
     // Pass animation data to an active weapon controller

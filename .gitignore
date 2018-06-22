@@ -35,3 +35,8 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
+# VSCode
+.vscode/
+
+# ctags
+tags

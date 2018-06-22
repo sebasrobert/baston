@@ -533,7 +533,7 @@ public class F3DGenericWeapon : MonoBehaviour
         var lifeTime = Random.Range(ProjectileLifeTime.x, ProjectileLifeTime.y);
 
         // Spawn
-        var projectile = F3DSpawner.Spawn(projectilePrefab, position, rotation, null);
+        var projectile = F3DSpawner.Spawn(projectilePrefab, position, rotation, null, true);
         projectile.GetComponent<F3DGenericProjectile>().Source = transform.root.gameObject;
 
         // Set Weapon Type
@@ -573,7 +573,7 @@ public class F3DGenericWeapon : MonoBehaviour
         var rot = FXSocket.rotation;
 
         // Spawn
-        var projectile = F3DSpawner.Spawn(projectilePrefab, pos, rot, FXSocket);
+        var projectile = F3DSpawner.Spawn(projectilePrefab, pos, rot, FXSocket, true);
 
         // Set Weapon Type
         var projectileObject = projectile.GetComponent<F3DPulse>();

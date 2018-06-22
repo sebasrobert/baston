@@ -1,8 +1,9 @@
 ﻿using System;
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Networking;
 
-public class F3DGenericProjectile : MonoBehaviour
+public class F3DGenericProjectile : NetworkBehaviour
 {
     private Rigidbody2D _rBody;
     private Collider2D _collider;
@@ -44,13 +45,6 @@ public class F3DGenericProjectile : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-       
-
-       
-
-        // Send damage and spawn hit effects 
-        
-
         var contacts = new ContactPoint2D[2];
         var contactsLength = other.GetContacts(contacts);
 

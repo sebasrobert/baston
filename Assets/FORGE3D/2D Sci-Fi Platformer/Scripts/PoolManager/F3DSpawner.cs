@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Networking;
 
 public class F3DSpawner : MonoBehaviour {
 
@@ -13,11 +14,13 @@ public class F3DSpawner : MonoBehaviour {
 	
 	}
 
-    public static Transform Spawn(Transform prefab, Vector3 position, Quaternion rotation, Transform parent)
+    public static Transform Spawn(Transform prefab, Vector3 position, Quaternion rotation, Transform parent, bool network = false)
     {
         if (prefab == null) return null;
-        var spawnedObject = (Transform)Instantiate(prefab, position, rotation, parent);
-//        spawnedObject.localScale = scale;
+        var spawnedObject = Instantiate(prefab, position, rotation, parent);
+        if (network) {
+            NetworkServer.Spawn(spawnedObject.gameObject);
+        }
 
         return spawnedObject;
     }

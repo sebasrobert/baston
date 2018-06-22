@@ -2794,6 +2794,10 @@ GameObject:
   - component: {fileID: 114222324556795876}
   - component: {fileID: 114782919482870466}
   - component: {fileID: 114177578691253220}
+  - component: {fileID: 114593435267802678}
+  - component: {fileID: 114870496754529086}
+  - component: {fileID: 114386630006125782}
+  - component: {fileID: 114474344150813066}
   m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
@@ -8543,8 +8547,8 @@ MonoBehaviour:
   highHealthColor: {r: 0, g: 1, b: 0, a: 1}
   mediumHealthColor: {r: 1, g: 0.9990684, b: 0, a: 1}
   lowHealthColor: {r: 1, g: 0, b: 0, a: 1}
-  inputControllerType: 1
-  inputControllerName: Gamepad1
+  inputControllerType: 0
+  inputControllerName: 
 --- !u!114 &114058152784860856
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9052,7 +9056,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Character: {fileID: 95685690820363264}
-  SideCheck: {fileID: 4170830201680532}
   WeaponSocket: {fileID: 4810496456767230}
   Ground:
     serializedVersion: 2
@@ -9062,10 +9065,9 @@ MonoBehaviour:
   MaxSpeed: 1
   CrouchSpeed: 0.5
   MaxSpeedBackwards: 1
-  JumpForce: 300
-  DoubleJumpForce: 300
+  JumpVelocity: 28
+  DoubleJumpVelocity: 24
   GroundCheckCircleSize: 0.3
-  SideCheckDist: 0.3
   AimTime: 22
 --- !u!114 &114292980806687904
 MonoBehaviour:
@@ -9292,6 +9294,25 @@ MonoBehaviour:
     HitPitch: {x: 0.8, y: 1}
     HitMixerGroup: {fileID: 243000013120428090, guid: 55ea6b5dbe087e046a809d48a8b6caf9,
       type: 2}
+--- !u!114 &114386630006125782
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1716986416150008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1590678366, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Animator: {fileID: 95685690820363264}
+  m_ParameterSendBits: 991
+  param0: 
+  param1: 
+  param2: 
+  param3: 
+  param4: 
+  param5: 
 --- !u!114 &114397601255687230
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9559,6 +9580,25 @@ MonoBehaviour:
   SparkFragment: {fileID: 0}
   ProjectilesPerRound: 1
   SparksPerRound: 0
+--- !u!114 &114474344150813066
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1716986416150008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1267208747, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Target: {fileID: 4810496456767230}
+  m_ChildIndex: 0
+  m_SendInterval: 0.033333335
+  m_SyncRotationAxis: 3
+  m_RotationSyncCompression: 2
+  m_MovementThreshold: 0.001
+  m_InterpolateRotation: 0.5
+  m_InterpolateMovement: 0.5
 --- !u!114 &114478897513445996
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10187,6 +10227,38 @@ MonoBehaviour:
     HitVolume: {x: 0, y: 0}
     HitPitch: {x: 0, y: 0}
     HitMixerGroup: {fileID: 0}
+--- !u!114 &114593435267802678
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1716986416150008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 63
+    i1: 238
+    i2: 60
+    i3: 182
+    i4: 22
+    i5: 141
+    i6: 212
+    i7: 175
+    i8: 155
+    i9: 155
+    i10: 61
+    i11: 149
+    i12: 87
+    i13: 163
+    i14: 3
+    i15: 92
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1
 --- !u!114 &114669699000985904
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10931,6 +11003,27 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114870496754529086
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1716986416150008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 2
+  m_SendInterval: 0.033333335
+  m_SyncRotationAxis: 0
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
 --- !u!114 &114928513658955930
 MonoBehaviour:
   m_ObjectHideFlags: 1

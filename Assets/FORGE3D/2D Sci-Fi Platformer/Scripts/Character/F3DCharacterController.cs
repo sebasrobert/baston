@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Networking;
 
-public class F3DCharacterController : MonoBehaviour
+public class F3DCharacterController : NetworkBehaviour
 {
 
     // Components
@@ -55,6 +56,11 @@ public class F3DCharacterController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        if (!hasAuthority)
+        {
+            return;
+        }
+
         // Debug Teleport
         if (Input.GetKeyDown(KeyCode.T))
         {
@@ -244,8 +250,28 @@ public class F3DCharacterController : MonoBehaviour
     private void Flip()
     {
         _facingRight = !_facingRight;
+        CmdSetFacingRight(_facingRight);
+    }
+
+    [Command]
+    void CmdSetFacingRight(bool newFacingRight)
+    {
+        _facingRight = newFacingRight;
+        RpcSetFacingRight(newFacingRight);
+    }
+
+    [ClientRpc]
+    void RpcSetFacingRight(bool newFacingRight)
+    {
+        _facingRight = newFacingRight;
         var theScale = transform.localScale;
-        theScale.x *= -1;
+        if (_facingRight) {
+            theScale.x = Mathf.Abs(theScale.x);
+        }
+        else if (theScale.x >= 0) {
+            theScale.x = -theScale.x;
+        }
         transform.localScale = theScale;
+
     }
 }
