@@ -6,8 +6,6 @@ public class F3DCharacterController : MonoBehaviour
 
     // Components
     public Animator Character;
-
-    public Transform SideCheck;
     public Transform WeaponSocket;
 
     // Settings
@@ -19,9 +17,8 @@ public class F3DCharacterController : MonoBehaviour
     public float CrouchSpeed = 0.75f;
     public float MaxSpeedBackwards = 1f;
     public float JumpVelocity = 28f;
-    public float DoubleJumpVelocity = 24;
+    public float DoubleJumpVelocity = 24f;
     public float GroundCheckCircleSize;
-    public float SideCheckDist;
     public float AimTime;
 
     //
@@ -37,7 +34,6 @@ public class F3DCharacterController : MonoBehaviour
     private bool _crouch;
     private bool _grounded;
     private bool _lastGroundedState;
-    private bool _sideObstacle;
     private float _horizontal;
     private float _horizontalSignLast;
 
@@ -125,13 +121,7 @@ public class F3DCharacterController : MonoBehaviour
         // Jump cancels any current crouch state
         if (_jump || _doubleJump)
             _crouch = false;
-
-        // Check Side Obstacle
-        _sideObstacle = Physics2D.Linecast(SideCheck.position, SideCheck.position + Vector3.left * SideCheckDist,
-            Ground);
-        _sideObstacle = _sideObstacle || Physics2D.Linecast(SideCheck.position,
-                            SideCheck.position + Vector3.right * SideCheckDist, Ground);
-
+        
         // Set Crouch flag 
         Character.SetBool("Crouch", _crouch);
         _weaponController.SetBool("Crouch", _crouch);
@@ -139,11 +129,6 @@ public class F3DCharacterController : MonoBehaviour
         // Set Grounded flag
         Character.SetBool("Grounded", _grounded);
         _weaponController.SetBool("Grounded", _grounded);
-
-        // Set Side Obstacle flag
-        Character.SetBool("SideObstacle", _sideObstacle);
-        _weaponController.SetBool("SideObstacle", _sideObstacle);
-
 
 
         ////////////////////////////////// FIRING
