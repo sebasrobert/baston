@@ -18,8 +18,8 @@ public class F3DCharacterController : MonoBehaviour
     public float MaxSpeed = 1f;
     public float CrouchSpeed = 0.75f;
     public float MaxSpeedBackwards = 1f;
-    public float JumpForce = 1000f;
-    public float DoubleJumpForce;
+    public float JumpVelocity = 28f;
+    public float DoubleJumpVelocity = 24;
     public float GroundCheckCircleSize;
     public float SideCheckDist;
     public float AimTime;
@@ -93,9 +93,9 @@ public class F3DCharacterController : MonoBehaviour
         // Jump
         if (Input.GetButtonDown(_character.inputControllerName + "Jump"))
         {
-            if (!_jump && !_doubleJump && _grounded)
+            if (!_jump && !_doubleJump)
             {
-                _rb2D.AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
+                _rb2D.velocity = new Vector2(_rb2D.velocity.x, JumpVelocity);
                 _jump = true;
                 _grounded = false;
 
@@ -104,7 +104,7 @@ public class F3DCharacterController : MonoBehaviour
             }
             else if (_jump && !_doubleJump)
             {
-                _rb2D.AddForce(new Vector2(0f, DoubleJumpForce), ForceMode2D.Impulse);
+                _rb2D.velocity = new Vector2(_rb2D.velocity.x, DoubleJumpVelocity);
                 _doubleJump = true;
                 _jump = false;
 
@@ -221,6 +221,12 @@ public class F3DCharacterController : MonoBehaviour
             Flip();
         else if (dir.x < 0 && _facingRight)
             Flip();
+        else if (dir.x == 0) {
+            if (_horizontal > 0 && !_facingRight) 
+               Flip();
+            else if (_horizontal < 0 && _facingRight)
+                Flip();
+        }
 
         // Draw Velocity
         Debug.DrawLine(currentWeapon.FXSocket.position, aimPos, Color.blue);
