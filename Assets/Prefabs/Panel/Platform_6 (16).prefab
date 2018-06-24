@@ -138,6 +138,7 @@ MonoBehaviour:
   ColorB: {r: 1, g: 1, b: 1, a: 0.39215687}
   Rate: 8
   lerpLength: 20
+  randomLerpLengthModifier: 10
   lerpFunctions: 1
 --- !u!212 &212087565094544592
 SpriteRenderer:
