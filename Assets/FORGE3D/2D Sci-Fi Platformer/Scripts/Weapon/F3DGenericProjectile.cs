@@ -21,6 +21,9 @@ public class F3DGenericProjectile : MonoBehaviour
     public float DelayDespawn;
     public float HitLifeTime;
 
+    [HideInInspector]
+    public GameObject Source;
+
     public virtual void Awake()
     {
         _rBody = GetComponent<Rigidbody2D>();
@@ -57,7 +60,7 @@ public class F3DGenericProjectile : MonoBehaviour
 
             var contact = other.contacts[0];
 
-            DealDamage(5, WeaponType, contact.collider.transform, Hit, HitLifeTime, contact.point, contact.normal);
+            DealDamage  (Source, 5, WeaponType, contact.collider.transform, Hit, HitLifeTime, contact.point, contact.normal);
 
             // Play hit sound
             F3DWeaponAudio.OnProjectileImpact(Audio, AudioInfo);
@@ -84,7 +87,7 @@ public class F3DGenericProjectile : MonoBehaviour
 
     }
 
-    public static bool DealDamage(int damageAmount, F3DWeaponController.WeaponType weaponType, Transform target,
+    public static bool DealDamage(GameObject source, int damageAmount, F3DWeaponController.WeaponType weaponType, Transform target,
         Transform hitPrefab, float hitLifeTime,
         Vector2 hitPoint, Vector2 hitNormal)
     {
@@ -92,7 +95,7 @@ public class F3DGenericProjectile : MonoBehaviour
         if (target == null) return false;
         var damage = target.GetComponentInParent<F3DDamage>();
         if (damage == null) return false;
-
+        EventManager.TriggerEvent(new GameEvents.WeaponHitPlayerEvent() { Source = source, Target = target.root.gameObject });
         //
         switch (damage.Type)
         {

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using GameEvents;
 
 public class F3DCharacter : MonoBehaviour
 {
@@ -64,7 +65,8 @@ public class F3DCharacter : MonoBehaviour
 //                _colliders[i].enabled = false;
             _weaponController.Drop();
 
-            //
+            EventManager.TriggerEvent(new PlayerDieEvent() { Player = gameObject });
+
             return;
         }
 

@@ -496,7 +496,7 @@ public class F3DGenericWeapon : MonoBehaviour
                     }
                 if (selfHit)
                     continue;
-                F3DGenericProjectile.DealDamage(5, Type, closeCheckHit[i].transform, projObject.Hit,
+                F3DGenericProjectile.DealDamage(transform.root.gameObject, 5, Type, closeCheckHit[i].transform, projObject.Hit,
                     projObject.HitLifeTime,
                     closeCheckHit[i].point, closeCheckHit[i].normal);
 
@@ -534,8 +534,7 @@ public class F3DGenericWeapon : MonoBehaviour
 
         // Spawn
         var projectile = F3DSpawner.Spawn(projectilePrefab, position, rotation, null);
-
-      
+        projectile.GetComponent<F3DGenericProjectile>().Source = transform.root.gameObject;
 
         // Set Weapon Type
         var projectileObject = projectile.GetComponent<F3DGenericProjectile>();

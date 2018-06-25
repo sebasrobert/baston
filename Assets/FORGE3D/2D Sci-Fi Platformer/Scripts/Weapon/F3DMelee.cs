@@ -66,7 +66,7 @@ public class F3DMelee : F3DGenericWeapon
 
     public void OnMeleeHit(Collider2D other)
     {
-        F3DGenericProjectile.DealDamage(5, Type, other.transform, BarrelSpark, 1f,
+        F3DGenericProjectile.DealDamage(transform.root.gameObject, 5, Type, other.transform, BarrelSpark, 1f,
             other.bounds.ClosestPoint(FXSocket.position), FXSocket.up);
     }
 }
