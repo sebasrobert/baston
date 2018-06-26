@@ -3791,7 +3791,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1716986416150008}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.61, y: 7.56, z: 0}
+  m_LocalPosition: {x: -30.78, y: -2.38, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children:
   - {fileID: 224679599922368250}
@@ -8544,7 +8544,7 @@ MonoBehaviour:
   mediumHealthColor: {r: 1, g: 0.9990684, b: 0, a: 1}
   lowHealthColor: {r: 1, g: 0, b: 0, a: 1}
   inputControllerType: 1
-  inputControllerName: Gamepad1
+  inputControllerName: Gamepad_1
 --- !u!114 &114058152784860856
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9052,7 +9052,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Character: {fileID: 95685690820363264}
-  SideCheck: {fileID: 4170830201680532}
   WeaponSocket: {fileID: 4810496456767230}
   Ground:
     serializedVersion: 2
@@ -9062,10 +9061,9 @@ MonoBehaviour:
   MaxSpeed: 1
   CrouchSpeed: 0.5
   MaxSpeedBackwards: 1
-  JumpForce: 300
-  DoubleJumpForce: 300
-  GroundCheckCircleSize: 0.3
-  SideCheckDist: 0.3
+  JumpVelocity: 28
+  DoubleJumpVelocity: 26
+  GroundCheckCircleSize: 0.2
   AimTime: 22
 --- !u!114 &114292980806687904
 MonoBehaviour:
@@ -10647,7 +10645,7 @@ MonoBehaviour:
   SpinDownRate: 0
   SpinUpDelayOnEarlyStop: 0
   LoopDelayOnEarlyStop: 0
-  FireRate: 0.3
+  FireRate: 0.2
   UseFireRateCurve: 0
   FireRateCurve:
     serializedVersion: 2
