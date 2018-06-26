@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 58000011886352618}
   - component: {fileID: 114000013109374052}
   - component: {fileID: 82000011561656862}
+  - component: {fileID: 114065660767164114}
   m_Layer: 12
   m_Name: PistolLaser_Projectile
   m_TagString: Untagged
@@ -254,10 +255,43 @@ MonoBehaviour:
   PostHitHide: 1
   DelayDespawn: 1
   HitLifeTime: 1
+  Source: {fileID: 0}
   RicochetChance: 0
   TrailFadeTime: 0
   TrailLifeTime: {x: 0, y: 0}
   TrailEndWidth: {x: 0, y: 0}
+--- !u!114 &114065660767164114
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010122042662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 88
+    i1: 136
+    i2: 62
+    i3: 203
+    i4: 214
+    i5: 83
+    i6: 45
+    i7: 244
+    i8: 232
+    i9: 118
+    i10: 151
+    i11: 198
+    i12: 83
+    i13: 100
+    i14: 196
+    i15: 163
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!198 &198000010283208646
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -13580,7 +13614,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1159644209
-  m_SortingLayer: 6
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
@@ -13636,7 +13670,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1159644209
-  m_SortingLayer: 6
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
@@ -13692,7 +13726,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1159644209
-  m_SortingLayer: 6
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0

@@ -45,6 +45,10 @@ public class F3DGenericProjectile : NetworkBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        if (!isServer) {
+            return;
+        }
+
         var contacts = new ContactPoint2D[2];
         var contactsLength = other.GetContacts(contacts);
 

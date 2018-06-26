@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 58000010905245396}
   - component: {fileID: 114000011764506928}
   - component: {fileID: 82000013673107740}
+  - component: {fileID: 114950416782341540}
   m_Layer: 12
   m_Name: ShotGun_Projectile_02
   m_TagString: Untagged
@@ -108,54 +109,69 @@ AudioSource:
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 1.001519
       inSlope: -3.449631
       outSlope: -3.449631
       tangentMode: 0
-    - serializedVersion: 2
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
       time: 1
       value: 0
       inSlope: -0.17248243
       outSlope: -0.17248243
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
   panLevelCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 0.21666667
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
@@ -176,10 +192,43 @@ MonoBehaviour:
   PostHitHide: 0
   DelayDespawn: 0
   HitLifeTime: 1
+  Source: {fileID: 0}
   RicochetChance: 0
   TrailFadeTime: 0
   TrailLifeTime: {x: 0, y: 0}
   TrailEndWidth: {x: 0, y: 0}
+--- !u!114 &114950416782341540
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010558636572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 170
+    i1: 103
+    i2: 132
+    i3: 194
+    i4: 163
+    i5: 193
+    i6: 85
+    i7: 100
+    i8: 72
+    i9: 40
+    i10: 92
+    i11: 128
+    i12: 9
+    i13: 50
+    i14: 110
+    i15: 90
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!212 &212000011162273132
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -193,6 +242,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: da56234d323e3bb45a1e09b27d53cf3a, type: 2}
   m_StaticBatchInfo:
