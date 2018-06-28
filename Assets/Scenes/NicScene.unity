@@ -2251,8 +2251,7 @@ MonoBehaviour:
   - {fileID: 1545701182}
   - {fileID: 619493346}
   - {fileID: 939141971}
-  GameDuration: 0
-  NumberOfKillsToWin: 0
+  NumberOfKillsToWin: 2
   PointsForKill: 100
   PointsForHit: 10
 --- !u!114 &319868930
