@@ -35,8 +35,10 @@ public class ScoreController : MonoBehaviour {
             for (int i = 0; i < players.Length; i++)
             {
                 PlayerScore playerScore = GetPlayerScore(players[i]);
+                Sprite headSprite = GetPlayerCharacterSprite(players[i]);
 
                 PlayerScoreCards[i].SetActive(true);
+                PlayerScoreCards[i].transform.Find("Head").GetComponent<Image>().sprite = headSprite;
                 PlayerScoreCards[i].transform.Find("ScoreValue").GetComponent<Text>().text = playerScore.Points.ToString();
                 PlayerScoreCards[i].transform.Find("KDValue").GetComponent<Text>().text = playerScore.NumberOfKills.ToString() + "/" + playerScore.NumberOfDeaths.ToString();
                 PlayerScoreCards[i].transform.Find("Name").GetComponent<Text>().text = players[i].name;
@@ -48,6 +50,11 @@ public class ScoreController : MonoBehaviour {
     private PlayerScore GetPlayerScore(GameObject player)
     {
         return player.GetComponent<PlayerScore>();
+    }
+
+    private Sprite GetPlayerCharacterSprite(GameObject player)
+    {
+        return player.GetComponent<F3DCharacterAvatar>().Head.sprite;
     }
 
 }
