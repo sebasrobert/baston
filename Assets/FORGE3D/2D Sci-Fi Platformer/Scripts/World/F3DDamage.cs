@@ -24,10 +24,10 @@ public class F3DDamage : MonoBehaviour
     }
  
 
-    public void OnDamage(int damageAmount, Vector3 contactPoint, Vector3 contactNormal)
+    public void OnDamage(GameObject source, int damageAmount, Vector3 contactPoint, Vector3 contactNormal)
     {
         if (_character)
-            _character.OnDamage(damageAmount);
+            _character.OnDamage(source, damageAmount);
         SpawnHit(contactPoint, contactNormal);
     }
 

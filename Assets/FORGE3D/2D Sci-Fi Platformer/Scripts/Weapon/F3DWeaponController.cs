@@ -163,6 +163,9 @@ public class F3DWeaponController : MonoBehaviour
             powerUpRb.AddForce((Vector2) Slots[EquippedSlot].Weapons[EquippedWeapon].FXSocket.up * Random.Range(8, 12),
                 ForceMode2D.Impulse);
             powerUpRb.AddTorque(Random.Range(-250, 250), ForceMode2D.Force);
+
+            // remove gun after 2s
+            F3DSpawner.Despawn(powerUp, 2f);
         }
 
         // Deactivate components

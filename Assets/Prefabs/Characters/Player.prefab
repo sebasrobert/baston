@@ -2794,6 +2794,7 @@ GameObject:
   - component: {fileID: 114222324556795876}
   - component: {fileID: 114782919482870466}
   - component: {fileID: 114177578691253220}
+  - component: {fileID: 114135968793678310}
   m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
@@ -8771,6 +8772,17 @@ MonoBehaviour:
     HitVolume: {x: 0, y: 0}
     HitPitch: {x: 0, y: 0}
     HitMixerGroup: {fileID: 0}
+--- !u!114 &114135968793678310
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1716986416150008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b090bb992b0914a31a344432a5c46174, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114166099785266762
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9052,7 +9064,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Character: {fileID: 95685690820363264}
-  SideCheck: {fileID: 4170830201680532}
   WeaponSocket: {fileID: 4810496456767230}
   Ground:
     serializedVersion: 2
@@ -9062,10 +9073,9 @@ MonoBehaviour:
   MaxSpeed: 1
   CrouchSpeed: 0.5
   MaxSpeedBackwards: 1
-  JumpForce: 300
-  DoubleJumpForce: 300
+  JumpVelocity: 28
+  DoubleJumpVelocity: 24
   GroundCheckCircleSize: 0.3
-  SideCheckDist: 0.3
   AimTime: 22
 --- !u!114 &114292980806687904
 MonoBehaviour:

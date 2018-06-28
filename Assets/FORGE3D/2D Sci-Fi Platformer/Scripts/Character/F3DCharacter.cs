@@ -40,7 +40,7 @@ public class F3DCharacter : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-    public void OnDamage(int damageAmount)
+    public void OnDamage(GameObject source, int damageAmount)
     {
         if (_controller == null) return;
         if (_isDead) return;
@@ -65,7 +65,7 @@ public class F3DCharacter : MonoBehaviour
 //                _colliders[i].enabled = false;
             _weaponController.Drop();
 
-            EventManager.TriggerEvent(new PlayerDieEvent() { Player = gameObject });
+            EventManager.TriggerEvent(new PlayerDieEvent() { Killer = source, Dead = gameObject });
 
             return;
         }

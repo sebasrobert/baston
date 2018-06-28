@@ -95,12 +95,11 @@ public class F3DGenericProjectile : MonoBehaviour
         if (target == null) return false;
         var damage = target.GetComponentInParent<F3DDamage>();
         if (damage == null) return false;
-        EventManager.TriggerEvent(new GameEvents.WeaponHitPlayerEvent() { Source = source, Target = target.root.gameObject });
         //
         switch (damage.Type)
         {
             case F3DDamage.DamageType.Character:
-                damage.OnDamage(damageAmount, hitPoint, hitNormal);
+                damage.OnDamage(source, damageAmount, hitPoint, hitNormal);
                 switch (weaponType)
                 {
                     case F3DWeaponController.WeaponType.Pistol:
@@ -135,10 +134,13 @@ public class F3DGenericProjectile : MonoBehaviour
                 }
                 break;
             default:
-                damage.OnDamage(damageAmount, hitPoint, hitNormal);
+                damage.OnDamage(source, damageAmount, hitPoint, hitNormal);
                 SpawnHit(hitPrefab, hitPoint, hitNormal, null, hitLifeTime);
                 break;
         }
+
+        EventManager.TriggerEvent(new GameEvents.WeaponHitPlayerEvent() { Shooter = source, Target = target.root.gameObject });
+
         return true;
     }
 }
