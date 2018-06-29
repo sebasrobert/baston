@@ -12,6 +12,7 @@ public class DeathMatchGameController : GameController {
     public int NumberOfKillsToWin;
     public int PointsForKill;
     public int PointsForHit;
+    public float WaitTimeBeforeRespawn;
 
     private Timer Timer;
     private int MaxKills;
@@ -46,6 +47,8 @@ public class DeathMatchGameController : GameController {
     public void OnPlayerDieEvent(PlayerDieEvent gameEvent)
     {
         UpdateScoreForKill(gameEvent.Killer, gameEvent.Dead, PointsForKill);
+
+        StartCoroutine(RespawnPlayer(gameEvent.Dead));
     }
 
     private void SpawnAllPlayers() 
@@ -99,5 +102,13 @@ public class DeathMatchGameController : GameController {
     private PlayerScore GetPlayerScore(GameObject player)
     {
         return player.GetComponent<PlayerScore>();
+    }
+
+    private IEnumerator RespawnPlayer(GameObject player)
+    {
+        yield return new WaitForSeconds(WaitTimeBeforeRespawn);
+
+        F3DCharacter character = player.GetComponent<F3DCharacter>();
+        character.RespawnAtInitialPosition();
     }
 }

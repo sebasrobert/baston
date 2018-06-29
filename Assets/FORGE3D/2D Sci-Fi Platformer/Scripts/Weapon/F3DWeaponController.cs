@@ -173,6 +173,12 @@ public class F3DWeaponController : MonoBehaviour
         this.enabled = false;
     }
 
+    public void ReactivateDefaultWeapon()
+    {
+        this.enabled = true;
+        Slots[EquippedSlot].Weapons[EquippedWeapon].gameObject.SetActive(true);
+    }
+
     public F3DGenericWeapon GetCurrentWeapon()
     {
         return Slots[EquippedSlot].Weapons[EquippedWeapon];
