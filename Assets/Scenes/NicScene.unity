@@ -2593,7 +2593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeLeft: 900
-  TimeLeftText: {fileID: 0}
+  TimeLeftText: {fileID: 1729384946}
 --- !u!1001 &332404278
 Prefab:
   m_ObjectHideFlags: 0
@@ -14872,6 +14872,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 995516f93a6b49546bbb0cbf1e5b0db8, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1729384946 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114839452705060750, guid: fd6f41930ff14427c8a6dbf7b70044ef,
+    type: 2}
+  m_PrefabInternal: {fileID: 920259482}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!4 &1736367651 stripped
 Transform:
   m_PrefabParentObject: {fileID: 477904, guid: 237eb4a4be553ec4fa4e0303b82f90aa, type: 2}
