@@ -22,7 +22,7 @@ public class Timer : MonoBehaviour {
         }
 
         string minutes = Mathf.Floor(TimeLeft / 60).ToString("00");
-        string seconds = (TimeLeft % 60).ToString("00");
+        string seconds = Mathf.Floor(TimeLeft % 60).ToString("00");
 
         TimeLeftText.text = string.Format("{0}:{1}", minutes, seconds);
 	}
