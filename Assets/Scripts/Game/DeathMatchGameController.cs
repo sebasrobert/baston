@@ -1,6 +1,6 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using GameEvents;
 
 public class DeathMatchGameController : GameController {
@@ -13,9 +13,11 @@ public class DeathMatchGameController : GameController {
     public int PointsForKill;
     public int PointsForHit;
     public float WaitTimeBeforeRespawn;
+    public GameObject GameOverObject;
 
     private Timer Timer;
     private int MaxKills;
+    private bool GameOver;
 
     private void Awake()
     {
@@ -25,6 +27,8 @@ public class DeathMatchGameController : GameController {
         Players = new GameObject[NumberOfPlayers];
         SpawnAllPlayers();
         MaxKills = 0;
+        GameOver = false;
+        GameOverObject.SetActive(false);
     }
 
     void Start () 
@@ -34,18 +38,32 @@ public class DeathMatchGameController : GameController {
     private void Update()
     {
         if(Timer.TimeLeft < float.Epsilon || MaxKills >= NumberOfKillsToWin) {
-            GameOver();
-            return;
-        }        
+            MakeGameOver();
+        }       
+
+        if (GameOver && Input.GetKeyDown(KeyCode.R))
+        {            
+            RestartGame();
+        }
     }
 
     public void OnWeaponHitPlayerEvent(WeaponHitPlayerEvent gameEvent)
     {
+        if(GameOver)
+        {
+            return;
+        }
+
         UpdateScoreForHit(gameEvent.Shooter, PointsForHit);
     }
 
     public void OnPlayerDieEvent(PlayerDieEvent gameEvent)
     {
+        if (GameOver)
+        {
+            return;
+        }
+
         UpdateScoreForKill(gameEvent.Killer, gameEvent.Dead, PointsForKill);
 
         StartCoroutine(RespawnPlayer(gameEvent.Dead));
@@ -75,8 +93,34 @@ public class DeathMatchGameController : GameController {
         }
     }
 
-    private void GameOver()
-    {        
+    private void MakeGameOver()
+    {
+        GameOver = true;
+        GameOverObject.SetActive(true);
+        StartCoroutine(PauseSceneSmoothly());
+    }
+
+    private IEnumerator PauseSceneSmoothly()
+    {
+        while (Time.timeScale > float.Epsilon)
+        {
+            yield return new WaitForSeconds(0.1f);
+
+            var newTimeScale = Time.timeScale - 0.03f;
+            if(newTimeScale < float.Epsilon)
+            {
+                newTimeScale = 0f;
+            }
+
+            Time.timeScale = newTimeScale;
+        }
+    }
+
+    private void RestartGame()
+    {
+        Time.timeScale = 1;
+        Scene scene = SceneManager.GetActiveScene(); 
+        SceneManager.LoadScene(scene.name);
     }
 
     private void UpdateScoreForHit(GameObject player, int points)
