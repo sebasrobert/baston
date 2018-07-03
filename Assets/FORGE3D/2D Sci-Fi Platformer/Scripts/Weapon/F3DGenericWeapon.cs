@@ -18,7 +18,9 @@ public class F3DGenericWeapon : MonoBehaviour
     public int RightHandId;
 
     // Weapon 
-    [Header("Weapon")] public F3DWeaponController.WeaponType Type;
+    [Header("Weapon")] public WeaponIdentifier Identifier;
+    public F3DWeaponController.WeaponType Type;
+
 
     public Mode FireMode;
     public bool AnimationFireEvent;

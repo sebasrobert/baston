@@ -90,6 +90,7 @@ public class DeathMatchGameController : GameController {
                 playerCharacter.inputControllerType = F3DCharacter.InputType.GAMING_CONTROLLER;
                 playerCharacter.inputControllerName = "Gamepad" + i;
             }
+            EquipPlayerWithWeapon(player, WeaponIdentifier.Knife);
         }
     }
 
@@ -154,5 +155,12 @@ public class DeathMatchGameController : GameController {
 
         F3DCharacter character = player.GetComponent<F3DCharacter>();
         character.RespawnAtInitialPosition();
+        EquipPlayerWithWeapon(player, WeaponIdentifier.Knife);
+    }
+
+    private void EquipPlayerWithWeapon(GameObject player, WeaponIdentifier weaponIdentifier)
+    {
+        F3DWeaponController playerWeaponController = player.GetComponent<F3DWeaponController>();
+        playerWeaponController.AddEquippedWeapon(weaponIdentifier);
     }
 }
