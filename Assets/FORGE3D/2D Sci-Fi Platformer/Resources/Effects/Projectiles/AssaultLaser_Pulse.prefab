@@ -184,7 +184,7 @@ MonoBehaviour:
   DelayDespawn: 0.5
   HitLifeTime: 1
   Source: {fileID: 0}
-  MaxLength: 11
+  MaxLength: 20
   Tiling: 0.1
   LineCastMask:
     serializedVersion: 2

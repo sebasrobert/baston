@@ -74,6 +74,7 @@ public class F3DWeaponController : MonoBehaviour
         _avatar = GetComponent<F3DCharacterAvatar>();
         _character = GetComponent<F3DCharacter>();
         BuildWeaponPaths();
+        DeactivateAllWeapons();
         ActivateWeapon(DefaultWeapon);
     }
 
@@ -204,6 +205,17 @@ public class F3DWeaponController : MonoBehaviour
         if (weaponPath != null)
         {
             Slots[weaponPath.SlotIndex].EquippedWeaponCounter = weaponPath.WeaponIndex;
+        }
+    }
+
+    private void DeactivateAllWeapons()
+    {
+        foreach(WeaponSlot slot in Slots)
+        {
+            foreach(F3DGenericWeapon weapon in slot.Weapons)
+            {
+                weapon.gameObject.SetActive(false);
+            }
         }
     }
 

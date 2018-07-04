@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4068146860051770}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: machine gun_fx_socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,7 +34,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4890863002442690}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: machine gun_fx_socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,7 +49,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4836892171102912}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: assault_shell_socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4213272872969328}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: assault_fx_socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,7 +81,7 @@ GameObject:
   - component: {fileID: 4657556560887540}
   - component: {fileID: 212018076381580128}
   - component: {fileID: 60677108336868430}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: leg left bottom1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4810496456767230}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: weapon_socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4538104373159902}
   - component: {fileID: 212602724840121202}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4369953988178076}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4107186485473892}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: assault_shell_socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,7 +158,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4847597184768550}
   - component: {fileID: 50393491193781008}
-  m_Layer: 19
+  m_Layer: 12
   m_Name: Wire_Point_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4813786982486564}
   - component: {fileID: 50616970167327058}
-  m_Layer: 19
+  m_Layer: 12
   m_Name: Wire_Point_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,7 +189,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4560699075667864}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,7 +204,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4472267989563840}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: sniper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,7 +219,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4988085718977356}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: assault_fx_socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 4466613962753880}
   - component: {fileID: 199298464680151642}
   - component: {fileID: 198432110365273586}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Knife_Slash_MeleeTrail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -251,7 +251,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4294868762235822}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -266,7 +266,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4319382302432100}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: root_machinegun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -282,7 +282,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4987783248243926}
   - component: {fileID: 212757395745208292}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -298,7 +298,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4851281576531534}
   - component: {fileID: 212629819503496664}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: machine gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -314,7 +314,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4283878816241698}
   - component: {fileID: 82555169386049786}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Voice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -331,7 +331,7 @@ GameObject:
   - component: {fileID: 4786959264326788}
   - component: {fileID: 120069900779613146}
   - component: {fileID: 114753215997934516}
-  m_Layer: 19
+  m_Layer: 12
   m_Name: Wire_Dynamic (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -348,7 +348,7 @@ GameObject:
   - component: {fileID: 4685582924258966}
   - component: {fileID: 212077484178119708}
   - component: {fileID: 58518502489400472}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: head_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -363,7 +363,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4639945439140426}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: shotgun_shell_socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -378,7 +378,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4910266684841776}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: root_sniper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -393,7 +393,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4261470539465568}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -408,7 +408,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4576135155212076}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -423,7 +423,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4776019994729510}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: machine gun_shell_socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -439,7 +439,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4206914063858876}
   - component: {fileID: 212828610714789826}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand1_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -454,7 +454,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4836225031206684}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: assault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -470,7 +470,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4792055973690222}
   - component: {fileID: 212574788882113754}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -485,7 +485,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4472298569474092}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: leg left top1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -501,7 +501,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4867606514420154}
   - component: {fileID: 212765280609528978}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: assault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -518,7 +518,7 @@ GameObject:
   - component: {fileID: 4551652196787968}
   - component: {fileID: 120241414047737308}
   - component: {fileID: 114001583813185490}
-  m_Layer: 19
+  m_Layer: 12
   m_Name: Wire_Dynamic (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -535,7 +535,7 @@ GameObject:
   - component: {fileID: 4380695142690128}
   - component: {fileID: 95746822343773832}
   - component: {fileID: 114669699000985904}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: TeslaCannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -550,7 +550,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4086284053975974}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: assault_fx_socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -566,7 +566,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4171871478810964}
   - component: {fileID: 212917296034832018}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand1_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -582,7 +582,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4793328676317346}
   - component: {fileID: 82043694776871278}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: FootstepsJump
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -599,7 +599,7 @@ GameObject:
   - component: {fileID: 4343795203483594}
   - component: {fileID: 95603294065317766}
   - component: {fileID: 114931185444539224}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Assault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -614,7 +614,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4398486962382680}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -629,7 +629,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4271836597869368}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: shotgun_shell_socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -646,7 +646,7 @@ GameObject:
   - component: {fileID: 4210894720013648}
   - component: {fileID: 95517103725502298}
   - component: {fileID: 114570571711854832}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: ShotGunLaser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -661,7 +661,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4135825131009076}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -676,7 +676,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4327901905816006}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: assault_shell_socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -693,7 +693,7 @@ GameObject:
   - component: {fileID: 4017655769311718}
   - component: {fileID: 212353364464826972}
   - component: {fileID: 60083071665877366}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: leg right bottom1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -708,7 +708,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4791106359197102}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -723,7 +723,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4175210014375856}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: leg right bottom1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -738,7 +738,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4312679435198590}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: pistol_shell_socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -753,7 +753,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4026222505754738}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: root_machinegun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -769,7 +769,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4944372722739724}
   - component: {fileID: 212134621252833664}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: barrel copy 44
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -785,7 +785,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4125598496915630}
   - component: {fileID: 212318965998033184}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -800,7 +800,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4170830201680532}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: SideCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -817,7 +817,7 @@ GameObject:
   - component: {fileID: 4386591437957784}
   - component: {fileID: 95753247557573372}
   - component: {fileID: 114928513658955930}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: SniperLaser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -832,7 +832,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4303444867854396}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: assault_shell_socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -848,7 +848,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4796350829382474}
   - component: {fileID: 212088092289932256}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: assault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -863,7 +863,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4405984466051396}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: handfist1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -878,7 +878,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4950518378528716}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -893,7 +893,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4294378967150032}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: pistol_shell_socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -909,7 +909,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4101466577186024}
   - component: {fileID: 212866684960563120}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: shotgun1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -924,7 +924,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4777160727762954}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -939,7 +939,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4086414750444148}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: machine gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -954,7 +954,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4285489669066338}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -969,7 +969,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4981671160725650}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -985,7 +985,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4020667125960326}
   - component: {fileID: 212705765941274208}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1000,7 +1000,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4065316453073970}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: machine gun_shell_socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1015,7 +1015,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4063632424635768}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: assault_shell_socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1030,7 +1030,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4928478482998300}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1046,7 +1046,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4205839378088856}
   - component: {fileID: 212432626766601830}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: machine gun bullets2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1062,7 +1062,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4186934873822900}
   - component: {fileID: 82598035893794406}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: FootstepsLand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1077,7 +1077,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4438483834132480}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1093,7 +1093,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4597707290710118}
   - component: {fileID: 212987039805733478}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1108,7 +1108,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4783972843308032}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: machine gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1123,7 +1123,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4820255235510592}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: handfist2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1138,7 +1138,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4359091277811594}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1154,7 +1154,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4209138698956300}
   - component: {fileID: 212098895093702530}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand1_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1170,7 +1170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4885440070692692}
   - component: {fileID: 212723457972834166}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: barrel1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1187,7 +1187,7 @@ GameObject:
   - component: {fileID: 4594057608765716}
   - component: {fileID: 95192364035758052}
   - component: {fileID: 114346180138061712}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: PistolLaser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1204,7 +1204,7 @@ GameObject:
   - component: {fileID: 4732687675213490}
   - component: {fileID: 212497379883218542}
   - component: {fileID: 60515741826264870}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: leg left top1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1221,7 +1221,7 @@ GameObject:
   - component: {fileID: 4332982832045546}
   - component: {fileID: 95209807980755332}
   - component: {fileID: 114058152784860856}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: AssaultPlasma
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1236,7 +1236,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4445271844705264}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: leg right top2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1252,7 +1252,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4207701738639620}
   - component: {fileID: 50677240986253454}
-  m_Layer: 19
+  m_Layer: 12
   m_Name: Wire_Point_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1268,7 +1268,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4835755924623640}
   - component: {fileID: 212194509339102988}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: machine gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1284,7 +1284,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4215063241466750}
   - component: {fileID: 212738724028645366}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: assault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1300,7 +1300,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4351977661444718}
   - component: {fileID: 82884519212213748}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1316,7 +1316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4921087575700380}
   - component: {fileID: 212076449937575726}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: handfist1_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1331,7 +1331,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4563202674800784}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: pistol_fx_socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1346,7 +1346,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4995219826718054}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1362,7 +1362,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4154563647063748}
   - component: {fileID: 212328496479352454}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Sniper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1377,7 +1377,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4134751066574738}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: assault_fx_socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1393,7 +1393,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4497515547759128}
   - component: {fileID: 212402783653902886}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: machine gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1408,7 +1408,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4668263975517680}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: leg left top1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1423,7 +1423,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4212209217624110}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: machine gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1438,7 +1438,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4577355798394222}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: machine gun_fx_socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1454,7 +1454,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4867160136783238}
   - component: {fileID: 212258148869353368}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1470,7 +1470,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4463004337777944}
   - component: {fileID: 212101020065195564}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1486,7 +1486,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4014877695060866}
   - component: {fileID: 212685712188594682}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1503,7 +1503,7 @@ GameObject:
   - component: {fileID: 4024222994219940}
   - component: {fileID: 95424225220086346}
   - component: {fileID: 114751756349947570}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Pistol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1520,7 +1520,7 @@ GameObject:
   - component: {fileID: 4316253241499564}
   - component: {fileID: 95878948224766326}
   - component: {fileID: 114578132880645202}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: MachineGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1536,7 +1536,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4669285155018340}
   - component: {fileID: 212825732185946714}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1555,7 +1555,7 @@ GameObject:
   - component: {fileID: 114701416850550700}
   - component: {fileID: 114939186674627936}
   - component: {fileID: 225920004210186402}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: HealthCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1572,7 +1572,7 @@ GameObject:
   - component: {fileID: 4778195391081140}
   - component: {fileID: 95023643962269536}
   - component: {fileID: 114732522889764442}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: PistolPlasma
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1588,7 +1588,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4849055761989380}
   - component: {fileID: 212008002786854388}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand2_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1603,7 +1603,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4500427617595572}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: root_machinegun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1618,7 +1618,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4889685933947058}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1634,7 +1634,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4828571454186462}
   - component: {fileID: 212181843620476142}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Sniper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1649,7 +1649,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4000183137310576}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: sniper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1665,7 +1665,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4301761724987622}
   - component: {fileID: 212240545024593090}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1681,7 +1681,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4240042433100546}
   - component: {fileID: 212618397917656706}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: machine gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1696,7 +1696,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4897171157342922}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: root_machinegun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1711,7 +1711,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4158981991190158}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: leg left bottom1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1726,7 +1726,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4617694224852780}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1742,7 +1742,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4806378599478098}
   - component: {fileID: 212355247896148812}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: PistolPlasma
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1758,7 +1758,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4579706136487380}
   - component: {fileID: 212715761627984670}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1776,7 +1776,7 @@ GameObject:
   - component: {fileID: 212589116266613272}
   - component: {fileID: 114179321678334626}
   - component: {fileID: 61158678041110106}
-  m_Layer: 16
+  m_Layer: 12
   m_Name: Knife1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1791,7 +1791,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4739590385577762}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1806,7 +1806,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4156441681610616}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: shotgun_shell_socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1822,7 +1822,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4929670994769108}
   - component: {fileID: 212811968683324740}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1837,7 +1837,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4403864995476964}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: assault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1852,7 +1852,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4134505242974352}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Knife1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1868,7 +1868,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4563149143527548}
   - component: {fileID: 212654762709778226}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1884,7 +1884,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4348876983529510}
   - component: {fileID: 212402903764113126}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand2_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1899,7 +1899,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4135434620714154}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: machine gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1915,7 +1915,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4701449974980530}
   - component: {fileID: 212086860323566136}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1930,7 +1930,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4911903022244272}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: root_shotgun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1945,7 +1945,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4361305188162246}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1960,7 +1960,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4032122438213344}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1975,7 +1975,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4318172440712338}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: assault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1991,7 +1991,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4257816954032386}
   - component: {fileID: 82051402376647192}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: WeaponSpin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2006,7 +2006,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4053839609386830}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Knife_fx_socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2022,7 +2022,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4818227548339398}
   - component: {fileID: 212664590890531272}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2038,7 +2038,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4619249696066984}
   - component: {fileID: 212451613338073160}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2053,7 +2053,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4562473887315136}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2070,7 +2070,7 @@ GameObject:
   - component: {fileID: 4823424248741054}
   - component: {fileID: 95726794053215724}
   - component: {fileID: 114470629513902538}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: ShotGunPlasma
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2086,7 +2086,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4668480338289422}
   - component: {fileID: 212677707810252990}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: shotgun1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2101,7 +2101,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4334571238914472}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2117,7 +2117,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4624925878540626}
   - component: {fileID: 212591907410333662}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2133,7 +2133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4023619885662970}
   - component: {fileID: 212307527254932416}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2148,7 +2148,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4166169429112460}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2163,7 +2163,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4490277952009700}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: sniper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2179,7 +2179,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4283257522072636}
   - component: {fileID: 212974381130002512}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand1_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2194,7 +2194,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4849796427978540}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2209,7 +2209,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4610306979175300}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: root_assault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2225,7 +2225,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4076758557537860}
   - component: {fileID: 212690659402049416}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Pistol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2240,7 +2240,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4186193836441386}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: machine gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2256,7 +2256,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4456677965140696}
   - component: {fileID: 212377879131234710}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: barrel copy 33
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2273,7 +2273,7 @@ GameObject:
   - component: {fileID: 4907795123550882}
   - component: {fileID: 95380911078687020}
   - component: {fileID: 114501301825511870}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: RocketLauncher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2288,7 +2288,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4754266334589116}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2303,7 +2303,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4827081578398226}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: machine gun_shell_socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2319,7 +2319,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4166873572700720}
   - component: {fileID: 212302107972019518}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2335,7 +2335,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4796174175157596}
   - component: {fileID: 212449672057667338}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2350,7 +2350,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4091768209468688}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: root_sniper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2365,7 +2365,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4007623054724108}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Audio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2381,7 +2381,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4211295424781884}
   - component: {fileID: 212023824471543538}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: barrel copy 11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2396,7 +2396,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4571816054193944}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: machine gun_fx_socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2412,7 +2412,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4416874084651780}
   - component: {fileID: 212463482859523422}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: handfist2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2427,7 +2427,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4384711243322314}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: pistol_fx_socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2443,7 +2443,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4847350966175728}
   - component: {fileID: 212833934946959100}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: machine gun bullets1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2458,7 +2458,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4864517767948582}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: root_shotgun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2473,7 +2473,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4746484598259466}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: root_machinegun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2488,7 +2488,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4832035377022642}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: handfist1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2503,7 +2503,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4084332873010698}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: leg left bottom1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2518,7 +2518,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4887598379205180}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2534,7 +2534,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4271506513015634}
   - component: {fileID: 212485838487773660}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: machine gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2549,7 +2549,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4290590332031656}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: machine gun_fx_socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2565,7 +2565,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4268678907094946}
   - component: {fileID: 212394877573612282}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2581,7 +2581,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4732810820051908}
   - component: {fileID: 212295782080634128}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2596,7 +2596,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4668331865564716}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2611,7 +2611,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4328003331423196}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: machine gun_shell_socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2627,7 +2627,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4351484488222642}
   - component: {fileID: 212637242292528690}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand1_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2643,7 +2643,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4097110099616852}
   - component: {fileID: 212779108290847276}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2658,7 +2658,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4594783696482122}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: root_assault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2673,7 +2673,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4133879255872246}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: machine gun_shell_socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2689,7 +2689,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4841829687206518}
   - component: {fileID: 212650236985988764}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand2_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2705,7 +2705,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4903102564274910}
   - component: {fileID: 82940839935433336}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: WeaponReload
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2722,7 +2722,7 @@ GameObject:
   - component: {fileID: 224324173556856686}
   - component: {fileID: 222684718490720314}
   - component: {fileID: 114806339800223260}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2737,7 +2737,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4947000630780124}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: machine gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2753,7 +2753,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4425529552682408}
   - component: {fileID: 212796565846733286}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: PistolLaser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2768,7 +2768,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4627928861925744}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: root_pistol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2795,7 +2795,7 @@ GameObject:
   - component: {fileID: 114782919482870466}
   - component: {fileID: 114177578691253220}
   - component: {fileID: 114135968793678310}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2812,7 +2812,7 @@ GameObject:
   - component: {fileID: 4887714168341416}
   - component: {fileID: 95754801305851304}
   - component: {fileID: 114089319217322982}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Sniper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2827,7 +2827,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4016688151054750}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: pistol_shell_socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2843,7 +2843,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4792069905046806}
   - component: {fileID: 82664650374373106}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Footsteps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2860,7 +2860,7 @@ GameObject:
   - component: {fileID: 4768305360936656}
   - component: {fileID: 95282424586280336}
   - component: {fileID: 114734055610607698}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: AssaultLaser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2877,7 +2877,7 @@ GameObject:
   - component: {fileID: 4336854404014420}
   - component: {fileID: 95979313115931958}
   - component: {fileID: 114761279003706384}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: LaserHeavy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2893,7 +2893,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4447589516492430}
   - component: {fileID: 212291180544157708}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: barrel copy 22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2909,7 +2909,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4277190547562080}
   - component: {fileID: 212288948379259546}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Sniper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2924,7 +2924,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4933703343117022}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: machine gun_fx_socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2939,7 +2939,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4992007263017622}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: leg right bottom1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2954,7 +2954,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4098970130990190}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: machine gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2970,7 +2970,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4846803555192894}
   - component: {fileID: 212194709891371628}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand2_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2986,7 +2986,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4081227454661318}
   - component: {fileID: 82789959939068642}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: WeaponLoop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3002,7 +3002,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4971829591161088}
   - component: {fileID: 212178347083745712}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand2_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3019,7 +3019,7 @@ GameObject:
   - component: {fileID: 4540819584036068}
   - component: {fileID: 212379892765948832}
   - component: {fileID: 60370562895655408}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3034,7 +3034,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4580374475411384}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: root_assault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3050,7 +3050,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4752608214245064}
   - component: {fileID: 212183694563111426}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: barrel3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3065,7 +3065,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4937352270160926}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3080,7 +3080,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4373071379121030}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: root_shotgun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3096,7 +3096,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4600186483737152}
   - component: {fileID: 212299492949369598}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: machine gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3112,7 +3112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224248531446390132}
   - component: {fileID: 114744718620426832}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3127,7 +3127,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4920545824215472}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: machine gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3142,7 +3142,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4117811032364932}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: machine gun bullets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3157,7 +3157,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4236322691043770}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: assault_shell_socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3172,7 +3172,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4673508941822090}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: pistol_fx_socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3187,7 +3187,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4200803310381492}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: machine gun_shell_socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3202,7 +3202,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4315734414387802}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: root_machinegun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3217,7 +3217,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4497664299622824}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: root_pistol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3232,7 +3232,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4788821563134276}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3247,7 +3247,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4852401655151984}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: root_sniper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3263,7 +3263,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4523763460686054}
   - component: {fileID: 212178455976624234}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3280,7 +3280,7 @@ GameObject:
   - component: {fileID: 4550212514607436}
   - component: {fileID: 95535402154040990}
   - component: {fileID: 114504690339706978}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: PlasmaHeavy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3295,7 +3295,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4750216278704452}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: shotgun_fx_socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3312,7 +3312,7 @@ GameObject:
   - component: {fileID: 4694495155288596}
   - component: {fileID: 95935761084674702}
   - component: {fileID: 114292980806687904}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Flamethrower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3327,7 +3327,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4424012033540724}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3342,7 +3342,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4156649498426208}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3358,7 +3358,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4534646550674610}
   - component: {fileID: 212133690389372998}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand2_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3373,7 +3373,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4526464253387558}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: root_pistol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3388,7 +3388,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4818102869738854}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: shotgun_fx_socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3405,7 +3405,7 @@ GameObject:
   - component: {fileID: 4854192261217254}
   - component: {fileID: 95918608693770178}
   - component: {fileID: 114166099785266762}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: SniperPlasma
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3421,7 +3421,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4848486826292880}
   - component: {fileID: 212332689778866782}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: barrel2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3436,7 +3436,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4465906769445192}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3451,7 +3451,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4566131001860600}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3466,7 +3466,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4663086594750744}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3482,7 +3482,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4203280816346094}
   - component: {fileID: 212722566599208794}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3497,7 +3497,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4580627634876628}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3512,7 +3512,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4139406643537962}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: assault_fx_socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3527,7 +3527,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4327667114906214}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: shotgun_fx_socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3544,7 +3544,7 @@ GameObject:
   - component: {fileID: 4682816757507850}
   - component: {fileID: 212228684232425898}
   - component: {fileID: 60130673479361702}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: leg right top2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3559,7 +3559,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4430407992827460}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: machine gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3576,7 +3576,7 @@ GameObject:
   - component: {fileID: 4180387181641880}
   - component: {fileID: 95478404847264862}
   - component: {fileID: 114478897513445996}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Shotgun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3593,7 +3593,7 @@ GameObject:
   - component: {fileID: 4665820677992586}
   - component: {fileID: 95817897789954830}
   - component: {fileID: 114397601255687230}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Knife
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3609,7 +3609,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4390383364153168}
   - component: {fileID: 50108806770173118}
-  m_Layer: 19
+  m_Layer: 12
   m_Name: Wire_Point_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3624,7 +3624,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4343630866296450}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: handfist2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3640,7 +3640,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4118723264381466}
   - component: {fileID: 212465605950635286}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3655,7 +3655,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4869879961849084}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: leg right top2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3671,7 +3671,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4067892348376928}
   - component: {fileID: 212119414998816872}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: shotgun1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3686,7 +3686,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4869841294888750}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: assault_fx_socket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3701,7 +3701,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224829009026227156}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3717,7 +3717,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4381677648434496}
   - component: {fileID: 212336545141250458}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: hand1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3730,8 +3730,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1433587161576564}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.0018325554, w: 0.99999833}
+  m_LocalPosition: {x: 0.277772, y: -0.027777, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4134751066574738}
@@ -3741,7 +3741,7 @@ Transform:
   - {fileID: 4277190547562080}
   m_Father: {fileID: 4910266684841776}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.21}
 --- !u!4 &4007623054724108
 Transform:
   m_ObjectHideFlags: 1
@@ -5006,7 +5006,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1539022833867186}
   m_LocalRotation: {x: 0, y: 0, z: 0.71112716, w: 0.7030634}
-  m_LocalPosition: {x: 0.222266, y: 5.354744, z: 0}
+  m_LocalPosition: {x: 0.222266, y: 5.179875, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4788821563134276}
@@ -6077,7 +6077,7 @@ Transform:
   m_GameObject: {fileID: 1231179071339320}
   m_LocalRotation: {x: 0, y: 0, z: 0.7090368, w: 0.7051715}
   m_LocalPosition: {x: 0.111499995, y: 1.635, z: 0}
-  m_LocalScale: {x: 1.0259404, y: 1.0259404, z: 1}
+  m_LocalScale: {x: 1.006324, y: 1.006324, z: 1}
   m_Children:
   - {fileID: 4156649498426208}
   m_Father: {fileID: 4032122438213344}
@@ -6243,7 +6243,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1037361584023156}
-  m_LocalRotation: {x: -0, y: -0, z: 0.09540598, w: 0.99543846}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.75, y: 3.37, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -7232,8 +7232,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5011876, y: 0.5}
-    oldSize: {x: 4.21, y: 3.3}
+    pivot: {x: 0.5275, y: 0.5045872}
+    oldSize: {x: 4, y: 3.27}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -8235,7 +8235,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1395694156820472}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 9b8f0379c137c904387c8f4921a7be9c, type: 2}
   m_CullingMode: 0
@@ -8576,7 +8576,7 @@ MonoBehaviour:
   SpinDownRate: 0
   SpinUpDelayOnEarlyStop: 0
   LoopDelayOnEarlyStop: 0
-  FireRate: 0.08
+  FireRate: 0.2
   UseFireRateCurve: 0
   FireRateCurve:
     serializedVersion: 2
@@ -8602,14 +8602,14 @@ MonoBehaviour:
   MuzzleFlashZ: -1
   ShellForce: {x: 5, y: 10}
   ShellTorque: {x: -2, y: 2}
-  ProjectileForce: {x: 7777, y: 9999}
+  ProjectileForce: {x: 3000, y: 3000}
   ProjectileHitLayerMask:
     serializedVersion: 2
-    m_Bits: 426752
+    m_Bits: 430336
   ProjectileDelay: 0
   ProjectileOffset: {x: 0.06, y: 0}
-  ProjectileRotation: {x: -5, y: 5}
-  ProjectileLifeTime: {x: 3, y: 4}
+  ProjectileRotation: {x: -1, y: 1}
+  ProjectileLifeTime: {x: 1, y: 1}
   ProjectileBaseScale: {x: 2, y: 1}
   ProjectileScaleX: {x: 0, y: 11}
   AudioInfo:
@@ -8690,7 +8690,7 @@ MonoBehaviour:
   SpinDownRate: 0
   SpinUpDelayOnEarlyStop: 0
   LoopDelayOnEarlyStop: 0
-  FireRate: 0.2
+  FireRate: 0.5
   UseFireRateCurve: 0
   FireRateCurve:
     serializedVersion: 2
@@ -8716,14 +8716,14 @@ MonoBehaviour:
   MuzzleFlashZ: -1
   ShellForce: {x: 5, y: 10}
   ShellTorque: {x: -2, y: 2}
-  ProjectileForce: {x: 12000, y: 15000}
+  ProjectileForce: {x: 4000, y: 4000}
   ProjectileHitLayerMask:
     serializedVersion: 2
-    m_Bits: 426752
+    m_Bits: 430336
   ProjectileDelay: 0
   ProjectileOffset: {x: 0, y: 0}
-  ProjectileRotation: {x: -2, y: 2}
-  ProjectileLifeTime: {x: 5, y: 6}
+  ProjectileRotation: {x: 0, y: 0}
+  ProjectileLifeTime: {x: 3, y: 3}
   ProjectileBaseScale: {x: 1, y: 2}
   ProjectileScaleX: {x: 0.1, y: 0.25}
   AudioInfo:
@@ -8815,7 +8815,7 @@ MonoBehaviour:
   SpinDownRate: 0
   SpinUpDelayOnEarlyStop: 0
   LoopDelayOnEarlyStop: 0
-  FireRate: 0
+  FireRate: 0.5
   UseFireRateCurve: 0
   FireRateCurve:
     serializedVersion: 2
@@ -8824,12 +8824,13 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   AnimatorFireRateMult: 0
-  FireQueue: 0
+  FireQueue: 1
   ProjectileCloseRange: 0
   FXSocket: {fileID: 4139406643537962}
   ShellSocket: {fileID: 4236322691043770}
-  MuzzleFlash: {fileID: 0}
-  Projectile: {fileID: 4000013603701636, guid: 93c3cfa0b5e89d14d91510b5f09bde3a, type: 2}
+  MuzzleFlash: {fileID: 4000010822920324, guid: 7dfa6deea0484a14790db42492f40fba,
+    type: 2}
+  Projectile: {fileID: 4000013203217322, guid: c4dee9096bcce99408c0ea76e8caffbf, type: 2}
   Shell: {fileID: 0}
   Smoke: {fileID: 4000013190636638, guid: 671247b83829be44ab087957806f7662, type: 2}
   BarrelSpark: {fileID: 4000013190636638, guid: 8c69106a15076d04ebffda84e37c80be,
@@ -8840,14 +8841,14 @@ MonoBehaviour:
   MuzzleFlashZ: -1
   ShellForce: {x: 5, y: 10}
   ShellTorque: {x: -2, y: 2}
-  ProjectileForce: {x: 2300, y: 2600}
+  ProjectileForce: {x: 6000, y: 6000}
   ProjectileHitLayerMask:
     serializedVersion: 2
-    m_Bits: 426752
+    m_Bits: 430336
   ProjectileDelay: 0
   ProjectileOffset: {x: 0, y: 0}
   ProjectileRotation: {x: 0, y: 0}
-  ProjectileLifeTime: {x: 5, y: 6}
+  ProjectileLifeTime: {x: 3, y: 3}
   ProjectileBaseScale: {x: 1, y: 2}
   ProjectileScaleX: {x: 0.1, y: 0.25}
   AudioInfo:
@@ -9139,7 +9140,7 @@ MonoBehaviour:
   ProjectileForce: {x: 2100, y: 2500}
   ProjectileHitLayerMask:
     serializedVersion: 2
-    m_Bits: 426752
+    m_Bits: 430336
   ProjectileDelay: 0
   ProjectileOffset: {x: 0.05, y: 0.05}
   ProjectileRotation: {x: -3, y: 3}
@@ -9244,14 +9245,14 @@ MonoBehaviour:
   MuzzleFlashZ: -1
   ShellForce: {x: 4, y: 6}
   ShellTorque: {x: -1, y: 1}
-  ProjectileForce: {x: 8888, y: 12000}
+  ProjectileForce: {x: 2500, y: 2500}
   ProjectileHitLayerMask:
     serializedVersion: 2
-    m_Bits: 426752
+    m_Bits: 430336
   ProjectileDelay: 0
   ProjectileOffset: {x: 1, y: 0}
-  ProjectileRotation: {x: -2, y: 2}
-  ProjectileLifeTime: {x: 3, y: 4}
+  ProjectileRotation: {x: 0, y: 0}
+  ProjectileLifeTime: {x: 1, y: 1}
   ProjectileBaseScale: {x: 0.8, y: 1.2}
   ProjectileScaleX: {x: 0, y: 0.1}
   AudioInfo:
@@ -9365,7 +9366,7 @@ MonoBehaviour:
   ProjectileForce: {x: 0, y: 0}
   ProjectileHitLayerMask:
     serializedVersion: 2
-    m_Bits: 426752
+    m_Bits: 430336
   ProjectileDelay: 0
   ProjectileOffset: {x: 0, y: 0}
   ProjectileRotation: {x: 0, y: 0}
@@ -9457,7 +9458,7 @@ MonoBehaviour:
     EquippedWeaponCounter: -1
   - Weapons:
     - {fileID: 114397601255687230}
-    EquippedWeaponCounter: 0
+    EquippedWeaponCounter: -1
 --- !u!114 &114470629513902538
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9486,7 +9487,7 @@ MonoBehaviour:
   SpinDownRate: 0
   SpinUpDelayOnEarlyStop: 0
   LoopDelayOnEarlyStop: 0
-  FireRate: 0
+  FireRate: 0.4
   UseFireRateCurve: 0
   FireRateCurve:
     serializedVersion: 2
@@ -9500,7 +9501,7 @@ MonoBehaviour:
   FXSocket: {fileID: 4750216278704452}
   ShellSocket: {fileID: 4639945439140426}
   MuzzleFlash: {fileID: 0}
-  Projectile: {fileID: 4000010298763132, guid: 8482466905b6d3946a69ed5b3fe2ccd4, type: 2}
+  Projectile: {fileID: 4000013203217322, guid: c4dee9096bcce99408c0ea76e8caffbf, type: 2}
   Shell: {fileID: 0}
   Smoke: {fileID: 4000013190636638, guid: 442e5f2697c8e814793262c5c17c5180, type: 2}
   BarrelSpark: {fileID: 4000013190636638, guid: 2dc7033f457b8574a9c92ec912ce59b4,
@@ -9511,14 +9512,14 @@ MonoBehaviour:
   MuzzleFlashZ: -1
   ShellForce: {x: 5, y: 10}
   ShellTorque: {x: -2, y: 2}
-  ProjectileForce: {x: 2500, y: 2600}
+  ProjectileForce: {x: 1500, y: 1500}
   ProjectileHitLayerMask:
     serializedVersion: 2
-    m_Bits: 426752
+    m_Bits: 430336
   ProjectileDelay: 0
   ProjectileOffset: {x: 0.2, y: 0.05}
-  ProjectileRotation: {x: -5, y: 5}
-  ProjectileLifeTime: {x: 2, y: 3}
+  ProjectileRotation: {x: -3, y: 3}
+  ProjectileLifeTime: {x: 1, y: 1}
   ProjectileBaseScale: {x: 0.3, y: 1}
   ProjectileScaleX: {x: 0, y: 0.1}
   AudioInfo:
@@ -9567,7 +9568,7 @@ MonoBehaviour:
     HitPitch: {x: 0, y: 0}
     HitMixerGroup: {fileID: 0}
   SparkFragment: {fileID: 0}
-  ProjectilesPerRound: 1
+  ProjectilesPerRound: 4
   SparksPerRound: 0
 --- !u!114 &114478897513445996
 MonoBehaviour:
@@ -9597,7 +9598,7 @@ MonoBehaviour:
   SpinDownRate: 0
   SpinUpDelayOnEarlyStop: 0
   LoopDelayOnEarlyStop: 0
-  FireRate: 0.3
+  FireRate: 0.4
   UseFireRateCurve: 0
   FireRateCurve:
     serializedVersion: 2
@@ -9623,14 +9624,14 @@ MonoBehaviour:
   MuzzleFlashZ: -1
   ShellForce: {x: 8, y: 12}
   ShellTorque: {x: -3, y: 3}
-  ProjectileForce: {x: 7777, y: 9999}
+  ProjectileForce: {x: 1500, y: 1500}
   ProjectileHitLayerMask:
     serializedVersion: 2
-    m_Bits: 426752
+    m_Bits: 4352
   ProjectileDelay: 0
   ProjectileOffset: {x: 0.3, y: 0}
-  ProjectileRotation: {x: -5, y: 5}
-  ProjectileLifeTime: {x: 2, y: 3}
+  ProjectileRotation: {x: -3, y: 3}
+  ProjectileLifeTime: {x: 1, y: 1}
   ProjectileBaseScale: {x: 0.3, y: 1}
   ProjectileScaleX: {x: 0, y: 0.1}
   AudioInfo:
@@ -9748,7 +9749,7 @@ MonoBehaviour:
   ProjectileForce: {x: 2100, y: 2500}
   ProjectileHitLayerMask:
     serializedVersion: 2
-    m_Bits: 426752
+    m_Bits: 430336
   ProjectileDelay: 0
   ProjectileOffset: {x: 0.05, y: 0.05}
   ProjectileRotation: {x: -3, y: 3}
@@ -9820,7 +9821,7 @@ MonoBehaviour:
   RightHandId: 2
   Identifier: 8
   Type: 7
-  FireMode: 0
+  FireMode: 1
   AnimationFireEvent: 0
   AnimationReadyEvent: 0
   AnimationSpawnShellEvent: 0
@@ -9828,7 +9829,7 @@ MonoBehaviour:
   SpinDownRate: 0
   SpinUpDelayOnEarlyStop: 0
   LoopDelayOnEarlyStop: 0
-  FireRate: 0
+  FireRate: 0.1
   UseFireRateCurve: 0
   FireRateCurve:
     serializedVersion: 2
@@ -9837,13 +9838,13 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   AnimatorFireRateMult: 0
-  FireQueue: 0
+  FireQueue: 1
   ProjectileCloseRange: 0
   FXSocket: {fileID: 4933703343117022}
   ShellSocket: {fileID: 4200803310381492}
   MuzzleFlash: {fileID: 4000010030254062, guid: 3ae339c3d0cefae47a16e226b5e488d3,
     type: 2}
-  Projectile: {fileID: 4000013603701636, guid: 93c3cfa0b5e89d14d91510b5f09bde3a, type: 2}
+  Projectile: {fileID: 4000013203217322, guid: c4dee9096bcce99408c0ea76e8caffbf, type: 2}
   Shell: {fileID: 0}
   Smoke: {fileID: 4000013190636638, guid: 27d88b28ec2c56a45aa5909999736c42, type: 2}
   BarrelSpark: {fileID: 4000013190636638, guid: 8c69106a15076d04ebffda84e37c80be,
@@ -9854,16 +9855,16 @@ MonoBehaviour:
   MuzzleFlashZ: -1
   ShellForce: {x: 5, y: 10}
   ShellTorque: {x: -2, y: 2}
-  ProjectileForce: {x: 2100, y: 2500}
+  ProjectileForce: {x: 3000, y: 3000}
   ProjectileHitLayerMask:
     serializedVersion: 2
-    m_Bits: 426752
+    m_Bits: 430336
   ProjectileDelay: 0
-  ProjectileOffset: {x: 0.05, y: 0.05}
-  ProjectileRotation: {x: -3, y: 3}
-  ProjectileLifeTime: {x: 5, y: 6}
+  ProjectileOffset: {x: 0, y: 0}
+  ProjectileRotation: {x: -1.5, y: 1.5}
+  ProjectileLifeTime: {x: 3, y: 3}
   ProjectileBaseScale: {x: 1.3, y: 1.5}
-  ProjectileScaleX: {x: 0, y: 0.5}
+  ProjectileScaleX: {x: 0.5, y: 1}
   AudioInfo:
     MixerGroup: {fileID: 0}
     Shot: []
@@ -9937,7 +9938,7 @@ MonoBehaviour:
   SpinDownRate: 0
   SpinUpDelayOnEarlyStop: 0
   LoopDelayOnEarlyStop: 0
-  FireRate: 0
+  FireRate: 0.4
   UseFireRateCurve: 0
   FireRateCurve:
     serializedVersion: 2
@@ -9951,7 +9952,7 @@ MonoBehaviour:
   FXSocket: {fileID: 4327667114906214}
   ShellSocket: {fileID: 4271836597869368}
   MuzzleFlash: {fileID: 0}
-  Projectile: {fileID: 4000010298763132, guid: 8482466905b6d3946a69ed5b3fe2ccd4, type: 2}
+  Projectile: {fileID: 4000011112682238, guid: 58883ecbd6532df4e87697c65364c4a3, type: 2}
   Shell: {fileID: 0}
   Smoke: {fileID: 4000013190636638, guid: 442e5f2697c8e814793262c5c17c5180, type: 2}
   BarrelSpark: {fileID: 4000013190636638, guid: 2dc7033f457b8574a9c92ec912ce59b4,
@@ -9962,14 +9963,14 @@ MonoBehaviour:
   MuzzleFlashZ: -1
   ShellForce: {x: 5, y: 10}
   ShellTorque: {x: -2, y: 2}
-  ProjectileForce: {x: 2500, y: 2600}
+  ProjectileForce: {x: 2000, y: 2000}
   ProjectileHitLayerMask:
     serializedVersion: 2
-    m_Bits: 426752
+    m_Bits: 430336
   ProjectileDelay: 0
   ProjectileOffset: {x: 0.2, y: 0.05}
-  ProjectileRotation: {x: -5, y: 5}
-  ProjectileLifeTime: {x: 2, y: 3}
+  ProjectileRotation: {x: -3, y: 3}
+  ProjectileLifeTime: {x: 0.7, y: 0.7}
   ProjectileBaseScale: {x: 0.3, y: 1}
   ProjectileScaleX: {x: 0, y: 0.1}
   AudioInfo:
@@ -10018,7 +10019,7 @@ MonoBehaviour:
     HitPitch: {x: 0, y: 0}
     HitMixerGroup: {fileID: 0}
   SparkFragment: {fileID: 0}
-  ProjectilesPerRound: 3
+  ProjectilesPerRound: 4
   SparksPerRound: 0
 --- !u!114 &114578132880645202
 MonoBehaviour:
@@ -10074,14 +10075,14 @@ MonoBehaviour:
   MuzzleFlashZ: -1
   ShellForce: {x: 5, y: 10}
   ShellTorque: {x: -2, y: 2}
-  ProjectileForce: {x: 8888, y: 12000}
+  ProjectileForce: {x: 1500, y: 1500}
   ProjectileHitLayerMask:
     serializedVersion: 2
-    m_Bits: 426752
+    m_Bits: 430336
   ProjectileDelay: 0
   ProjectileOffset: {x: 3, y: 0.05}
-  ProjectileRotation: {x: -3, y: 3}
-  ProjectileLifeTime: {x: 5, y: 6}
+  ProjectileRotation: {x: -1.5, y: 1.5}
+  ProjectileLifeTime: {x: 3, y: 3}
   ProjectileBaseScale: {x: 1.3, y: 1.5}
   ProjectileScaleX: {x: 0, y: 1}
   AudioInfo:
@@ -10259,7 +10260,7 @@ MonoBehaviour:
   ProjectileForce: {x: 2100, y: 2500}
   ProjectileHitLayerMask:
     serializedVersion: 2
-    m_Bits: 426752
+    m_Bits: 430336
   ProjectileDelay: 0
   ProjectileOffset: {x: 0.05, y: 0.05}
   ProjectileRotation: {x: -3, y: 3}
@@ -10400,14 +10401,14 @@ MonoBehaviour:
   MuzzleFlashZ: -1
   ShellForce: {x: 4, y: 6}
   ShellTorque: {x: -1, y: 1}
-  ProjectileForce: {x: 9999, y: 10000}
+  ProjectileForce: {x: 3000, y: 3000}
   ProjectileHitLayerMask:
     serializedVersion: 2
-    m_Bits: 426752
+    m_Bits: 430336
   ProjectileDelay: 0
   ProjectileOffset: {x: 1, y: 0}
-  ProjectileRotation: {x: -3, y: 3}
-  ProjectileLifeTime: {x: 3, y: 4}
+  ProjectileRotation: {x: 0, y: 0}
+  ProjectileLifeTime: {x: 1, y: 1}
   ProjectileBaseScale: {x: 0.8, y: 1}
   ProjectileScaleX: {x: 0, y: 0.1}
   AudioInfo:
@@ -10489,8 +10490,8 @@ MonoBehaviour:
   SpinDownRate: 0
   SpinUpDelayOnEarlyStop: 0
   LoopDelayOnEarlyStop: 0
-  FireRate: 0.18
-  UseFireRateCurve: 1
+  FireRate: 0.4
+  UseFireRateCurve: 0
   FireRateCurve:
     serializedVersion: 2
     m_Curve:
@@ -10533,14 +10534,14 @@ MonoBehaviour:
   MuzzleFlashZ: -1
   ShellForce: {x: 5, y: 10}
   ShellTorque: {x: -2, y: 2}
-  ProjectileForce: {x: 1700, y: 2000}
+  ProjectileForce: {x: 2000, y: 2000}
   ProjectileHitLayerMask:
     serializedVersion: 2
-    m_Bits: 426752
+    m_Bits: 430336
   ProjectileDelay: 0
   ProjectileOffset: {x: 0, y: 0}
-  ProjectileRotation: {x: -4, y: 4}
-  ProjectileLifeTime: {x: 0.03, y: 0.05}
+  ProjectileRotation: {x: -1, y: 1}
+  ProjectileLifeTime: {x: 1, y: 1}
   ProjectileBaseScale: {x: 1.2, y: 1.3}
   ProjectileScaleX: {x: 0, y: 0.25}
   AudioInfo:
@@ -10695,10 +10696,10 @@ MonoBehaviour:
   ProjectileForce: {x: 1500, y: 1500}
   ProjectileHitLayerMask:
     serializedVersion: 2
-    m_Bits: 426752
+    m_Bits: 430336
   ProjectileDelay: 0
   ProjectileOffset: {x: 1, y: 0}
-  ProjectileRotation: {x: -1, y: 1}
+  ProjectileRotation: {x: 0, y: 0}
   ProjectileLifeTime: {x: 1, y: 1}
   ProjectileBaseScale: {x: 2, y: 2}
   ProjectileScaleX: {x: 0, y: 0}
@@ -10851,14 +10852,14 @@ MonoBehaviour:
   MuzzleFlashZ: -1
   ShellForce: {x: 5, y: 10}
   ShellTorque: {x: -2, y: 2}
-  ProjectileForce: {x: 8888, y: 12000}
+  ProjectileForce: {x: 2500, y: 2500}
   ProjectileHitLayerMask:
     serializedVersion: 2
-    m_Bits: 426752
+    m_Bits: 430336
   ProjectileDelay: 0
   ProjectileOffset: {x: 0, y: -0}
-  ProjectileRotation: {x: -6, y: 6}
-  ProjectileLifeTime: {x: 5, y: 6}
+  ProjectileRotation: {x: -1.5, y: 1.5}
+  ProjectileLifeTime: {x: 3, y: 3}
   ProjectileBaseScale: {x: 1.5, y: 2}
   ProjectileScaleX: {x: 0, y: 0.5}
   AudioInfo:
@@ -10979,7 +10980,7 @@ MonoBehaviour:
   SpinDownRate: 0
   SpinUpDelayOnEarlyStop: 0
   LoopDelayOnEarlyStop: 0
-  FireRate: 0
+  FireRate: 0.5
   UseFireRateCurve: 0
   FireRateCurve:
     serializedVersion: 2
@@ -10992,8 +10993,9 @@ MonoBehaviour:
   ProjectileCloseRange: 0
   FXSocket: {fileID: 4134751066574738}
   ShellSocket: {fileID: 4327901905816006}
-  MuzzleFlash: {fileID: 0}
-  Projectile: {fileID: 4000013603701636, guid: 93c3cfa0b5e89d14d91510b5f09bde3a, type: 2}
+  MuzzleFlash: {fileID: 4000012883924136, guid: 07a859312ddeaef4597e8a0ade44d808,
+    type: 2}
+  Projectile: {fileID: 4000011112682238, guid: 58883ecbd6532df4e87697c65364c4a3, type: 2}
   Shell: {fileID: 0}
   Smoke: {fileID: 4000013190636638, guid: 671247b83829be44ab087957806f7662, type: 2}
   BarrelSpark: {fileID: 4000013190636638, guid: 8c69106a15076d04ebffda84e37c80be,
@@ -11004,14 +11006,14 @@ MonoBehaviour:
   MuzzleFlashZ: -1
   ShellForce: {x: 5, y: 10}
   ShellTorque: {x: -2, y: 2}
-  ProjectileForce: {x: 2300, y: 2600}
+  ProjectileForce: {x: 5000, y: 5000}
   ProjectileHitLayerMask:
     serializedVersion: 2
-    m_Bits: 426752
+    m_Bits: 430336
   ProjectileDelay: 0
   ProjectileOffset: {x: 0, y: 0}
   ProjectileRotation: {x: 0, y: 0}
-  ProjectileLifeTime: {x: 5, y: 6}
+  ProjectileLifeTime: {x: 3, y: 3}
   ProjectileBaseScale: {x: 1, y: 2}
   ProjectileScaleX: {x: 0.1, y: 0.25}
   AudioInfo:
@@ -11087,14 +11089,14 @@ MonoBehaviour:
   SpinDownRate: 0
   SpinUpDelayOnEarlyStop: 0
   LoopDelayOnEarlyStop: 0
-  FireRate: 0
-  UseFireRateCurve: 1
+  FireRate: 0.2
+  UseFireRateCurve: 0
   FireRateCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: -0.0043023573
-      value: 0.17051867
+      value: 0.20192125
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -11102,8 +11104,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.030026928
-      value: 0.07494833
+      time: 0.16589412
+      value: 0.19835179
       inSlope: -0.2580881
       outSlope: -0.2580881
       tangentMode: 0
@@ -11111,17 +11113,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.1783462
-      value: 0.10399759
-      inSlope: -0.16000122
-      outSlope: -0.16000122
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.98200214
-      value: 0.10298952
+      time: 0.9944036
+      value: 0.1604805
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -11149,14 +11142,14 @@ MonoBehaviour:
   MuzzleFlashZ: -1
   ShellForce: {x: 5, y: 10}
   ShellTorque: {x: -2, y: 2}
-  ProjectileForce: {x: 9999, y: 12345}
+  ProjectileForce: {x: 1500, y: 1500}
   ProjectileHitLayerMask:
     serializedVersion: 2
-    m_Bits: 426752
+    m_Bits: 430336
   ProjectileDelay: 0
   ProjectileOffset: {x: 3, y: 0}
-  ProjectileRotation: {x: -4, y: 4}
-  ProjectileLifeTime: {x: 3, y: 4}
+  ProjectileRotation: {x: -1, y: 1}
+  ProjectileLifeTime: {x: 1, y: 1}
   ProjectileBaseScale: {x: 1, y: 2}
   ProjectileScaleX: {x: 0, y: 0}
   AudioInfo:
@@ -16070,7 +16063,7 @@ SpriteRenderer:
   m_SortingLayerID: 1435840749
   m_SortingLayer: 1
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300006, guid: e5b8f5fd1ec4e4d44b49100ce096ecde, type: 3}
+  m_Sprite: {fileID: 21300026, guid: fee10258c5e73e844b93fb16ac6959d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -16250,7 +16243,7 @@ SpriteRenderer:
   m_SortingLayerID: 1435840749
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300010, guid: fee10258c5e73e844b93fb16ac6959d9, type: 3}
+  m_Sprite: {fileID: 21300034, guid: fee10258c5e73e844b93fb16ac6959d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -17600,7 +17593,7 @@ SpriteRenderer:
   m_SortingLayerID: 1435840749
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fee10258c5e73e844b93fb16ac6959d9, type: 3}
+  m_Sprite: {fileID: 21300024, guid: fee10258c5e73e844b93fb16ac6959d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -19310,7 +19303,7 @@ SpriteRenderer:
   m_SortingLayerID: 1435840749
   m_SortingLayer: 1
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300002, guid: e5b8f5fd1ec4e4d44b49100ce096ecde, type: 3}
+  m_Sprite: {fileID: 21300030, guid: fee10258c5e73e844b93fb16ac6959d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

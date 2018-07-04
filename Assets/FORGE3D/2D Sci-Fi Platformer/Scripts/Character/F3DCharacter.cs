@@ -127,7 +127,7 @@ public class F3DCharacter : MonoBehaviour
     {
         foreach (Collider2D c in colliders)
         {
-            c.gameObject.layer = LayerMask.NameToLayer("Default");
+            c.gameObject.layer = LayerMask.NameToLayer("Player");
         }
 
     }

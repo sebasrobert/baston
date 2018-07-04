@@ -501,7 +501,6 @@ public class F3DGenericWeapon : MonoBehaviour
                 F3DGenericProjectile.DealDamage(transform.root.gameObject, 5, Type, closeCheckHit[i].transform, projObject.Hit,
                     projObject.HitLifeTime,
                     closeCheckHit[i].point, closeCheckHit[i].normal);
-
                 // Play close impact through the attached soundSource
                 F3DWeaponAudio.OnProjectileImpact(_weaponAudio.ProjectileHitClose, AudioInfo);
                 return;
