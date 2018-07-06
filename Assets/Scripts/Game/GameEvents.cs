@@ -13,4 +13,9 @@ namespace GameEvents {
         public GameObject Killer { get; set; }
         public GameObject Dead { get; set; }
     }
+
+    public class PlayerSuicideEvent : GameEvent
+    {
+        public GameObject Player { get; set; }
+    }
 }

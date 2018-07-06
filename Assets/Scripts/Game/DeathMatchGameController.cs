@@ -12,6 +12,7 @@ public class DeathMatchGameController : GameController {
     public int NumberOfKillsToWin;
     public int PointsForKill;
     public int PointsForHit;
+    public int PointsForSuicide;
     public float WaitTimeBeforeRespawn;
     public GameObject GameOverObject;
 
@@ -24,6 +25,7 @@ public class DeathMatchGameController : GameController {
         Timer = GetComponent<Timer>();
         EventManager.StartListening<WeaponHitPlayerEvent>(OnWeaponHitPlayerEvent);
         EventManager.StartListening<PlayerDieEvent>(OnPlayerDieEvent);
+        EventManager.StartListening<PlayerSuicideEvent>(OnPlayerSuicideEvent);
         Players = new GameObject[NumberOfPlayers];
         SpawnAllPlayers();
         MaxKills = 0;
@@ -67,6 +69,17 @@ public class DeathMatchGameController : GameController {
         UpdateScoreForKill(gameEvent.Killer, gameEvent.Dead, PointsForKill);
 
         StartCoroutine(RespawnPlayer(gameEvent.Dead));
+    }
+
+    public void OnPlayerSuicideEvent(PlayerSuicideEvent gameEvent)
+    {
+        if (GameOver)
+        {
+            return;
+        }
+
+        UpdateScoreForHit(gameEvent.Player, PointsForSuicide);
+        StartCoroutine(RespawnPlayer(gameEvent.Player));
     }
 
     private void SpawnAllPlayers() 

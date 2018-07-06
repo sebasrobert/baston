@@ -132,6 +132,19 @@ public class F3DCharacter : MonoBehaviour
 
     }
 
+    public void Suicide()
+    {
+        _isDead = true;
+        _controller.enabled = false;
+        gameObject.layer = LayerMask.NameToLayer("Dead");
+        foreach (Collider2D c in _colliders)
+        {
+            c.enabled = false;
+        }
+
+        EventManager.TriggerEvent(new PlayerSuicideEvent() { Player = gameObject });
+    }
+
     private void Die(GameObject source)
     {
         _isDead = true;
