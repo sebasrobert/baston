@@ -10,6 +10,7 @@ public class F3DGenericProjectile : MonoBehaviour
     public AudioSource Audio;
     public F3DWeaponAudio.WeaponAudioInfo AudioInfo { get; set; }
     public F3DWeaponController.WeaponType WeaponType;
+    public int DamageAmount;
 
     //
     protected Vector3 _origin;
@@ -55,12 +56,10 @@ public class F3DGenericProjectile : MonoBehaviour
         var contactsLength = other.GetContacts(contacts);
 
         if (contactsLength > 0)
-        {
-         
-
+        {            
             var contact = other.contacts[0];
 
-            DealDamage  (Source, 5, WeaponType, contact.collider.transform, Hit, HitLifeTime, contact.point, contact.normal);
+            DealDamage  (Source, DamageAmount, WeaponType, contact.collider.transform, Hit, HitLifeTime, contact.point, contact.normal);
 
             // Play hit sound
             F3DWeaponAudio.OnProjectileImpact(Audio, AudioInfo);
@@ -95,6 +94,8 @@ public class F3DGenericProjectile : MonoBehaviour
         if (target == null) return false;
         var damage = target.GetComponentInParent<F3DDamage>();
         if (damage == null) return false;
+
+        Debug.Log("Hit with " + target.gameObject);
         //
         switch (damage.Type)
         {

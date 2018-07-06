@@ -35,6 +35,7 @@ public class F3DGenericWeapon : MonoBehaviour
     public AnimationCurve FireRateCurve;
     public bool AnimatorFireRateMult;
     public bool FireQueue;
+    public int DamageAmount;
 
     // Checks
     public float ProjectileCloseRange;
@@ -498,7 +499,7 @@ public class F3DGenericWeapon : MonoBehaviour
                     }
                 if (selfHit)
                     continue;
-                F3DGenericProjectile.DealDamage(transform.root.gameObject, 5, Type, closeCheckHit[i].transform, projObject.Hit,
+                F3DGenericProjectile.DealDamage(transform.root.gameObject, DamageAmount, Type, closeCheckHit[i].transform, projObject.Hit,
                     projObject.HitLifeTime,
                     closeCheckHit[i].point, closeCheckHit[i].normal);
                 // Play close impact through the attached soundSource
@@ -540,6 +541,7 @@ public class F3DGenericWeapon : MonoBehaviour
         // Set Weapon Type
         var projectileObject = projectile.GetComponent<F3DGenericProjectile>();
         projectileObject.WeaponType = Type;
+        projectileObject.DamageAmount = DamageAmount;
 
         // Set AudioInfo
         projectileObject.AudioInfo = AudioInfo;
