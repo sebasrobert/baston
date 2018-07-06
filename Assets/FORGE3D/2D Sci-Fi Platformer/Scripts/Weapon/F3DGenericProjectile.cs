@@ -95,8 +95,6 @@ public class F3DGenericProjectile : MonoBehaviour
         var damage = target.GetComponentInParent<F3DDamage>();
         if (damage == null) return false;
 
-        Debug.Log("Hit with " + target.gameObject);
-        //
         switch (damage.Type)
         {
             case F3DDamage.DamageType.Character:

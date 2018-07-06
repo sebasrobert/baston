@@ -179,6 +179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Audio: {fileID: 82000011246326688}
   WeaponType: 5
+  DamageAmount: 15
   Hit: {fileID: 4000013971833946, guid: b2b5850449e7d6a47be37e258bcfdad1, type: 2}
   PostHitHide: 1
   DelayDespawn: 0.5
@@ -188,7 +189,7 @@ MonoBehaviour:
   Tiling: 0.1
   LineCastMask:
     serializedVersion: 2
-    m_Bits: 426752
+    m_Bits: 4352
   FadeRate: 22
 --- !u!120 &120000010645331452
 LineRenderer:
