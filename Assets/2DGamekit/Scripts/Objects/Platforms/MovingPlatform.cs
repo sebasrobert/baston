@@ -21,6 +21,9 @@ namespace Gamekit2D
 
         public bool startMovingOnlyWhenVisible;
         public bool isMovingAtStart = true;
+        public float breakDistance = 0;
+        public float decelarationRate = 1.0f;
+        public float accelarationRate = 1.0f;
 
         [HideInInspector]
         public Vector3[] localNodes = new Vector3[1];
@@ -42,6 +45,7 @@ namespace Gamekit2D
 
         protected bool m_Started = false;
         protected bool m_VeryFirstStart = false;
+        protected float m_currentSpeed;
 
         public Vector2 Velocity
         {
@@ -92,6 +96,7 @@ namespace Gamekit2D
             m_Current = 0;
             m_Dir = 1;
             m_Next = localNodes.Length > 1 ? 1 : 0;
+            m_currentSpeed = 0f;
 
             m_WaitTime = waitTimes[0];
 
@@ -120,15 +125,25 @@ namespace Gamekit2D
                 return;
             }
 
-            float distanceToGo = speed * Time.deltaTime;
+            Vector2 direction = m_WorldNode[m_Next] - transform.position;
+
+            if (direction.sqrMagnitude < breakDistance * breakDistance)
+            {
+                m_currentSpeed = Mathf.Lerp(m_currentSpeed, 0.5f, decelarationRate * Time.deltaTime);
+            }
+            else
+            {
+                m_currentSpeed = Mathf.Lerp(m_currentSpeed, speed, accelarationRate * Time.deltaTime);
+            }
+
+            float distanceToGo = m_currentSpeed * Time.deltaTime;
 
             while(distanceToGo > 0)
             {
-
-                Vector2 direction = m_WorldNode[m_Next] - transform.position;
+                var sqrMagnitude = direction.sqrMagnitude;
 
                 float dist = distanceToGo;
-                if(direction.sqrMagnitude < dist * dist)
+                if(sqrMagnitude < dist * dist)
                 {   //we have to go farther than our current goal point, so we set the distance to the remaining distance
                     //then we change the current & next indexes
                     dist = direction.magnitude;
@@ -136,6 +151,7 @@ namespace Gamekit2D
                     m_Current = m_Next;
 
                     m_WaitTime = waitTimes[m_Current];
+                    m_currentSpeed = 0f;
 
                     if (m_Dir > 0)
                     {
@@ -195,6 +211,8 @@ namespace Gamekit2D
                 // we have some wait time set, that mean we reach a point where we have to wait. So no need to continue to move the platform, early exit.
                 if (m_WaitTime > 0.001f) 
                     break;
+
+                direction = m_WorldNode[m_Next] - transform.position;
             }
         }
 

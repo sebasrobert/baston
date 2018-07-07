@@ -2226,6 +2226,31 @@ Prefab:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: 3626fe8e008014f6bbd19bb72937b311, type: 2}
+    - target: {fileID: 114671511161199820, guid: 2705583ba617d47f584db54f214d5799,
+        type: 2}
+      propertyPath: accelarationRate
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114671511161199820, guid: 2705583ba617d47f584db54f214d5799,
+        type: 2}
+      propertyPath: decelarationRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114671511161199820, guid: 2705583ba617d47f584db54f214d5799,
+        type: 2}
+      propertyPath: breakDistance
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114671511161199820, guid: 2705583ba617d47f584db54f214d5799,
+        type: 2}
+      propertyPath: waitTimes.Array.data[0]
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114671511161199820, guid: 2705583ba617d47f584db54f214d5799,
+        type: 2}
+      propertyPath: waitTimes.Array.data[1]
+      value: 0.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2705583ba617d47f584db54f214d5799, type: 2}
   m_IsPrefabParent: 0
@@ -6533,6 +6558,26 @@ Prefab:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: 3626fe8e008014f6bbd19bb72937b311, type: 2}
+    - target: {fileID: 114671511161199820, guid: 2705583ba617d47f584db54f214d5799,
+        type: 2}
+      propertyPath: accelarationRate
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114671511161199820, guid: 2705583ba617d47f584db54f214d5799,
+        type: 2}
+      propertyPath: breakDistance
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114671511161199820, guid: 2705583ba617d47f584db54f214d5799,
+        type: 2}
+      propertyPath: waitTimes.Array.data[0]
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114671511161199820, guid: 2705583ba617d47f584db54f214d5799,
+        type: 2}
+      propertyPath: waitTimes.Array.data[1]
+      value: 0.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2705583ba617d47f584db54f214d5799, type: 2}
   m_IsPrefabParent: 0

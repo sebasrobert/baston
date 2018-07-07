@@ -82,6 +82,30 @@ namespace Gamekit2D
                 m_MovingPlatform.speed = newSpeed;
             }
 
+            EditorGUI.BeginChangeCheck();
+            float newBreakDistance = EditorGUILayout.FloatField("Break Distance", m_MovingPlatform.breakDistance);
+            if (EditorGUI.EndChangeCheck())
+            {
+                Undo.RecordObject(target, "Changed Break Distance");
+                m_MovingPlatform.breakDistance = newBreakDistance;
+            }
+
+            EditorGUI.BeginChangeCheck();
+            float newDecelarationRate = EditorGUILayout.FloatField("Decelaration Rate", m_MovingPlatform.decelarationRate);
+            if (EditorGUI.EndChangeCheck())
+            {
+                Undo.RecordObject(target, "Changed Decelaration Rate");
+                m_MovingPlatform.decelarationRate = newDecelarationRate;
+            }
+
+            EditorGUI.BeginChangeCheck();
+            float newAccelarationRate = EditorGUILayout.FloatField("Accelaration Rate", m_MovingPlatform.accelarationRate);
+            if (EditorGUI.EndChangeCheck())
+            {
+                Undo.RecordObject(target, "Changed Accelaration Rate");
+                m_MovingPlatform.accelarationRate = newAccelarationRate;
+            }
+
             EditorGUILayout.Separator();
             EditorGUILayout.Separator();
 
