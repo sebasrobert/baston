@@ -78,7 +78,7 @@ public class DeathMatchGameController : GameController {
             return;
         }
 
-        UpdateScoreForHit(gameEvent.Player, PointsForSuicide);
+        UpdateScoreForSuicide(gameEvent.Player, PointsForSuicide);
         StartCoroutine(RespawnPlayer(gameEvent.Player));
     }
 
@@ -141,6 +141,13 @@ public class DeathMatchGameController : GameController {
     {
         PlayerScore playerScore = GetPlayerScore(player);
         playerScore.Points += points;
+    }
+
+    private void UpdateScoreForSuicide(GameObject player, int points)
+    {
+        PlayerScore playerScore = GetPlayerScore(player);
+        playerScore.Points -= points;
+        playerScore.NumberOfDeaths++;
     }
 
     private void UpdateScoreForKill(GameObject killer, GameObject dead, int points)
