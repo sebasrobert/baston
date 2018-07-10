@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 50657722920460430}
   - component: {fileID: 61949491503066902}
   - component: {fileID: 114332219899053514}
-  m_Layer: 13
+  m_Layer: 11
   m_Name: SniperLaser_PowerUp
   m_TagString: Collectable
   m_Icon: {fileID: 0}

@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 50586781367127462}
   - component: {fileID: 61407427833803838}
   - component: {fileID: 114840767553876756}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: TeslaCannon_PowerUp
   m_TagString: Collectable
   m_Icon: {fileID: 0}

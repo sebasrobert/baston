@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 50996641924011114}
   - component: {fileID: 61367345571316552}
   - component: {fileID: 114820865575712064}
-  m_Layer: 13
+  m_Layer: 11
   m_Name: LaserHeavy_PowerUp
   m_TagString: Collectable
   m_Icon: {fileID: 0}

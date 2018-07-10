@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 50095254951606732}
   - component: {fileID: 61852593073613850}
   - component: {fileID: 114182926059548348}
-  m_Layer: 13
+  m_Layer: 11
   m_Name: PistolLaser_PowerUp
   m_TagString: Collectable
   m_Icon: {fileID: 0}

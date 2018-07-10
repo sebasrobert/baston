@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 50194109543696012}
   - component: {fileID: 61551075104463708}
   - component: {fileID: 114814130604608524}
-  m_Layer: 13
+  m_Layer: 11
   m_Name: PlasmaHeavy_PowerUp
   m_TagString: Collectable
   m_Icon: {fileID: 0}

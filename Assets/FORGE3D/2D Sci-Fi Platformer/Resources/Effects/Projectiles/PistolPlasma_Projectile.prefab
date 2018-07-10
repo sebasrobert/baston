@@ -61,7 +61,7 @@ GameObject:
   - component: {fileID: 82000012311922470}
   m_Layer: 10
   m_Name: PistolPlasma_Projectile
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -281,6 +281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Audio: {fileID: 82000012311922470}
   WeaponType: 0
+  DamageAmount: 0
   Hit: {fileID: 4000011555818812, guid: efc00ae131f8d86498732bf05e786740, type: 2}
   PostHitHide: 1
   DelayDespawn: 2

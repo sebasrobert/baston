@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 50299066282315400}
   - component: {fileID: 61089105372491200}
   - component: {fileID: 114080246331563686}
-  m_Layer: 13
+  m_Layer: 11
   m_Name: SniperPlasma_PowerUp
   m_TagString: Collectable
   m_Icon: {fileID: 0}

@@ -2367,7 +2367,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1627706747068418
 GameObject:
   m_ObjectHideFlags: 1
@@ -7113,12 +7113,12 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 1716986416150008}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 3626fe8e008014f6bbd19bb72937b311, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.056293488, y: 3.9969397}
-  m_Size: {x: 2.8643875, y: 8.993879}
+  m_Offset: {x: 0.056293488, y: 4.2199793}
+  m_Size: {x: 2.8643875, y: 8.5478}
   m_Direction: 0
 --- !u!82 &82043694776871278
 AudioSource:
@@ -8353,7 +8353,7 @@ MonoBehaviour:
   ProjectileForce: {x: 3000, y: 3000}
   ProjectileHitLayerMask:
     serializedVersion: 2
-    m_Bits: 430336
+    m_Bits: 446720
   ProjectileDelay: 0
   ProjectileOffset: {x: 0.06, y: 0}
   ProjectileRotation: {x: -1, y: 1}
@@ -8468,7 +8468,7 @@ MonoBehaviour:
   ProjectileForce: {x: 4000, y: 4000}
   ProjectileHitLayerMask:
     serializedVersion: 2
-    m_Bits: 430336
+    m_Bits: 446720
   ProjectileDelay: 0
   ProjectileOffset: {x: 0, y: 0}
   ProjectileRotation: {x: 0, y: 0}
@@ -8594,7 +8594,7 @@ MonoBehaviour:
   ProjectileForce: {x: 6000, y: 6000}
   ProjectileHitLayerMask:
     serializedVersion: 2
-    m_Bits: 430336
+    m_Bits: 446720
   ProjectileDelay: 0
   ProjectileOffset: {x: 0, y: 0}
   ProjectileRotation: {x: 0, y: 0}
@@ -8891,7 +8891,7 @@ MonoBehaviour:
   ProjectileForce: {x: 2100, y: 2500}
   ProjectileHitLayerMask:
     serializedVersion: 2
-    m_Bits: 430336
+    m_Bits: 446720
   ProjectileDelay: 0
   ProjectileOffset: {x: 0.05, y: 0.05}
   ProjectileRotation: {x: -3, y: 3}
@@ -9000,7 +9000,7 @@ MonoBehaviour:
   ProjectileForce: {x: 2500, y: 2500}
   ProjectileHitLayerMask:
     serializedVersion: 2
-    m_Bits: 430336
+    m_Bits: 446720
   ProjectileDelay: 0
   ProjectileOffset: {x: 1, y: 0}
   ProjectileRotation: {x: 0, y: 0}
@@ -9119,7 +9119,7 @@ MonoBehaviour:
   ProjectileForce: {x: 0, y: 0}
   ProjectileHitLayerMask:
     serializedVersion: 2
-    m_Bits: 430336
+    m_Bits: 446720
   ProjectileDelay: 0
   ProjectileOffset: {x: 0, y: 0}
   ProjectileRotation: {x: 0, y: 0}
@@ -9269,7 +9269,7 @@ MonoBehaviour:
   ProjectileForce: {x: 1500, y: 1500}
   ProjectileHitLayerMask:
     serializedVersion: 2
-    m_Bits: 430336
+    m_Bits: 446720
   ProjectileDelay: 0
   ProjectileOffset: {x: 0.2, y: 0.05}
   ProjectileRotation: {x: -3, y: 3}
@@ -9382,7 +9382,7 @@ MonoBehaviour:
   ProjectileForce: {x: 1500, y: 1500}
   ProjectileHitLayerMask:
     serializedVersion: 2
-    m_Bits: 4352
+    m_Bits: 20736
   ProjectileDelay: 0
   ProjectileOffset: {x: 0.3, y: 0}
   ProjectileRotation: {x: -3, y: 3}
@@ -9505,7 +9505,7 @@ MonoBehaviour:
   ProjectileForce: {x: 2100, y: 2500}
   ProjectileHitLayerMask:
     serializedVersion: 2
-    m_Bits: 430336
+    m_Bits: 446720
   ProjectileDelay: 0
   ProjectileOffset: {x: 0.05, y: 0.05}
   ProjectileRotation: {x: -3, y: 3}
@@ -9615,7 +9615,7 @@ MonoBehaviour:
   ProjectileForce: {x: 3000, y: 3000}
   ProjectileHitLayerMask:
     serializedVersion: 2
-    m_Bits: 430336
+    m_Bits: 446720
   ProjectileDelay: 0
   ProjectileOffset: {x: 0, y: 0}
   ProjectileRotation: {x: -1.5, y: 1.5}
@@ -9724,7 +9724,7 @@ MonoBehaviour:
   ProjectileForce: {x: 2000, y: 2000}
   ProjectileHitLayerMask:
     serializedVersion: 2
-    m_Bits: 430336
+    m_Bits: 446720
   ProjectileDelay: 0
   ProjectileOffset: {x: 0.2, y: 0.05}
   ProjectileRotation: {x: -3, y: 3}
@@ -9837,7 +9837,7 @@ MonoBehaviour:
   ProjectileForce: {x: 1500, y: 1500}
   ProjectileHitLayerMask:
     serializedVersion: 2
-    m_Bits: 430336
+    m_Bits: 446720
   ProjectileDelay: 0
   ProjectileOffset: {x: 3, y: 0.05}
   ProjectileRotation: {x: -1.5, y: 1.5}
@@ -10020,7 +10020,7 @@ MonoBehaviour:
   ProjectileForce: {x: 2100, y: 2500}
   ProjectileHitLayerMask:
     serializedVersion: 2
-    m_Bits: 430336
+    m_Bits: 446720
   ProjectileDelay: 0
   ProjectileOffset: {x: 0.05, y: 0.05}
   ProjectileRotation: {x: -3, y: 3}
@@ -10084,7 +10084,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 1
-  Hit: {fileID: 4000012108150988, guid: 95d294d51813f6647a44ffabd2129820, type: 2}
+  Hit: {fileID: 4570903537081998, guid: 8027d18b3dcc84ae89acdf6e32df31b1, type: 2}
   HitNormalOffset: {x: -0.2, y: 0.2}
 --- !u!114 &114701416850550700
 MonoBehaviour:
@@ -10165,7 +10165,7 @@ MonoBehaviour:
   ProjectileForce: {x: 3000, y: 3000}
   ProjectileHitLayerMask:
     serializedVersion: 2
-    m_Bits: 430336
+    m_Bits: 446720
   ProjectileDelay: 0
   ProjectileOffset: {x: 1, y: 0}
   ProjectileRotation: {x: 0, y: 0}
@@ -10299,7 +10299,7 @@ MonoBehaviour:
   ProjectileForce: {x: 2000, y: 2000}
   ProjectileHitLayerMask:
     serializedVersion: 2
-    m_Bits: 430336
+    m_Bits: 446720
   ProjectileDelay: 0
   ProjectileOffset: {x: 0, y: 0}
   ProjectileRotation: {x: -1, y: 1}
@@ -10459,7 +10459,7 @@ MonoBehaviour:
   ProjectileForce: {x: 1500, y: 1500}
   ProjectileHitLayerMask:
     serializedVersion: 2
-    m_Bits: 430336
+    m_Bits: 446720
   ProjectileDelay: 0
   ProjectileOffset: {x: 1, y: 0}
   ProjectileRotation: {x: 0, y: 0}
@@ -10619,7 +10619,7 @@ MonoBehaviour:
   ProjectileForce: {x: 2500, y: 2500}
   ProjectileHitLayerMask:
     serializedVersion: 2
-    m_Bits: 430336
+    m_Bits: 446720
   ProjectileDelay: 0
   ProjectileOffset: {x: 0, y: -0}
   ProjectileRotation: {x: -1.5, y: 1.5}
@@ -10774,7 +10774,7 @@ MonoBehaviour:
   ProjectileForce: {x: 5000, y: 5000}
   ProjectileHitLayerMask:
     serializedVersion: 2
-    m_Bits: 430336
+    m_Bits: 446720
   ProjectileDelay: 0
   ProjectileOffset: {x: 0, y: 0}
   ProjectileRotation: {x: 0, y: 0}
@@ -10911,7 +10911,7 @@ MonoBehaviour:
   ProjectileForce: {x: 1500, y: 1500}
   ProjectileHitLayerMask:
     serializedVersion: 2
-    m_Bits: 430336
+    m_Bits: 446720
   ProjectileDelay: 0
   ProjectileOffset: {x: 3, y: 0}
   ProjectileRotation: {x: -1, y: 1}

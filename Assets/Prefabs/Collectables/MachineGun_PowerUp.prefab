@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 50128637613055426}
   - component: {fileID: 61334625959865044}
   - component: {fileID: 114685696345708748}
-  m_Layer: 13
+  m_Layer: 11
   m_Name: MachineGun_PowerUp
   m_TagString: Collectable
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4859776421593462}
   - component: {fileID: 212029514553097546}
-  m_Layer: 13
+  m_Layer: 11
   m_Name: MachineGun_AmmoFeed_PowerUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4413204036519872}
   - component: {fileID: 212945627351389972}
-  m_Layer: 13
+  m_Layer: 11
   m_Name: MachineGun_Barrel_PowerUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}

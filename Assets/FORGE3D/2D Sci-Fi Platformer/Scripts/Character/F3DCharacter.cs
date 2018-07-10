@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using GameEvents;
 
-public class F3DCharacter : MonoBehaviour
+public class F3DCharacter : MonoBehaviour, IDamageable
 {
     public enum InputType
     {
@@ -61,6 +61,11 @@ public class F3DCharacter : MonoBehaviour
         {
             Die(source);
             return;
+        }
+
+        if (!ReferenceEquals(gameObject, source))
+        {
+            EventManager.TriggerEvent(new GameEvents.WeaponHitPlayerEvent() { Shooter = source, Target = gameObject });
         }
 
         // Play Hit Animation and limit hit animation triggering 
@@ -134,6 +139,11 @@ public class F3DCharacter : MonoBehaviour
 
     public void Suicide()
     {
+        if(_isDead)
+        {
+            return;
+        }
+
         _isDead = true;
         _controller.enabled = false;
         gameObject.layer = LayerMask.NameToLayer("Dead");
@@ -163,7 +173,15 @@ public class F3DCharacter : MonoBehaviour
         }
         _weaponController.Drop();
 
-        EventManager.TriggerEvent(new PlayerDieEvent() { Killer = source, Dead = gameObject });
+        if (ReferenceEquals(gameObject, source))
+        {
+            EventManager.TriggerEvent(new PlayerSuicideEvent() { Player = gameObject });
+        }
+        else
+        {
+            EventManager.TriggerEvent(new PlayerDieEvent() { Killer = source, Dead = gameObject });    
+        }
+
     }
 
     private void ChangeHealth(float newHealth) 

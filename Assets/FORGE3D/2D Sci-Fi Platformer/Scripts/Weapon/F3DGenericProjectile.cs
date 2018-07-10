@@ -138,8 +138,6 @@ public class F3DGenericProjectile : MonoBehaviour
                 break;
         }
 
-        EventManager.TriggerEvent(new GameEvents.WeaponHitPlayerEvent() { Shooter = source, Target = target.root.gameObject });
-
         return true;
     }
 }

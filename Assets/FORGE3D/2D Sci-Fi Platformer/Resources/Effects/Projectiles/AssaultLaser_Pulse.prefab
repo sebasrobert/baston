@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 114000011089959014}
   m_Layer: 10
   m_Name: AssaultLaser_Pulse
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -189,7 +189,7 @@ MonoBehaviour:
   Tiling: 0.1
   LineCastMask:
     serializedVersion: 2
-    m_Bits: 4352
+    m_Bits: 20736
   FadeRate: 22
 --- !u!120 &120000010645331452
 LineRenderer:

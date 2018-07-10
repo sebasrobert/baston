@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 50845137621417378}
   - component: {fileID: 61837343035527464}
   - component: {fileID: 114258674262886040}
-  m_Layer: 13
+  m_Layer: 11
   m_Name: Assault_PowerUp
   m_TagString: Collectable
   m_Icon: {fileID: 0}

@@ -14,20 +14,20 @@ public class F3DDamage : MonoBehaviour
     }
 
     public DamageType Type;
-    private F3DCharacter _character;
+    private IDamageable _damageable;
     public Transform Hit;
     public Vector2 HitNormalOffset;
 
     private void Awake()
     {
-        _character = GetComponent<F3DCharacter>();
+        _damageable = GetComponent<IDamageable>();
     }
  
 
     public void OnDamage(GameObject source, int damageAmount, Vector3 contactPoint, Vector3 contactNormal)
     {
-        if (_character)
-            _character.OnDamage(source, damageAmount);
+        if (_damageable != null)
+            _damageable.OnDamage(source, damageAmount);
         SpawnHit(contactPoint, contactNormal);
     }
 

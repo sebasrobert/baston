@@ -499,6 +499,7 @@ public class F3DGenericWeapon : MonoBehaviour
                     }
                 if (selfHit)
                     continue;
+                
                 F3DGenericProjectile.DealDamage(transform.root.gameObject, DamageAmount, Type, closeCheckHit[i].transform, projObject.Hit,
                     projObject.HitLifeTime,
                     closeCheckHit[i].point, closeCheckHit[i].normal);

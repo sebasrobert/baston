@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Collectable
+  - Barrel
+  - Projectile
   layers:
   - Default
   - TransparentFX
@@ -20,7 +22,7 @@ TagManager:
   - NoHit
   - Player
   - Boundary
-  - 
+  - Barrel
   - 
   - 
   - 

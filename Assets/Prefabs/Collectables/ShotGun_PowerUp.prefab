@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4774240414452216}
   - component: {fileID: 212847455541899272}
-  m_Layer: 13
+  m_Layer: 11
   m_Name: ShotGun_Handle_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 50688654920159950}
   - component: {fileID: 61661826123388152}
   - component: {fileID: 114789132161591608}
-  m_Layer: 13
+  m_Layer: 11
   m_Name: ShotGun_PowerUp
   m_TagString: Collectable
   m_Icon: {fileID: 0}

@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 50636704440620346}
   - component: {fileID: 61805681242855980}
   - component: {fileID: 114390185993618668}
-  m_Layer: 13
+  m_Layer: 11
   m_Name: RocketLauncher_PowerUp
   m_TagString: Collectable
   m_Icon: {fileID: 0}

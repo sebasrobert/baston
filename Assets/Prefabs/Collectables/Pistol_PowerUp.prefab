@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 50820598059709152}
   - component: {fileID: 61368422593017904}
   - component: {fileID: 114371049531226318}
-  m_Layer: 13
+  m_Layer: 11
   m_Name: Pistol_PowerUp
   m_TagString: Collectable
   m_Icon: {fileID: 0}
