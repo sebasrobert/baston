@@ -85,7 +85,7 @@ public class Explosive : MonoBehaviour, IDamageable
                 continue;
             }
 
-            GameObject objectHit = colliderAround.gameObject;
+            GameObject objectHit = colliderAround.transform.root.gameObject;
 
             F3DDamage damage = objectHit.GetComponent<F3DDamage>();
             if (damage)
@@ -93,7 +93,7 @@ public class Explosive : MonoBehaviour, IDamageable
                 float sqrMagnitude = (objectHit.transform.position - transform.position).sqrMagnitude;
                 var damageAmount = (sqrMagnitude < highDamageRadius * highDamageRadius) ? highDamageAmount : lowDamageAmount;
 
-                damage.OnDamage(source, damageAmount, explosionHits[0].point, explosionHits[0].normal);
+                damage.OnDamage(source, F3DDamage.DamageType.Shot, damageAmount, explosionHits[0].point, explosionHits[0].normal);
             }
         }
 

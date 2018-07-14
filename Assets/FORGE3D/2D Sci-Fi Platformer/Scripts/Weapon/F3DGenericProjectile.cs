@@ -10,6 +10,7 @@ public class F3DGenericProjectile : MonoBehaviour
     public AudioSource Audio;
     public F3DWeaponAudio.WeaponAudioInfo AudioInfo { get; set; }
     public F3DWeaponController.WeaponType WeaponType;
+    public F3DDamage.DamageType DamageType;
     public int DamageAmount;
 
     //
@@ -59,7 +60,7 @@ public class F3DGenericProjectile : MonoBehaviour
         {            
             var contact = other.contacts[0];
 
-            DealDamage  (Source, DamageAmount, WeaponType, contact.collider.transform, Hit, HitLifeTime, contact.point, contact.normal);
+            DealDamage(Source, DamageType, DamageAmount, WeaponType, contact.collider.transform, Hit, HitLifeTime, contact.point, contact.normal);
 
             // Play hit sound
             F3DWeaponAudio.OnProjectileImpact(Audio, AudioInfo);
@@ -86,7 +87,7 @@ public class F3DGenericProjectile : MonoBehaviour
 
     }
 
-    public static bool DealDamage(GameObject source, int damageAmount, F3DWeaponController.WeaponType weaponType, Transform target,
+    public static bool DealDamage(GameObject source, F3DDamage.DamageType damageType, int damageAmount, F3DWeaponController.WeaponType weaponType, Transform target,
         Transform hitPrefab, float hitLifeTime,
         Vector2 hitPoint, Vector2 hitNormal)
     {
@@ -95,10 +96,10 @@ public class F3DGenericProjectile : MonoBehaviour
         var damage = target.GetComponentInParent<F3DDamage>();
         if (damage == null) return false;
 
-        switch (damage.Type)
+        switch (damage.DamageableType)
         {
-            case F3DDamage.DamageType.Character:
-                damage.OnDamage(source, damageAmount, hitPoint, hitNormal);
+            case DamageableType.Character:
+                damage.OnDamage(source, damageType, damageAmount, hitPoint, hitNormal);
                 switch (weaponType)
                 {
                     case F3DWeaponController.WeaponType.Pistol:
@@ -133,7 +134,7 @@ public class F3DGenericProjectile : MonoBehaviour
                 }
                 break;
             default:
-                damage.OnDamage(source, damageAmount, hitPoint, hitNormal);
+                damage.OnDamage(source, damageType, damageAmount, hitPoint, hitNormal);
                 SpawnHit(hitPrefab, hitPoint, hitNormal, null, hitLifeTime);
                 break;
         }

@@ -25,6 +25,7 @@ public class F3DCharacterController : MonoBehaviour
     private Rigidbody2D _rb2D;
     private F3DWeaponController _weaponController;
     private F3DCharacter _character;
+    private Freezeable _freezable;
     private F3DCharacterAudio _audio;
 
     //
@@ -48,6 +49,7 @@ public class F3DCharacterController : MonoBehaviour
     {
         _character = GetComponent<F3DCharacter>();
         _weaponController = GetComponent<F3DWeaponController>();
+        _freezable = GetComponent<Freezeable>();
         _rb2D = GetComponent<Rigidbody2D>();
         _audio = GetComponent<F3DCharacterAudio>();
     }
@@ -55,6 +57,14 @@ public class F3DCharacterController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        if(Freezed())
+        {
+            _horizontal = 0;
+            Character.SetFloat("Horizontal", 0);
+            _weaponController.SetFloat("Horizontal", 0);
+            return;
+        }
+
         // Debug Teleport
         if (Input.GetKeyDown(KeyCode.T))
         {
@@ -247,5 +257,10 @@ public class F3DCharacterController : MonoBehaviour
         var theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
+    }
+
+    private bool Freezed()
+    {
+        return _freezable != null && _freezable.Freezed;
     }
 }

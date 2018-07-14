@@ -12,6 +12,7 @@ public class F3DWeaponController : MonoBehaviour
     //
     private F3DCharacterAvatar _avatar;
     private F3DCharacter _character;
+    private Freezeable _freezable;
     private WeaponPath[] WeaponPaths;
     private WeaponIdentifier CurrentWeapon;
     private int CurrentSlot;
@@ -73,6 +74,7 @@ public class F3DWeaponController : MonoBehaviour
     {
         _avatar = GetComponent<F3DCharacterAvatar>();
         _character = GetComponent<F3DCharacter>();
+        _freezable = GetComponent<Freezeable>();
         BuildWeaponPaths();
         DeactivateAllWeapons();
         ActivateWeapon(DefaultWeapon);
@@ -85,6 +87,12 @@ public class F3DWeaponController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        if(Freezed())
+        {
+            GetCurrentWeapon().Stop();
+            return;
+        }
+
         // Fire
         if (_character.inputControllerType == F3DCharacter.InputType.KEYBOAD_MOUSE)
         {
@@ -311,5 +319,10 @@ public class F3DWeaponController : MonoBehaviour
             default:
                 return armature.Hand1;
         }
+    }
+
+    private bool Freezed()
+    {
+        return _freezable != null && _freezable.Freezed;
     }
 }

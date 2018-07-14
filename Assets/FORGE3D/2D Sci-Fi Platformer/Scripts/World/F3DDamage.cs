@@ -1,34 +1,41 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class F3DDamage : MonoBehaviour
 {
     public enum DamageType
     {
-        Generic,
-        Character,
-        Mud,
-        Wood,
-        Metal,
-        Shield
+        Shot,
+        Freeze
     }
 
-    public DamageType Type;
+    public DamageableType DamageableType;
     private IDamageable _damageable;
+    private Freezeable _freezable;
     public Transform Hit;
     public Vector2 HitNormalOffset;
 
     private void Awake()
     {
         _damageable = GetComponent<IDamageable>();
+        _freezable = GetComponent<Freezeable>();
     }
  
 
-    public void OnDamage(GameObject source, int damageAmount, Vector3 contactPoint, Vector3 contactNormal)
+    public void OnDamage(GameObject source, DamageType damageType, int damageAmount, Vector3 contactPoint, Vector3 contactNormal)
     {
-        if (_damageable != null)
-            _damageable.OnDamage(source, damageAmount);
-        SpawnHit(contactPoint, contactNormal);
+        if (damageType == DamageType.Shot)
+        {
+            if (_damageable != null)
+                _damageable.OnDamage(source, damageAmount);
+            SpawnHit(contactPoint, contactNormal);
+        }
+        else if (damageType == DamageType.Freeze)
+        {
+            if(_freezable != null)
+            {
+                _freezable.Freeze(damageAmount);
+            }
+        }
     }
 
     private void SpawnHit(Vector3 contactPoint, Vector3 contactNormal)
