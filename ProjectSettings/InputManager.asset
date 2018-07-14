@@ -362,7 +362,7 @@ InputManager:
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: 1
+    positiveButton: 
     altNegativeButton: 
     altPositiveButton: joystick 1 button 3
     gravity: 1000
@@ -470,11 +470,11 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: Gamepad1NextSlot
+    m_Name: Gamepad2NextSlot
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: 1
+    positiveButton: 
     altNegativeButton: 
     altPositiveButton: joystick 2 button 3
     gravity: 1000
@@ -484,7 +484,7 @@ InputManager:
     invert: 0
     type: 0
     axis: 0
-    joyNum: 0    
+    joyNum: 0
   - serializedVersion: 3
     m_Name: Gamepad2Crouch
     descriptiveName: 
@@ -582,11 +582,11 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: Gamepad1NextSlot
+    m_Name: Gamepad3NextSlot
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: 1
+    positiveButton: 
     altNegativeButton: 
     altPositiveButton: joystick 3 button 3
     gravity: 1000
@@ -596,7 +596,7 @@ InputManager:
     invert: 0
     type: 0
     axis: 0
-    joyNum: 0    
+    joyNum: 0
   - serializedVersion: 3
     m_Name: Gamepad3Crouch
     descriptiveName: 
@@ -694,11 +694,11 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: Gamepad1NextSlot
+    m_Name: Gamepad4NextSlot
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: 1
+    positiveButton: 
     altNegativeButton: 
     altPositiveButton: joystick 4 button 3
     gravity: 1000
@@ -708,7 +708,7 @@ InputManager:
     invert: 0
     type: 0
     axis: 0
-    joyNum: 0    
+    joyNum: 0
   - serializedVersion: 3
     m_Name: Gamepad4Crouch
     descriptiveName: 
