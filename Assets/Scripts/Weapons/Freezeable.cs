@@ -5,9 +5,11 @@ public class Freezeable : MonoBehaviour {
 
     public GameObject FreezeEffect;
     public float MaxFreezeDuration;
+    public float StopEffectDelay;
     [HideInInspector]
     public bool Freezed { get; protected set; }
 
+    ParticleSystem[] AllParticleSytems;
     private float TimeLeftFreezing;
 
 	// Use this for initialization
@@ -22,7 +24,7 @@ public class Freezeable : MonoBehaviour {
 	
     void Start()
     {
-        FreezeEffect.SetActive(false);
+        AllParticleSytems = FreezeEffect.GetComponentsInChildren<ParticleSystem>();
     }
 
 	void Update () {
@@ -32,14 +34,37 @@ public class Freezeable : MonoBehaviour {
     private IEnumerator Freezing()
     {
         Freezed = true;
-
-        while(TimeLeftFreezing > 0f)
+        bool particuleSysmtesPlaying = false;
+        while(TimeLeftFreezing > StopEffectDelay)
         {
-            FreezeEffect.SetActive(true );
-            yield return new WaitForSeconds(TimeLeftFreezing);
+            if (!particuleSysmtesPlaying)
+            {
+                PlayAllParticuleSystems();
+                particuleSysmtesPlaying = true;
+            }
+            yield return new WaitForSeconds(TimeLeftFreezing - StopEffectDelay);
         }
 
-        FreezeEffect.SetActive(false);
+        StopAllParticuleSystems();
+
+        yield return new WaitForSeconds(StopEffectDelay);
+
         Freezed = false;
+    }
+
+    private void PlayAllParticuleSystems()
+    {
+        foreach(ParticleSystem particuleSystem in AllParticleSytems)
+        {
+            particuleSystem.Play();
+        }
+    }
+
+    private void StopAllParticuleSystems()
+    {
+        foreach (ParticleSystem particuleSystem in AllParticleSytems)
+        {
+            particuleSystem.Stop();
+        }
     }
 }

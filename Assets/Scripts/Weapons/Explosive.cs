@@ -85,9 +85,9 @@ public class Explosive : MonoBehaviour, IDamageable
                 continue;
             }
 
-            GameObject objectHit = colliderAround.transform.root.gameObject;
+            GameObject objectHit = colliderAround.gameObject;
 
-            F3DDamage damage = objectHit.GetComponent<F3DDamage>();
+            F3DDamage damage = objectHit.GetComponentInParent<F3DDamage>();
             if (damage)
             {
                 float sqrMagnitude = (objectHit.transform.position - transform.position).sqrMagnitude;

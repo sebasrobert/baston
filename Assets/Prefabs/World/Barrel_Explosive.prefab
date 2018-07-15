@@ -109,9 +109,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97ede9e9dfea69c4786089819888b0f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 4
+  DamageableType: 0
   Hit: {fileID: 0}
   HitNormalOffset: {x: 0, y: 0}
+  FireHitRate: 1
 --- !u!114 &114464346741311294
 MonoBehaviour:
   m_ObjectHideFlags: 1
