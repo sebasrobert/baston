@@ -4,16 +4,30 @@ using UnityEngine;
 
 public class Collector : MonoBehaviour {
 
+    private F3DWeaponController WeaponController;
+
+    private void Awake()
+    {
+        WeaponController = GetComponent<F3DWeaponController>();
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {        
-        if (other.gameObject.CompareTag("Weapon"))
+        if (other.gameObject.CompareTag("Collectable"))
         {
-            pickupWeapon(other.gameObject);
+            Collectable collectable = other.GetComponent<Collectable>();
+            switch(collectable.CollectableType)
+            {
+                case CollectableType.Weapon:
+                    pickupWeapon((CollectableWeapon)collectable);
+                    break;
+            }
+            collectable.Pickup();
         }
     }
 
-    private void pickupWeapon(GameObject weapon) 
+    private void pickupWeapon(CollectableWeapon weapon) 
     {
-        Debug.Log("Pick up weapon " + weapon.name);
+        WeaponController.ActivateWeapon(weapon.WeaponIdentifier);
     }
 }

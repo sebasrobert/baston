@@ -6,26 +6,38 @@ using Random = UnityEngine.Random;
 
 public class F3DWeaponController : MonoBehaviour
 {
-    public int EquippedSlot;
-    public int EquippedWeapon;
+    public WeaponIdentifier DefaultWeapon;
     public List<WeaponSlot> Slots;
 
     //
     private F3DCharacterAvatar _avatar;
     private F3DCharacter _character;
+    private Freezeable _freezable;
+    private WeaponPath[] WeaponPaths;
+    private WeaponIdentifier CurrentWeapon;
+    private int CurrentSlot;
+    private bool nextSlotPressed;
 
     //
     [Serializable]
     public class WeaponSlot
     {
         [SerializeField] public List<F3DGenericWeapon> Weapons;
-        public int WeaponSlotCounter = 1;
+        [HideInInspector] public int EquippedWeaponCounter = -1;
 
-        public void Forward()
+        public F3DGenericWeapon GetEquippedWeapon()
         {
-            WeaponSlotCounter++;
-            if (WeaponSlotCounter >= Weapons.Count)
-                WeaponSlotCounter = 0;
+            if(!HasEquippedWeapon())
+            {
+                return null;
+            }
+
+            return Weapons[EquippedWeaponCounter];
+        }
+
+        public bool HasEquippedWeapon()
+        {
+            return EquippedWeaponCounter != -1;
         }
     }
 
@@ -46,11 +58,26 @@ public class F3DWeaponController : MonoBehaviour
         Melee
     }
 
+    private class WeaponPath
+    {
+        public readonly int SlotIndex;
+        public readonly int WeaponIndex;
+
+        public WeaponPath(int slotIndex, int weaponIndex)
+        {
+            SlotIndex = slotIndex;
+            WeaponIndex = weaponIndex;
+        }
+    }
+
     private void Awake()
     {
         _avatar = GetComponent<F3DCharacterAvatar>();
         _character = GetComponent<F3DCharacter>();
-        ActivateWeapon(EquippedSlot, EquippedWeapon);
+        _freezable = GetComponent<Freezeable>();
+        BuildWeaponPaths();
+        DeactivateAllWeapons();
+        ActivateWeapon(DefaultWeapon);
     }
 
     // Use this for initialization
@@ -60,119 +87,213 @@ public class F3DWeaponController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        if(Freezed())
+        {
+            GetCurrentWeapon().Stop();
+            return;
+        }
+
         // Fire
         if (_character.inputControllerType == F3DCharacter.InputType.KEYBOAD_MOUSE)
         {
             if (Input.GetMouseButtonDown(0))
             {
-                Slots[EquippedSlot].Weapons[EquippedWeapon].Fire();
+                GetCurrentWeapon().Fire();
             }
 
             // Stop
             if (Input.GetMouseButtonUp(0))
             {
-                Slots[EquippedSlot].Weapons[EquippedWeapon].Stop();
+                GetCurrentWeapon().Stop();
             }
+
+            // Switch Weapon Slot
+            if (Input.GetButton(_character.inputControllerName + "Slot1"))
+                ActivateSlot(0);
+            if (Input.GetButton(_character.inputControllerName + "Slot2"))
+                ActivateSlot(1);
+            if (Input.GetButton(_character.inputControllerName + "Slot3"))
+                ActivateSlot(2);
         } else {
             if(Input.GetButton(_character.inputControllerName + "Fire")) {
-                Slots[EquippedSlot].Weapons[EquippedWeapon].Fire();   
+                GetCurrentWeapon().Fire();   
             } else {
-                Slots[EquippedSlot].Weapons[EquippedWeapon].Stop();
+                GetCurrentWeapon().Stop();
+            }
+
+            if (!nextSlotPressed && Input.GetButtonDown(_character.inputControllerName + "NextSlot"))
+            {
+                nextSlotPressed = true;
+                ActivateNextSlot();
+            }
+            if (Input.GetButtonUp(_character.inputControllerName + "NextSlot"))
+            {
+                nextSlotPressed = false;
             }
         }
+    }
 
-        // Switch Weapon Slot
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-            ActivateSlot(0);
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-            ActivateSlot(1);
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-            ActivateSlot(2);
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-            ActivateSlot(3);
-        if (Input.GetKeyDown(KeyCode.Alpha5))
-            ActivateSlot(4);
-        if (Input.GetKeyDown(KeyCode.Alpha6))
-            ActivateSlot(5);
-        if (Input.GetKeyDown(KeyCode.F))
-            ActivateSlot(6);
+    private void BuildWeaponPaths()
+    {
+        int weaponCount = Enum.GetNames(typeof(WeaponIdentifier)).Length;
+        WeaponPaths = new WeaponPath[weaponCount];
+
+        for (int slotCounter = 0; slotCounter < Slots.Count; slotCounter++)
+        {
+            WeaponSlot weaponSlot = Slots[slotCounter];
+            for (int weaponCounter = 0; weaponCounter < weaponSlot.Weapons.Count; weaponCounter++)
+            {
+                WeaponIdentifier weaponIndentifier = weaponSlot.Weapons[weaponCounter].Identifier;
+                WeaponPaths[(int)weaponIndentifier] = new WeaponPath(slotCounter, weaponCounter);
+            }
+        }
     }
 
     private void ActivateSlot(int slot)
     {
-        if (slot > Slots.Count - 1) return;
-        if (slot == EquippedSlot)
-            Slots[EquippedSlot].Forward();
-        EquippedSlot = slot;
-        EquippedWeapon = Slots[EquippedSlot].WeaponSlotCounter;
-        ActivateWeapon(EquippedSlot, EquippedWeapon);
+        if (slot < 0 || slot > Slots.Count - 1) return;
+        if (!Slots[slot].HasEquippedWeapon()) return;
+
+        WeaponIdentifier activeWeaponIdentifier = Slots[slot].GetEquippedWeapon().Identifier;
+        ActivateWeapon(activeWeaponIdentifier);
+    }
+
+    private void ActivateNextSlot()
+    {
+        if(Slots.Count <= 1)
+        {
+            return;
+        }
+
+        for (int i = 1; i < Slots.Count; i++)
+        {
+            int nextSlot = (CurrentSlot + i) % Slots.Count;
+            if(Slots[nextSlot].HasEquippedWeapon())
+            {
+                ActivateSlot(nextSlot);
+                return;
+            }
+        }
     }
 
     //////////////////////////////////////////////////////////////
     // Pass animation data to an active weapon controller
     public void SetBool(string var, bool value)
     {
-        Slots[EquippedSlot].Weapons[EquippedWeapon].Animator.SetBool(var, value);
+        GetCurrentWeapon().Animator.SetBool(var, value);
     }
 
     public void SetFloat(string var, float value)
     {
-        Slots[EquippedSlot].Weapons[EquippedWeapon].Animator.SetFloat(var, value);
+        GetCurrentWeapon().Animator.SetFloat(var, value);
     }
     //////////////////////////////////////////////////////////////
 
     // Weapon activation
-    private void ActivateWeapon(int slot, int weapon)
+    public void ActivateWeapon(WeaponIdentifier weaponIdentifier)
     {
-        EquippedSlot = slot;
-        EquippedWeapon = weapon;
-        for (var i = 0; i < Slots.Count; i++)
-        {
-            for (var y = 0; y < Slots[i].Weapons.Count; y++)
-                Slots[i].Weapons[y].gameObject.SetActive(slot == i && weapon == y);
-        }
-     //   Slots[slot].Weapons[weapon].OnAnimationReadyEvent();
+        WeaponPath weaponPath = WeaponPaths[(int)weaponIdentifier];
 
-        UpdateCharacterHands(_avatar.Characters[_avatar.CharacterId]);
+        if(weaponPath != null) 
+        {
+            GetCurrentWeapon().gameObject.SetActive(false);
+
+            SetCurrentWeapon(weaponIdentifier);
+            SetEquippedWeaponInSlot(weaponIdentifier);
+            GetCurrentWeapon().gameObject.SetActive(true);
+
+            UpdateCharacterHands(_avatar.Characters[_avatar.CharacterId]);
+        }
     }
 
-    
+    public void AddEquippedWeapon(WeaponIdentifier weaponIdentifier)
+    {
+        WeaponPath weaponPath = WeaponPaths[(int)weaponIdentifier];
+
+        if (weaponPath != null)
+        {
+            Slots[weaponPath.SlotIndex].EquippedWeaponCounter = weaponPath.WeaponIndex;
+        }
+    }
+
+    private void DeactivateAllWeapons()
+    {
+        foreach(WeaponSlot slot in Slots)
+        {
+            foreach(F3DGenericWeapon weapon in slot.Weapons)
+            {
+                weapon.gameObject.SetActive(false);
+            }
+        }
+    }
 
     // Weapon drop on character killed
     public void Drop()
     {
-        var powerUpPrefab = Slots[EquippedSlot].Weapons[EquippedWeapon].PowerUp;
+        F3DGenericWeapon currentWeapon = GetCurrentWeapon();
+        var powerUpPrefab = currentWeapon.PowerUp;
         if (powerUpPrefab != null)
         {
             // Random Rotation
-            var rot = Slots[EquippedSlot].Weapons[EquippedWeapon].FXSocket.rotation *
+            var rot =currentWeapon.FXSocket.rotation *
                       Quaternion.Euler(0, 0, Random.Range(-5, 5));
 
             // Spawn
-            var powerUp = F3DSpawner.Spawn(powerUpPrefab, Slots[EquippedSlot].Weapons[EquippedWeapon].FXSocket.position,
+            var powerUp = F3DSpawner.Spawn(powerUpPrefab, currentWeapon.FXSocket.position,
                 rot, null);
 
             // Flip
-            var powerUpFlip = Mathf.Sign(Slots[EquippedSlot].Weapons[EquippedWeapon].FXSocket.lossyScale.x);
+            var powerUpFlip = Mathf.Sign(currentWeapon.FXSocket.lossyScale.x);
             var curScale = powerUp.localScale;
             curScale.x *= powerUpFlip;
             powerUp.localScale = curScale;
 
             // Add random force / torque
             var powerUpRb = powerUp.GetComponent<Rigidbody2D>();
-            powerUpRb.AddForce((Vector2) Slots[EquippedSlot].Weapons[EquippedWeapon].FXSocket.up * Random.Range(8, 12),
+            powerUpRb.AddForce((Vector2) currentWeapon.FXSocket.up * Random.Range(8, 12),
                 ForceMode2D.Impulse);
             powerUpRb.AddTorque(Random.Range(-250, 250), ForceMode2D.Force);
+
+            // remove gun after 2s
+            F3DSpawner.Despawn(powerUp, 2f);
         }
 
         // Deactivate components
-        Slots[EquippedSlot].Weapons[EquippedWeapon].gameObject.SetActive(false);
+        currentWeapon.gameObject.SetActive(false);
         this.enabled = false;
+    }
+
+    public void ReactivateDefaultWeapon()
+    {
+        this.enabled = true;
+        ResetEquippedWeapons();
+        ActivateWeapon(DefaultWeapon);
     }
 
     public F3DGenericWeapon GetCurrentWeapon()
     {
-        return Slots[EquippedSlot].Weapons[EquippedWeapon];
+        WeaponPath weaponPath = WeaponPaths[(int)CurrentWeapon];
+        return Slots[weaponPath.SlotIndex].Weapons[weaponPath.WeaponIndex];
+    }
+
+    private void ResetEquippedWeapons()
+    {
+        foreach(WeaponSlot slot in Slots)
+        {
+            slot.EquippedWeaponCounter = -1;
+        }
+    }
+
+    private void SetCurrentWeapon(WeaponIdentifier weaponIdentifier)
+    {
+        CurrentWeapon = weaponIdentifier;
+    }
+
+    private void SetEquippedWeaponInSlot(WeaponIdentifier weaponIdentifer)
+    {
+        WeaponPath weaponPath = WeaponPaths[(int)weaponIdentifer];
+        Slots[weaponPath.SlotIndex].EquippedWeaponCounter = weaponPath.WeaponIndex;
+        CurrentSlot = weaponPath.SlotIndex;
     }
 
     // Avatar Hands
@@ -182,8 +303,6 @@ public class F3DWeaponController : MonoBehaviour
         myWeapon.LeftHand.sprite = GetSpriteFromHandId(myWeapon.LeftHandId, armature);
         myWeapon.RightHand.sprite = GetSpriteFromHandId(myWeapon.RightHandId, armature);
     }
-
-
 
     private Sprite GetSpriteFromHandId(int id, F3DCharacterAvatar.CharacterArmature armature)
     {
@@ -200,5 +319,10 @@ public class F3DWeaponController : MonoBehaviour
             default:
                 return armature.Hand1;
         }
+    }
+
+    private bool Freezed()
+    {
+        return _freezable != null && _freezable.Freezed;
     }
 }

@@ -11,7 +11,6 @@ public class F3DAssault : F3DGenericWeapon
             if (fxSocketObjects[i] != null)
             {
                 F3DSpawner.Despawn(fxSocketObjects[i].gameObject);
-                Debug.Log("Despawn " + fxSocketObjects[i].gameObject.name);
             }
     }
 }

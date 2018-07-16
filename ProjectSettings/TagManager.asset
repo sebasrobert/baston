@@ -4,7 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Weapon
+  - Collectable
+  - Barrel
+  - Projectile
   layers:
   - Default
   - TransparentFX
@@ -16,11 +18,11 @@ TagManager:
   - 
   - Ground
   - Dead
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Projectile
+  - NoHit
+  - Player
+  - Boundary
+  - Barrel
   - 
   - 
   - 

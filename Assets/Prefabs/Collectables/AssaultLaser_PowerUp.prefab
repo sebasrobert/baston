@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 212379517448501592}
   - component: {fileID: 50507883059986768}
   - component: {fileID: 61763997433636472}
-  m_Layer: 13
+  - component: {fileID: 114983607671922786}
+  m_Layer: 11
   m_Name: AssaultLaser_PowerUp
-  m_TagString: Weapon
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -87,6 +88,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 8.34, y: 3.51}
   m_EdgeRadius: 0
+--- !u!114 &114983607671922786
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1246384818883734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 369e0a511e10e41a88023cccea2893c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollectableType: 0
+  WeaponIdentifier: 4
 --- !u!212 &212379517448501592
 SpriteRenderer:
   m_ObjectHideFlags: 1

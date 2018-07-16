@@ -59,9 +59,9 @@ GameObject:
   - component: {fileID: 58000010180636626}
   - component: {fileID: 114000012019213518}
   - component: {fileID: 82000012311922470}
-  m_Layer: 12
+  m_Layer: 10
   m_Name: PistolPlasma_Projectile
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -281,10 +281,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Audio: {fileID: 82000012311922470}
   WeaponType: 0
+  DamageAmount: 0
   Hit: {fileID: 4000011555818812, guid: efc00ae131f8d86498732bf05e786740, type: 2}
   PostHitHide: 1
   DelayDespawn: 2
   HitLifeTime: 1
+  Source: {fileID: 0}
   RicochetChance: 0
   TrailFadeTime: 0
   TrailLifeTime: {x: 0, y: 0}
@@ -18056,7 +18058,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1159644209
-  m_SortingLayer: 6
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
@@ -18112,7 +18114,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1159644209
-  m_SortingLayer: 6
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0

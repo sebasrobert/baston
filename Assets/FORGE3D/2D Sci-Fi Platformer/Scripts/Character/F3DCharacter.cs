@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using GameEvents;
 
-public class F3DCharacter : MonoBehaviour
+public class F3DCharacter : MonoBehaviour, IDamageable
 {
     public enum InputType
     {
@@ -18,6 +18,8 @@ public class F3DCharacter : MonoBehaviour
     public Color highHealthColor;
     public Color mediumHealthColor;
     public Color lowHealthColor;
+    public float noHitDurationWhileRespawn;
+    public float blinkRateWhileRespawn;
     public InputType inputControllerType;
     public string inputControllerName;
 
@@ -29,6 +31,9 @@ public class F3DCharacter : MonoBehaviour
     private F3DWeaponController _weaponController;
     private bool _isDead;
     private float currentHealth;
+    private Collider2D[] _colliders;
+    private Vector3 _initialPosition;
+    private Quaternion _initialRotation;
 
     // Use this for initialization
     void Awake()
@@ -36,11 +41,14 @@ public class F3DCharacter : MonoBehaviour
         _rBody = GetComponent<Rigidbody2D>();
         _controller = GetComponent<F3DCharacterController>();
         _weaponController = GetComponent<F3DWeaponController>();
+        _colliders = gameObject.GetComponentsInChildren<Collider2D>();
         heathBarImage = heathBarSlider.GetComponentInChildren<Image>();
         currentHealth = maxHealth;
+        _initialPosition = gameObject.transform.position;
+        _initialRotation = gameObject.transform.rotation;
     }
 
-    public void OnDamage(int damageAmount)
+    public void OnDamage(GameObject source, int damageAmount)
     {
         if (_controller == null) return;
         if (_isDead) return;
@@ -51,29 +59,129 @@ public class F3DCharacter : MonoBehaviour
         // Dead Already?
         if (currentHealth < float.Epsilon)
         {
-            _isDead = true;
-
-            // Player Death sequence
-            _controller.Character.SetBool(Random.Range(-1f, 1f) > 0 ? "DeathFront" : "DeathBack", true);
-
-            // Dead dont do shit
-            _controller.enabled = false;
-            gameObject.layer = LayerMask.NameToLayer("Dead");
-            _rBody.drag = 2f;
-
-//            for (int i = 0; i < _colliders.Length; i++)
-//                _colliders[i].enabled = false;
-            _weaponController.Drop();
-
-            EventManager.TriggerEvent(new PlayerDieEvent() { Player = gameObject });
-
+            Die(source);
             return;
+        }
+
+        if (!ReferenceEquals(gameObject, source))
+        {
+            EventManager.TriggerEvent(new GameEvents.WeaponHitPlayerEvent() { Shooter = source, Target = gameObject });
         }
 
         // Play Hit Animation and limit hit animation triggering 
         if (_hitTriggerCounter < 1)
             _controller.Character.SetTrigger("Hit");
         _hitTriggerCounter++;
+    }
+
+    public void RespawnAtInitialPosition()
+    {
+        _weaponController.ReactivateDefaultWeapon();
+        gameObject.transform.position = _initialPosition;
+        gameObject.transform.rotation = _initialRotation;
+        _rBody.bodyType = RigidbodyType2D.Dynamic;
+        _controller.enabled = true;
+        _controller.Character.SetBool("DeathFront", false);
+        _controller.Character.SetBool("DeathBack", false);
+        ChangeHealth(maxHealth);
+
+        EnableCollidersAndDeactivateCollisionWithProjectiles(_colliders);
+
+        _isDead = false;
+        StartCoroutine(BlinkEffectWhileRespawn());
+    }
+
+    private IEnumerator BlinkEffectWhileRespawn()
+    {
+        SpriteRenderer[] spriteRenderers = gameObject.GetComponentsInChildren<SpriteRenderer>();
+
+        var newAlpha = 1f;
+        var elapsedTime = 0f;
+        while (elapsedTime < noHitDurationWhileRespawn)
+        {
+            newAlpha = (newAlpha < float.Epsilon) ? 1f : 0f;
+            ChangeSpriteRenderersAlpha(spriteRenderers, newAlpha);
+            yield return new WaitForSeconds(blinkRateWhileRespawn);
+            elapsedTime += blinkRateWhileRespawn;
+        }
+
+        ChangeSpriteRenderersAlpha(spriteRenderers, 1f);
+
+        ActivateCollisionWithProjectiles(_colliders);
+    }
+
+    private void ChangeSpriteRenderersAlpha(SpriteRenderer[] spriteRenderers, float newAlpha)
+    {
+        foreach (SpriteRenderer spriteRenderer in spriteRenderers)
+        {
+            var color = spriteRenderer.color;
+            spriteRenderer.color = new Color(color.r, color.g, color.b, newAlpha);
+        }
+    }
+
+    private void EnableCollidersAndDeactivateCollisionWithProjectiles(Collider2D[] colliders)
+    {
+        foreach (Collider2D c in colliders)
+        {
+            c.enabled = true;
+            c.gameObject.layer = LayerMask.NameToLayer("NoHit");
+        }
+    }
+
+    private void ActivateCollisionWithProjectiles(Collider2D[] colliders)
+    {
+        foreach (Collider2D c in colliders)
+        {
+            c.gameObject.layer = LayerMask.NameToLayer("Player");
+        }
+
+    }
+
+    public void Suicide()
+    {
+        if(_isDead)
+        {
+            return;
+        }
+
+        _isDead = true;
+        _controller.enabled = false;
+        gameObject.layer = LayerMask.NameToLayer("Dead");
+        foreach (Collider2D c in _colliders)
+        {
+            c.enabled = false;
+        }
+
+        EventManager.TriggerEvent(new PlayerSuicideEvent() { Player = gameObject });
+    }
+
+    private void Die(GameObject source)
+    {
+        _isDead = true;
+        _rBody.bodyType = RigidbodyType2D.Static;
+
+        // Player Death sequence
+        _controller.Character.SetBool(Random.Range(-1f, 1f) > 0 ? "DeathFront" : "DeathBack", true);
+
+        // Dead dont do shit
+        _controller.enabled = false;
+        gameObject.layer = LayerMask.NameToLayer("Dead");
+
+        foreach (Collider2D c in _colliders)
+        {
+            c.enabled = false;
+        }
+        _weaponController.Drop();
+
+        if (ReferenceEquals(gameObject, source))
+        {
+            EventManager.TriggerEvent(new PlayerSuicideEvent() { Player = gameObject });
+        }
+        else
+        {
+            EventManager.TriggerEvent(new PlayerDieEvent() { Killer = source, Dead = gameObject });    
+        }
+
     }
 
     private void ChangeHealth(float newHealth) 

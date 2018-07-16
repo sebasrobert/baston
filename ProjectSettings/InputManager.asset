@@ -102,6 +102,54 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
+    m_Name: Slot1
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 1
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 0
+    axis: 0
+    joyNum: 0
+  - serializedVersion: 3
+    m_Name: Slot2
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 2
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 0
+    axis: 0
+    joyNum: 0
+  - serializedVersion: 3
+    m_Name: Slot3
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 3
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 0
+    axis: 0
+    joyNum: 0
+  - serializedVersion: 3
     m_Name: Mouse X
     descriptiveName: 
     descriptiveNegativeName: 
@@ -164,70 +212,6 @@ InputManager:
     invert: 1
     type: 2
     axis: 1
-    joyNum: 0
-  - serializedVersion: 3
-    m_Name: Fire1
-    descriptiveName: 
-    descriptiveNegativeName: 
-    negativeButton: 
-    positiveButton: joystick button 0
-    altNegativeButton: 
-    altPositiveButton: 
-    gravity: 1000
-    dead: 0.001
-    sensitivity: 1000
-    snap: 0
-    invert: 0
-    type: 0
-    axis: 0
-    joyNum: 0
-  - serializedVersion: 3
-    m_Name: Fire2
-    descriptiveName: 
-    descriptiveNegativeName: 
-    negativeButton: 
-    positiveButton: joystick button 1
-    altNegativeButton: 
-    altPositiveButton: 
-    gravity: 1000
-    dead: 0.001
-    sensitivity: 1000
-    snap: 0
-    invert: 0
-    type: 0
-    axis: 0
-    joyNum: 0
-  - serializedVersion: 3
-    m_Name: Fire3
-    descriptiveName: 
-    descriptiveNegativeName: 
-    negativeButton: 
-    positiveButton: joystick button 2
-    altNegativeButton: 
-    altPositiveButton: 
-    gravity: 1000
-    dead: 0.001
-    sensitivity: 1000
-    snap: 0
-    invert: 0
-    type: 0
-    axis: 0
-    joyNum: 0
-  - serializedVersion: 3
-    m_Name: Jump
-    descriptiveName: 
-    descriptiveNegativeName: 
-    negativeButton: 
-    positiveButton: joystick button 3
-    altNegativeButton: 
-    altPositiveButton: 
-    gravity: 1000
-    dead: 0.001
-    sensitivity: 1000
-    snap: 0
-    invert: 0
-    type: 0
-    axis: 0
     joyNum: 0
   - serializedVersion: 3
     m_Name: Submit
@@ -308,7 +292,7 @@ InputManager:
     invert: 0
     type: 2
     axis: 0
-    joyNum: 1    
+    joyNum: 1
   - serializedVersion: 3
     m_Name: Gamepad1RightX
     descriptiveName: 
@@ -340,7 +324,7 @@ InputManager:
     invert: 0
     type: 2
     axis: 3
-    joyNum: 1    
+    joyNum: 1
   - serializedVersion: 3
     m_Name: Gamepad1Fire
     descriptiveName: 
@@ -372,7 +356,23 @@ InputManager:
     invert: 0
     type: 0
     axis: 0
-    joyNum: 0    
+    joyNum: 0
+  - serializedVersion: 3
+    m_Name: Gamepad1NextSlot
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: joystick 1 button 3
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 0
+    axis: 0
+    joyNum: 0
   - serializedVersion: 3
     m_Name: Gamepad1Crouch
     descriptiveName: 
@@ -404,7 +404,7 @@ InputManager:
     invert: 0
     type: 2
     axis: 0
-    joyNum: 2    
+    joyNum: 2
   - serializedVersion: 3
     m_Name: Gamepad2RightX
     descriptiveName: 
@@ -436,7 +436,7 @@ InputManager:
     invert: 0
     type: 2
     axis: 3
-    joyNum: 2    
+    joyNum: 2
   - serializedVersion: 3
     m_Name: Gamepad2Fire
     descriptiveName: 
@@ -468,7 +468,23 @@ InputManager:
     invert: 0
     type: 0
     axis: 0
-    joyNum: 0    
+    joyNum: 0
+  - serializedVersion: 3
+    m_Name: Gamepad2NextSlot
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: joystick 2 button 3
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 0
+    axis: 0
+    joyNum: 0
   - serializedVersion: 3
     m_Name: Gamepad2Crouch
     descriptiveName: 
@@ -500,7 +516,7 @@ InputManager:
     invert: 0
     type: 2
     axis: 0
-    joyNum: 3   
+    joyNum: 3
   - serializedVersion: 3
     m_Name: Gamepad3RightX
     descriptiveName: 
@@ -532,7 +548,7 @@ InputManager:
     invert: 0
     type: 2
     axis: 3
-    joyNum: 3    
+    joyNum: 3
   - serializedVersion: 3
     m_Name: Gamepad3Fire
     descriptiveName: 
@@ -564,7 +580,23 @@ InputManager:
     invert: 0
     type: 0
     axis: 0
-    joyNum: 0    
+    joyNum: 0
+  - serializedVersion: 3
+    m_Name: Gamepad3NextSlot
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: joystick 3 button 3
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 0
+    axis: 0
+    joyNum: 0
   - serializedVersion: 3
     m_Name: Gamepad3Crouch
     descriptiveName: 
@@ -596,7 +628,7 @@ InputManager:
     invert: 0
     type: 2
     axis: 0
-    joyNum: 4    
+    joyNum: 4
   - serializedVersion: 3
     m_Name: Gamepad4RightX
     descriptiveName: 
@@ -628,7 +660,7 @@ InputManager:
     invert: 0
     type: 2
     axis: 3
-    joyNum: 4    
+    joyNum: 4
   - serializedVersion: 3
     m_Name: Gamepad4Fire
     descriptiveName: 
@@ -660,7 +692,23 @@ InputManager:
     invert: 0
     type: 0
     axis: 0
-    joyNum: 0    
+    joyNum: 0
+  - serializedVersion: 3
+    m_Name: Gamepad4NextSlot
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: joystick 4 button 3
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 0
+    axis: 0
+    joyNum: 0
   - serializedVersion: 3
     m_Name: Gamepad4Crouch
     descriptiveName: 

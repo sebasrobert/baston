@@ -82,7 +82,7 @@ public class F3DPulse : F3DGenericProjectile
             // Damage and Hit Effects
             if (Hit && !_alreadyHit)
             {
-                DealDamage(transform.root.gameObject, 5, WeaponType, lineHit.transform, Hit, HitLifeTime, lineHit.point, lineHit.normal);
+                DealDamage(transform.root.gameObject, DamageType,DamageAmount, WeaponType, lineHit.transform, Hit, HitLifeTime, lineHit.point, lineHit.normal);
                 _alreadyHit = true;
 
                 // Shift the AudioSource attached to this pulse to the lineEnd position

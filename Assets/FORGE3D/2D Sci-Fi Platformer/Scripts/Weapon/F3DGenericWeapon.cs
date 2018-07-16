@@ -18,7 +18,9 @@ public class F3DGenericWeapon : MonoBehaviour
     public int RightHandId;
 
     // Weapon 
-    [Header("Weapon")] public F3DWeaponController.WeaponType Type;
+    [Header("Weapon")] public WeaponIdentifier Identifier;
+    public F3DWeaponController.WeaponType Type;
+
 
     public Mode FireMode;
     public bool AnimationFireEvent;
@@ -33,6 +35,8 @@ public class F3DGenericWeapon : MonoBehaviour
     public AnimationCurve FireRateCurve;
     public bool AnimatorFireRateMult;
     public bool FireQueue;
+    public F3DDamage.DamageType DamageType;
+    public int DamageAmount;
 
     // Checks
     public float ProjectileCloseRange;
@@ -496,10 +500,10 @@ public class F3DGenericWeapon : MonoBehaviour
                     }
                 if (selfHit)
                     continue;
-                F3DGenericProjectile.DealDamage(transform.root.gameObject, 5, Type, closeCheckHit[i].transform, projObject.Hit,
+                
+                F3DGenericProjectile.DealDamage(transform.root.gameObject, DamageType, DamageAmount, Type, closeCheckHit[i].transform, projObject.Hit,
                     projObject.HitLifeTime,
                     closeCheckHit[i].point, closeCheckHit[i].normal);
-
                 // Play close impact through the attached soundSource
                 F3DWeaponAudio.OnProjectileImpact(_weaponAudio.ProjectileHitClose, AudioInfo);
                 return;
@@ -539,6 +543,8 @@ public class F3DGenericWeapon : MonoBehaviour
         // Set Weapon Type
         var projectileObject = projectile.GetComponent<F3DGenericProjectile>();
         projectileObject.WeaponType = Type;
+        projectileObject.DamageType = DamageType;
+        projectileObject.DamageAmount = DamageAmount;
 
         // Set AudioInfo
         projectileObject.AudioInfo = AudioInfo;
